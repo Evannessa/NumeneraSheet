@@ -2,7 +2,7 @@
   "name": "numenera-sheet",
   "title": "Numenera Sheet Override",
   "description": "",
-  "version": "This is auto replaced",
+  "version": "1.0.0",
   "library": "false",
   "manifestPlusVersion": "1.0.0",
   "minimumCoreVersion": "0.8.6",
