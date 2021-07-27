@@ -100,6 +100,9 @@
     font-family: "Shadows Into Light";
     text-transform: uppercase; }
   .numeneraoverhaul button:hover {
+    appearance: none;
+    border: none;
+    box-shadow: none;
     color: #d5a02d;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(159, 120, 91, 0.75); }
@@ -270,9 +273,12 @@
     margin: 0.1rem;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     .numeneraoverhaul .card .stats {
       margin: 0.5rem; }
+    .numeneraoverhaul .card .expanded {
+      overflow: auto; }
   .numeneraoverhaul .card__title {
     text-transform: uppercase;
     font-size: 1rem;
