@@ -130,7 +130,7 @@ $ff-indie: 'Patrick Hand';
 
 	}
 
-	button:hover, button:active, button:focus {
+	button:hover, button:active, button:focus{
 		appearance: none;
 		border: none;
 		box-shadow: none;
@@ -452,7 +452,8 @@ $ff-indie: 'Patrick Hand';
 		background-image: linear-gradient(top,
 				rgba(255, 255, 255, 0) 0%,
 				rgba(255, 255, 255, 0) 60%,
-				rgb(235, 214, 195) 100%);
+				rgba(236, 222, 209, 0.9) 70%,
+				rgb(235, 220, 207) 100%);
 		top: 0;
 		left: 0;
 		content: "";
@@ -460,6 +461,26 @@ $ff-indie: 'Patrick Hand';
 		position: absolute;
 		width: 100%;
 		pointer-events: none;
+	}
+	.special-damage-wrapper{
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.special-damage-label{
+		display: flex;
+		align-items: center;
+	}
+	#special-damage{
+		width: 2em;
+		flex: 0 1 auto;
+	}
+	.rest{
+		display: flex;
+		flex-wrap: nowrap;
+		width: min-content;
+		height: min-content;
+		align-items: center;
+		justify-content:center;
 	}
 
 	/* #region STATS  */

@@ -63,7 +63,6 @@ function toggleExpandClass(event){
 	//get the, add overlay
 	var panel = cardParent.querySelector(".panel")
 	var overlay = panel.querySelector(".panel-overlay")
-	console.log(overlay)
 	if(cardParent.classList.contains("expanded")){
 		panel.removeChild(overlay);
 	}
@@ -75,7 +74,6 @@ function toggleExpandClass(event){
 function returnOverlayHTML(){
 	const overlay = document.createElement('div');
 	overlay.className = "panel-overlay"
-	// overlay.innerHTML = `<div class="panel-overlay"></div>`;
 	return overlay
 }
 
