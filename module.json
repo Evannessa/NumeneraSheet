@@ -1,5 +1,5 @@
 {
-  "name": "numenera-sheet",
+  "name": "NumeneraSheet",
   "title": "Numenera Sheet Override",
   "description": "",
   "version": "1.0.0",
@@ -19,13 +19,14 @@
     
   ],
   "esmodules": [
-    "/scripts/module.js"
+    "/scripts/NumeneraSheet.js"
   ],
   "scripts": [
     "/scripts/lib/lib.js"
   ],
   "styles": [
-    "/styles/module.css"
+    "/styles/module.css",
+    "/styles/styleNumenera.css"
   ],
   "languages": [
     {

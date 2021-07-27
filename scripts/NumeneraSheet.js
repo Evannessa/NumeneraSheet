@@ -1,10 +1,10 @@
-import {
-	CypherSystem
-} from "../../../systems/cyphersystem/module/cyphersystem.js";
-import CypherSystemActorSheet, { CypherActorSheet } from "../../../systems/cyphersystem/module/actor/actor-sheet.js";
-import CypherSystemPC from "../../../systems/cyphersystem/module/actor/pc-sheet.js";
-
-export class NumeneraSheet extends CypherSystemPC {
+// import {
+	// CypherSystem
+// } from "../../../systems/cyphersystem/module/cyphersystem.js";
+// import CypherSystemActorSheet, { CypherActorSheet } from "../../../systems/cyphersystem/module/actor/actor-sheet.js";
+import {CypherActorSheetPC} from "../../../systems/cyphersystem/module/actor/pc-sheet.js";
+// import NumeneraSheet from "templates\NumeneraSheet.html"
+export class NumeneraSheet extends CypherActorSheetPC {
 	get template() {
 		return "modules/NumeneraSheet/templates/NumeneraSheet.html";
 	}
@@ -31,7 +31,7 @@ export class NumeneraSheet extends CypherSystemPC {
 
 }
 
-Actors.registerSheet("CypherSystem", NumeneraSheet, {
+Actors.registerSheet("cypher", NumeneraSheet, {
 	types:["PC"],
 	makeDefault: true
 });
