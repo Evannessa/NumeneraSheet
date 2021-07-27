@@ -8,44 +8,52 @@ $clr-light: #e8e6e3;
 $clr-panel: rgba(232, 230, 227, 0.85);
 $ff-shadows: 'Shadows Into Light';
 $ff-indie: 'Patrick Hand';
-.app .window-app{
+
+.app .window-app {
 	width: min-content !important;
 }
-.window-app{
+
+.window-app {
 	width: max-content !important;
 }
+
 .window-app .window-content {
 	// background: unset;
 	height: 100%;
 	width: 100%;
-	form{
+
+	form {
 		height: 100%;
 	}
 }
+
 .numeneraoverhaul {
 	min-width: 700px;
 	min-height: 300px;
-	.sheet-body
-	{
+
+	.sheet-body {
 		background: unset;
 		height: 100%;
 		width: 100%;
+
 		// background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4);
-		form{
-			height: 100%;
-		width: 100%;
-		}
-	}
-	.numenera-sheet{
-			max-width: 1000px;
+		form {
 			height: 100%;
 			width: 100%;
-			background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") center !important;
-			background-size: cover;
-			color: $clr-gradient0;
 		}
-	section{
-		.numenera-sheet{
+	}
+
+	.numenera-sheet {
+		max-width: 1000px;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") center !important;
+		background-size: cover;
+		color: $clr-gradient0;
+	}
+
+	section {
+		.numenera-sheet {
 			height: 100%;
 			width: 100%;
 			background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
@@ -122,7 +130,7 @@ $ff-indie: 'Patrick Hand';
 
 	}
 
-	button:hover {
+	button:hover, button:active, button:focus {
 		appearance: none;
 		border: none;
 		box-shadow: none;
@@ -156,7 +164,7 @@ $ff-indie: 'Patrick Hand';
 
 	p {
 		padding: 1rem;
-		font-family: $ff-indie; 
+		font-family: $ff-indie;
 		// font-family: ff-indie; 'Indie Flower', cursive;
 	}
 
@@ -199,7 +207,10 @@ $ff-indie: 'Patrick Hand';
 		border-style: none;
 		font-weight: bold;
 	}
-	h3, h4, li{
+
+	h3,
+	h4,
+	li {
 		color: $clr-gradient1;
 		font-size: 1rem;
 		font-family: $ff-indie;
@@ -325,11 +336,13 @@ $ff-indie: 'Patrick Hand';
 		font-size: 3rem;
 		font-family: $ff-indie, cursive;
 	}
-	.circle-input__wrapper{
+
+	.circle-input__wrapper {
 		position: relative;
 		text-align: center;
 	}
-	.overlapLabel{
+
+	.overlapLabel {
 		position: absolute;
 		// transform: translateY(-5rem);
 		bottom: -0.5rem;
@@ -342,7 +355,7 @@ $ff-indie: 'Patrick Hand';
 	/* #endregion */
 	/* #region specific ids */
 
-	.item-list-overhaul{
+	.item-list-overhaul {
 		display: flex;
 		flex-direction: column;
 		justify-content: stretch;
@@ -391,12 +404,16 @@ $ff-indie: 'Patrick Hand';
 		flex-direction: column;
 		align-items: center;
 		overflow: hidden;
-		.stats{
+
+		.stats {
 			margin: 0.5rem;
 		}
-		.expanded{
-			overflow: auto;
-		}
+
+	}
+
+	.expanded {
+		overflow: auto;
+		height: max-content;
 	}
 
 	.card__title {
@@ -406,10 +423,43 @@ $ff-indie: 'Patrick Hand';
 
 	}
 
+	.card__header {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.expand-toggle {
+		display: inline;
+		width: min-content;
+		float: right;
+		// justify-self: flex-end;
+		// flex: 1;
+		color: $clr-light;
+		// align-self: flex-end;
+	}
+
 	.panel {
+		position: relative;
 		background-color: $clr-panel;
 		border-radius: 5px;
 		padding: 0.2rem;
+		
+	}
+
+	.panel-overlay{
+		border-radius: 5px;
+		background-image: linear-gradient(top,
+				rgba(255, 255, 255, 0) 0%,
+				rgba(255, 255, 255, 0) 60%,
+				rgb(235, 214, 195) 100%);
+		top: 0;
+		left: 0;
+		content: "";
+		height: 100%;
+		position: absolute;
+		width: 100%;
+		pointer-events: none;
 	}
 
 	/* #region STATS  */

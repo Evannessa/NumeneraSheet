@@ -31,6 +31,55 @@ export class NumeneraSheet extends CypherActorSheetPC {
 
 }
 
+Hooks.on('renderActorSheet', (app, html, data) => {
+	let expandButtons = Array.from(html.find(".expand-toggle"));
+	for(let expandButton of expandButtons){
+		expandButton.addEventListener("click", toggleExpandClass)
+	}
+	let cards = Array.from(html.find(".card"))
+	for(let card of cards){
+		if(card.querySelector(".expand-toggle") !=null){
+			if(!card.classList.contains("expanded")){
+				card.querySelector(".panel").prepend(returnOverlayHTML())
+			}
+		}
+	}
+});
+
+function toggleExpandClass(event){
+	var button = event.currentTarget;
+	//switch the icon
+	if(button.firstChild.className == "fas fa-chevron-circle-down"){
+		button.firstChild.className = "fas fa-chevron-circle-up";
+	}
+	else{
+		button.firstChild.className = "fas fa-chevron-circle-down";
+	}
+
+	//get the card parent, add expanded class
+	var cardParent = button.closest(".card")
+	cardParent.classList.toggle("expanded");
+
+	//get the, add overlay
+	var panel = cardParent.querySelector(".panel")
+	var overlay = panel.querySelector(".panel-overlay")
+	console.log(overlay)
+	if(cardParent.classList.contains("expanded")){
+		panel.removeChild(overlay);
+	}
+	else{
+		panel.prepend(returnOverlayHTML())
+	}
+}
+
+function returnOverlayHTML(){
+	const overlay = document.createElement('div');
+	overlay.className = "panel-overlay"
+	// overlay.innerHTML = `<div class="panel-overlay"></div>`;
+	return overlay
+}
+
+
 Actors.registerSheet("cypher", NumeneraSheet, {
 	types:["PC"],
 	makeDefault: true
