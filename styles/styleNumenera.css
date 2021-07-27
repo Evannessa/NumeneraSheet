@@ -155,9 +155,8 @@
     font-weight: bold; }
   .numeneraoverhaul h3, .numeneraoverhaul h4, .numeneraoverhaul li {
     color: rgba(114, 88, 71, 0.85);
-    text-transform: uppercase;
     font-size: 1rem;
-    font-family: "Shadows Into Light"; }
+    font-family: "Patrick Hand"; }
   .numeneraoverhaul .icon {
     margin-right: 0.2rem; }
   .numeneraoverhaul .titles {
@@ -231,6 +230,26 @@
     text-align: center;
     font-size: 3rem;
     font-family: "Patrick Hand", cursive; }
+  .numeneraoverhaul .circularInput {
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    border-style: none;
+    background-color: #e8e6e3;
+    box-shadow: inset 0 0 0 2px moccasin;
+    text-align: center;
+    font-size: 3rem;
+    font-family: "Patrick Hand", cursive; }
+  .numeneraoverhaul .circle-input__wrapper {
+    position: relative;
+    text-align: center; }
+  .numeneraoverhaul .overlapLabel {
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-family: "Shadows Into Light", cursive; }
   .numeneraoverhaul .item-list-overhaul {
     display: flex;
     flex-direction: column;

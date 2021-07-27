@@ -196,8 +196,6 @@
 					<div class="panel item-list-overhaul">
 						<ol class="items-list item-list-overhaul">
 							<li class="item item-header">
-								<div class="item-name">
-									{{localize 'CYPHERSYSTEM.Abilities'}}</div>
 								<div class="item-controls">
 									<a class="item-control item-create"
 										title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
@@ -211,6 +209,46 @@
 							{{> systems/cyphersystem/templates/tabs/abilities.html}}
 							{{/if}}
 						</ol>
+					</div>
+				</div>
+				<div class="card">
+					<h1 class="card__title">Recovery</h1>
+					<div class="panel">
+							<div class="circle-input__wrapper">
+								<input class="circularInput" type="number" name="" id="">
+								<h3 class="overlapLabel" >1D6+</h3>
+							</div>
+				<div class="damage-track__wrapper panel">
+							<label class="radio">
+								<span class="radio__wrapper">
+									<input type="radio" name="radio" id=""
+										checked="checked">
+									<span class="custom__radio"></span>
+								</span>
+								<span class="radio__label">1 Action</span>
+							</label>
+							<label class="radio">
+								<span class="radio__wrapper">
+									<input type="radio" name="radio" id="">
+									<span class="custom__radio"></span>
+								</span>
+								<span class="radio__label">10 Mins</span>
+							</label>
+							<label class="radio">
+								<span class="radio__wrapper">
+									<input type="radio" name="radio" id="">
+									<span class="custom__radio"></span>
+								</span>
+								<span class="radio__label">1 Hour</span>
+							</label>
+							<label class="radio">
+								<span class="radio__wrapper">
+									<input type="radio" name="radio" id="">
+									<span class="custom__radio"></span>
+								</span>
+								<span class="radio__label">10 Hours</span>
+							</label>
+						</div>
 					</div>
 				</div>
 			</section>

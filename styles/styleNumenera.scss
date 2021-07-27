@@ -198,9 +198,8 @@ $ff-indie: 'Patrick Hand';
 	}
 	h3, h4, li{
 		color: $clr-gradient1;
-		text-transform: uppercase;
 		font-size: 1rem;
-		font-family: $ff-shadows;
+		font-family: $ff-indie;
 	}
 
 	/* #endregion */
@@ -312,7 +311,30 @@ $ff-indie: 'Patrick Hand';
 		font-family: $ff-indie, cursive;
 	}
 
-	.circularInput {}
+	.circularInput {
+		border-radius: 50%;
+		width: 4rem;
+		height: 4rem;
+		border-style: none;
+		background-color: $clr-light;
+		box-shadow: inset 0 0 0 2px moccasin;
+		text-align: center;
+		font-size: 3rem;
+		font-family: $ff-indie, cursive;
+	}
+	.circle-input__wrapper{
+		position: relative;
+		text-align: center;
+	}
+	.overlapLabel{
+		position: absolute;
+		// transform: translateY(-5rem);
+		bottom: -0.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		font-weight: bold;
+		font-family: $ff-shadows, cursive;
+	}
 
 	/* #endregion */
 	/* #region specific ids */
