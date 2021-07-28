@@ -2,7 +2,7 @@
 	<div class="numeneraoverhaul">
 		<section class="numenera-sheet">
 			<header>
-				<div class="titles">
+				<div class="title">
 					<input class="title__name" type="text" name="name" id="" value="{{actor.name}}">
 					<input class="title__descriptor" type="text" name="data.basic.descriptor"
 						value="{{data.basic.descriptor}}" id="" placeholder="Descriptor">
@@ -280,12 +280,12 @@
 					</div>
 				</div>
 				<!-- RECOVERY -->
-				<div class="card" id="recoveryPanel">
+				<div class="card recovery" id="recoveryPanel">
 					<button id="recovery" class="header__button"><i
 							class="fas fa-dice-d20"></i>Recovery</button>
 					<div class="panel">
 						<div class="circle-input__wrapper">
-							<input class="circularInput roundedText" type="text"
+							<input class="circle__input" type="text"
 								name="data.recoveries.recoveryRoll"
 								value="{{data.recoveries.recoveryRoll}}"
 								data.dtype="String">
