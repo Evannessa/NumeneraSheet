@@ -50,6 +50,7 @@
 							fugit blanditiis? Repellendus, nulla id?</p>
 					</div>
 				</div>
+				<!-- MIGHT SPEED INTELLECT STATS -->
 				<div class="card" id="mightSpeedIntellect">
 					<div class="stats">
 						<div class="stat" id="might">
@@ -131,9 +132,10 @@
 						deleniti minus
 						fugit blanditiis? Repellendus, nulla id?</p>
 				</div>
+				<!-- ADVANCEMENT -->
 				<div class="card" id="advancement">
 					<h1 class="card__title">Advancement</h1>
-					<div class="tier panel">
+					<div class="tier panel --extended">
 						<h2>Tier 1</h2>
 						<div class="tier__input-wrapper">
 							<input type="text" placeholder="Tier 1 Adv. #1">
@@ -143,6 +145,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- DAMAGE TRACK -->
 				<div class="card" id="damageTrack">
 					<h1 class="card__title">Damage Track</h1>
 					<div class="panel">
@@ -187,6 +190,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- BIO -->
 				<div class="card" id="bio">
 					<div class="card__header">
 						<div class="invisible__div"></div>
@@ -199,31 +203,35 @@
 							rows="12"></textarea>
 					</div>
 				</div>
-				<div class="card" id="abilities">
-					<div class="card__header">
-						<div class="invisible__div"></div>
-						<h1 class="card__title">Abilities</h1>
-						<button class="expand-toggle"><i
-								class="fas fa-chevron-circle-down"></i></button>
-					</div>
-					<div class="panel item-list-overhaul">
-						<ol class="items-list item-list-overhaul">
-							<li class="item item-header">
-								<div class="item-controls">
-									<a class="item-control item-create"
-										title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-										data-type="ability"><i
-											class="fas fa-plus"></i></a>
-								</div>
-							</li>
-							{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-							{{> systems/cyphersystem/templates/tabs/teenAbilities.html}}
-							{{else}}
-							{{> systems/cyphersystem/templates/tabs/abilities.html}}
-							{{/if}}
-						</ol>
+				<!-- ABILITIES -->
+				<div class="card__wrapper">
+					<div class="card" id="abilities">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Abilities</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended item-list-overhaul">
+							<ol class="items-list item-list-overhaul">
+								<li class="item item-header">
+									<div class="item-controls">
+										<a class="item-control item-create"
+											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+											data-type="ability"><i
+												class="fas fa-plus"></i></a>
+									</div>
+								</li>
+								{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
+								{{> systems/cyphersystem/templates/tabs/teenAbilities.html}}
+								{{else}}
+								{{> systems/cyphersystem/templates/tabs/abilities.html}}
+								{{/if}}
+							</ol>
+						</div>
 					</div>
 				</div>
+				<!-- COMBAT -->
 				<div class="card__wrapper">
 					<div class="circle-input__wrapper corner-style">
 						<input class="circularInput --small" type="number"
@@ -238,7 +246,7 @@
 							<button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button>
 						</div>
-						<div class="panel item-list-overhaul">
+						<div class="panel --extended item-list-overhaul">
 							<!-- <ol class="items-list item-list-overhaul">
 								<li class="item item-header">
 									<div class="item-controls">
@@ -256,6 +264,7 @@
 						</div>
 					</div>
 				</div>
+				<!-- RECOVERY -->
 				<div class="card" id="recoveryPanel">
 					<button id="recovery" class="header__button"><i
 							class="fas fa-dice-d20"></i>Recovery</button>
