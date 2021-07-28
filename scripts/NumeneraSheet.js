@@ -50,6 +50,11 @@ Hooks.on('renderActorSheet', (app, html, data) => {
 });
 
 function toggleExpandClass(event){
+	console.log(event.target)
+	console.log(event.currentTarget)
+	// if(event.target !== this){
+	// 	return;
+	// }
 	var button = event.currentTarget;
 	//switch the icon
 	if(button.firstChild.className == "fas fa-chevron-circle-down"){

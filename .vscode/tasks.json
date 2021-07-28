@@ -1,30 +1,33 @@
 // Sass configuration
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=733558
-	// for the documentation about the tasks.json format
+	// // See https://go.microsoft.com/fwlink/?LinkId=733558
+	// // for the documentation about the tasks.json format
 	"version": "2.0.0",
+	// "tasks": [
+	// 	{
+	// 		"type": "gulp",
+	// 		"task": "default",
+	// 		"problemMatcher": [],
+	// 		"label": "gulp: default",
+	// 		"group": {
+	// 			"kind": "build",
+	// 			"isDefault": true
+	// 		}
+	// 	}
+	// ]
 	"tasks": [
 		{
-			"type": "gulp",
-			"task": "default",
-			"problemMatcher": [],
-			"label": "gulp: default",
+			"label": "Sass Compile",
+			"type": "shell",
+			"command": "node-sass ./styles/styleNumenera.scss ./styles/styleNumenera.css",
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
+			},
+			"problemMatcher": [
+				"$node-sass"
+			]
 		}
 	]
-// 	"tasks": [
-// 		{
-// 			"label": "Sass Compile",
-// 			"type": "shell",
-// 			"command": "node-sass ./styles/styleNumenera.scss ./styles/styleNumenera.css",
-// 			"group": "build",
-// 			"problemMatcher": [
-// 				"$node-sass"
-// 			]
-// 		}
-// 	]
 //       }
 }

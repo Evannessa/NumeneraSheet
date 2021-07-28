@@ -346,8 +346,13 @@ $ff-indie: 'Patrick Hand';
 		text-align: center;
 		font-size: 3rem;
 		font-family: $ff-indie, cursive;
+		
 	}
-
+	
+	.--small{
+		width: 3rem;
+		height: 3rem;
+	}
 	.circle-input__wrapper {
 		position: relative;
 		text-align: center;
@@ -484,7 +489,8 @@ $ff-indie: 'Patrick Hand';
 		top: 0;
 		left: 0;
 		content: "";
-		height: min(100%, 12rem);
+		height: 12rem;
+		// height: min(100%, 12rem);
 		position: absolute;
 		width: 100%;
 		pointer-events: none;
