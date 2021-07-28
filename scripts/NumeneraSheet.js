@@ -52,8 +52,8 @@ Hooks.on('renderActorSheet', (app, html, data) => {
 function toggleExpandClass(event){
 	console.log(event.target)
 	console.log(event.currentTarget)
-	// if(event.target !== this){
-	// 	return;
+	// if(event.target !== this || event.target != ){
+		// return;
 	// }
 	var button = event.currentTarget;
 	//switch the icon
