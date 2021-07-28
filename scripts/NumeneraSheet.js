@@ -44,6 +44,9 @@ Hooks.on('renderActorSheet', (app, html, data) => {
 			}
 		}
 	}
+	let recoveryButton = Array.from(html.find("#recovery"))[0]
+	recoveryButton.addEventListener("click", ()=> game.cyphersystem.recoveryRollMacro(data.actor))
+	
 });
 
 function toggleExpandClass(event){

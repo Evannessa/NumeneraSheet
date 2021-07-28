@@ -109,8 +109,7 @@
   margin: 0;
 }
 
-.numeneraoverhaul input[type=text],
-.numeneraoverhaul input[type=number] {
+.numeneraoverhaul input[type=text] {
   -webkit-appearance: none;
   margin: 0;
   margin-left: auto;
@@ -133,9 +132,29 @@
           appearance: none;
   border: none;
   background-color: transparent;
-  font-size: 1rem;
+  font-size: 1rem !important;
   font-family: "Shadows Into Light";
   text-transform: uppercase;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  cursor: pointer;
+}
+
+.numeneraoverhaul .header__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.numeneraoverhaul .header__button > i {
+  margin-right: 0.5rem;
 }
 
 .numeneraoverhaul button:hover, .numeneraoverhaul button:active, .numeneraoverhaul button:focus {
@@ -203,7 +222,7 @@
   font-family: "Shadows Into Light";
 }
 
-.numeneraoverhaul h1 {
+.numeneraoverhaul h1, .numeneraoverhaul .header__button {
   text-transform: uppercase;
   color: #e8e6e3;
   text-shadow: 3px 4px 4px rgba(49, 44, 45, 0.95);
@@ -399,6 +418,13 @@
   text-align: center;
 }
 
+.numeneraoverhaul .corner-style {
+  position: absolute;
+  margin-top: -5px;
+  left: -5px;
+  z-index: 10;
+}
+
 .numeneraoverhaul .overlapLabel {
   position: absolute;
   bottom: -0.5rem;
@@ -430,6 +456,7 @@
 }
 
 .numeneraoverhaul .card {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 calc(33% - 0.2rem);
           flex: 0 1 calc(33% - 0.2rem);
@@ -457,6 +484,15 @@
 
 .numeneraoverhaul .card .stats {
   margin: 0.5rem;
+}
+
+.numeneraoverhaul .card__wrapper {
+  width: 33%;
+  position: relative;
+}
+
+.numeneraoverhaul .card__wrapper > .card {
+  width: 100%;
 }
 
 .numeneraoverhaul .expanded {
@@ -505,7 +541,7 @@
   top: 0;
   left: 0;
   content: "";
-  height: 100%;
+  height: 12rem;
   position: absolute;
   width: 100%;
   pointer-events: none;
@@ -700,15 +736,16 @@
 }
 
 .numeneraoverhaul .radio__wrapper > input {
-  opacity: 0;
-  width: 0;
-  height: 0;
   cursor: pointer;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
 }
 
 .numeneraoverhaul .custom__radio {
   display: -ms-grid;
   display: grid;
+  display: none;
+  /*TODO: Take this out once you figure the custom radio buttons out*/
   place-items: center;
   top: 0;
   left: 0;

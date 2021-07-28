@@ -101,8 +101,8 @@ $ff-indie: 'Patrick Hand';
 		margin: 0;
 	}
 
-	input[type=text],
-	input[type=number] {
+	input[type=text]{
+	// input[type=number]{
 		-webkit-appearance: none;
 		margin: 0;
 		margin-left: auto;
@@ -124,11 +124,22 @@ $ff-indie: 'Patrick Hand';
 		appearance: none;
 		border: none;
 		background-color: transparent;
-		font-size: 1rem;
+		font-size: 1rem !important;
 		font-family: $ff-shadows;
 		text-transform: uppercase;
+		width: min-content;
+		cursor: pointer;
 
 	}
+	.header__button{
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+	}
+	.header__button > i{
+		margin-right: 0.5rem;
+	}
+
 
 	button:hover, button:active, button:focus{
 		appearance: none;
@@ -187,7 +198,7 @@ $ff-indie: 'Patrick Hand';
 		font-family: $ff-shadows;
 	}
 
-	h1 {
+	h1, .header__button {
 		text-transform: uppercase;
 		color: $clr-light;
 		text-shadow: 3px 4px 4px $clr-gradient0;
@@ -341,6 +352,12 @@ $ff-indie: 'Patrick Hand';
 		position: relative;
 		text-align: center;
 	}
+	.corner-style{
+		position: absolute;
+		margin-top: -5px;
+		left: -5px;
+		z-index: 10;
+	}
 
 	.overlapLabel {
 		position: absolute;
@@ -390,6 +407,7 @@ $ff-indie: 'Patrick Hand';
 
 	/* #endregion */
 	.card {
+		position: relative;
 		flex: 0 1 calc(33% - 0.2rem);
 		width: 33%;
 		height: 12rem;
@@ -409,6 +427,13 @@ $ff-indie: 'Patrick Hand';
 			margin: 0.5rem;
 		}
 
+	}
+	.card__wrapper{
+		width: 33%;
+		position: relative;
+	}
+	.card__wrapper > .card{
+		width: 100%;
 	}
 
 	.expanded {
@@ -444,6 +469,8 @@ $ff-indie: 'Patrick Hand';
 		background-color: $clr-panel;
 		border-radius: 5px;
 		padding: 0.2rem;
+		// min-height: 100%;
+
 		
 	}
 
@@ -457,7 +484,7 @@ $ff-indie: 'Patrick Hand';
 		top: 0;
 		left: 0;
 		content: "";
-		height: 100%;
+		height: min(100%, 12rem);
 		position: absolute;
 		width: 100%;
 		pointer-events: none;
@@ -600,15 +627,18 @@ $ff-indie: 'Patrick Hand';
 	}
 
 	.radio__wrapper>input {
-		opacity: 0;
-		width: 0;
-		height: 0;
+		// opacity: 0;
+		// width: 0;
+		// height: 0;
 		cursor: pointer;
+		margin-right: 0.2em;
+		margin-left: 0.2em;
 	}
 
 
 	.custom__radio {
 		display: grid;
+		display: none; /*TODO: Take this out once you figure the custom radio buttons out*/
 		place-items: center;
 		top: 0;
 		left: 0;
@@ -617,6 +647,7 @@ $ff-indie: 'Patrick Hand';
 		border-radius: 50%;
 		border: 0.1em solid $clr-gradient1;
 		margin-right: 0.2em;
+
 	}
 
 	[type="radio"]:not(:checked)+.custom__radio::before {
