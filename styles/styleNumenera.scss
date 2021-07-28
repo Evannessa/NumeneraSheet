@@ -47,8 +47,8 @@ $ff-indie: 'Patrick Hand';
 		max-width: 1000px;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") center !important;
-		background-size: cover;
+		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+		background-size: 100% 100%;
 		color: $clr-gradient0;
 	}
 
