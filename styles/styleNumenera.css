@@ -46,18 +46,16 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5)), url("../images/SheetBG.jpg") !important;
-    background-size: 100% 100%;
+    background-size: 200% 200%;
     color: rgba(49, 44, 45, 0.95); }
-  .numeneraoverhaul section .numenera-sheet {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5)), url("../images/SheetBG.jpg") !important; }
   .numeneraoverhaul *,
   .numeneraoverhaul *::before,
   .numeneraoverhaul *::after {
     box-sizing: inherit;
     margin: 0;
     padding: 0; }
+  .numeneraoverhaul img {
+    border-style: none; }
   .numeneraoverhaul .sheet {
     box-sizing: border-box;
     height: 100%;
@@ -102,11 +100,13 @@
     color: #d5a02d;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(159, 120, 91, 0.75); }
-  .numeneraoverhaul input[type="text"]:focus, .numeneraoverhaul input[type="text"]:hover, .numeneraoverhaul input[type="text"]:active, .numeneraoverhaul input[type="number"]:focus, .numeneraoverhaul input[type="number"]:hover, .numeneraoverhaul input[type="number"]:active, .numeneraoverhaul textarea:focus, .numeneraoverhaul textarea:hover, .numeneraoverhaul textarea:active {
-    outline: none;
-    background: none;
-    box-shadow: 0px 0px 5px #d5a02d;
-    background-color: white !important; }
+  .numeneraoverhaul input[type="text"], .numeneraoverhaul input[type="number"], .numeneraoverhaul textarea {
+    color: rgba(49, 44, 45, 0.95); }
+    .numeneraoverhaul input[type="text"]:focus, .numeneraoverhaul input[type="text"]:hover, .numeneraoverhaul input[type="text"]:active, .numeneraoverhaul input[type="number"]:focus, .numeneraoverhaul input[type="number"]:hover, .numeneraoverhaul input[type="number"]:active, .numeneraoverhaul textarea:focus, .numeneraoverhaul textarea:hover, .numeneraoverhaul textarea:active {
+      outline: none;
+      background: none;
+      box-shadow: 0px 0px 5px #d5a02d;
+      background-color: white !important; }
   .numeneraoverhaul .sheet-body {
     height: 100%;
     background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5));
@@ -197,7 +197,7 @@
     flex-direction: row;
     min-width: 800px;
     overflow: scroll;
-    height: max-content; }
+    height: 100%; }
   .numeneraoverhaul .logo img {
     width: 100%;
     object-fit: contain; }
@@ -302,7 +302,17 @@
       height: max-content; }
     .numeneraoverhaul .card .item-name, .numeneraoverhaul .card .settings-list, .numeneraoverhaul .card .item-quantity {
       font-size: 0.85rem;
-      font-weight: bold; }
+      font-weight: bold;
+      opacity: 85%; }
+    .numeneraoverhaul .card .item-header {
+      text-transform: uppercase;
+      font-family: "Patrick Hand"; }
+      .numeneraoverhaul .card .item-header .item-name, .numeneraoverhaul .card .item-header .settings-list, .numeneraoverhaul .card .item-header .item-quantity {
+        opacity: 100%; }
+    .numeneraoverhaul .card .items-list .item ~ .item {
+      border-top: 1px dotted rgba(159, 120, 91, 0.75); }
+    .numeneraoverhaul .card .items-list .item:last-child {
+      border-bottom: 1px dotted rgba(159, 120, 91, 0.75); }
   .numeneraoverhaul .card__wrapper {
     width: 100%;
     height: 8rem;
@@ -333,6 +343,7 @@
     padding: 0.2rem;
     width: 100%; }
   .numeneraoverhaul .--extended {
+    min-height: 6.9505rem;
     max-height: 100%;
     overflow: visible; }
   .numeneraoverhaul .panel-overlay {
@@ -461,8 +472,6 @@
     transform: scale(1);
     border-color: red;
     /* background: radial-gradient($clr-gradient2 70%, rgba(255 0, 0, 0) 51%) !important; */ }
-  .numeneraoverhaul .tier {
-    background-color: #e8e6e3; }
   .numeneraoverhaul .tier__input-wrapper {
     display: flex;
     flex-wrap: wrap;

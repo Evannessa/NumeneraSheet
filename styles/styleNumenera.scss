@@ -1,5 +1,8 @@
 @import './fontsandvariables';
 
+@mixin min-height($value){
+	min-height: ($value/16)+rem;
+}
 
 .app .window-app {
 	width: min-content !important;
@@ -41,17 +44,17 @@
 		height: 100%;
 		width: 100%;
 		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
-		background-size: 100% 100%;
+		background-size: 200% 200%;
 		color: $clr-gradient0;
 	}
 
-	section {
-		.numenera-sheet {
-			height: 100%;
-			width: 100%;
-			background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
-		}
-	}
+	// section {
+	// 	.numenera-sheet {
+	// 		height: 100%;
+	// 		width: 100%;
+	// 		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+	// 	}
+	// }
 
 	*,
 	*::before,
@@ -60,6 +63,9 @@
 		margin: 0;
 		padding: 0;
 
+	}
+	img{
+		border-style: none;
 	}
 
 
@@ -136,6 +142,7 @@
 	}
 
 	input[type="text"], input[type="number"], textarea{
+		color: $clr-gradient0;
 		&:focus, &:hover, &:active{
 			outline: none;
 			background: none;
@@ -264,7 +271,7 @@
 		flex-direction: row;
 		min-width: 800px;
 		overflow: scroll;
-		height: max-content;
+		height: 100%;
 	}
 
 
@@ -425,6 +432,24 @@
 		.item-name, .settings-list, .item-quantity{
 			font-size: 0.85rem;
 			font-weight: bold;
+			opacity: 85%;
+		}
+		.item-header{
+			// color: darken($clr-accent, 10%);
+			text-transform: uppercase;
+			font-family: $ff-indie;
+			.item-name, .settings-list, .item-quantity{
+				opacity: 100%;
+		}
+		}
+		.items-list .item~.item{
+			border-top: 1px dotted $clr-gradient2;
+		}
+		.items-list .item:last-child{
+			border-bottom: 1px dotted $clr-gradient2;
+		}
+		.item-quantity{
+
 		}
 
 	}
@@ -477,6 +502,7 @@
 	}
 	.--extended{
 		// min-height: 100%;
+		@include min-height(111.208);
 		max-height: 100%;
 		overflow: visible;
 	}
@@ -683,7 +709,7 @@
 
 
 	.tier {
-		background-color: $clr-light;
+		// background-color: $clr-light;
 	}
 
 	.tier__input-wrapper {
