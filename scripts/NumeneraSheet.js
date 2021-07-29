@@ -106,9 +106,14 @@ function preExpand(card){
 	//get the card parent, add expanded class
 	//if the event is null, we called this method without clicking
 	card.classList.add("expanded")
+	//if this card has a wrapper, add the wrapper too
+	let wrapper = card.closest(".card__wrapper")
+	if(wrapper != null){
+		wrapper.classList.add("expanded")
+	}
 
 	//get the, add overlay
-	var panel = card.querySelector(".panel")
+	// var panel = card.querySelector(".panel")
 	// panel.prepend(returnOverlayHTML())
 }
 
@@ -128,6 +133,11 @@ function toggleExpandClass(event, actor){
 	//if the event is null, we called this method without clicking
 	cardParent.classList.toggle("expanded");
 
+	//if this card has a wrapper, add the wrapper too
+	let wrapper = cardParent.closest(".card__wrapper")
+	if(wrapper != null){
+		wrapper.classList.add("expanded")
+	}
 	//set a boolean value for if the classlist is expanded
 	let expanded = cardParent.classList.contains("expanded")
 

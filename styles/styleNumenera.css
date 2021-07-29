@@ -113,9 +113,6 @@
     /* display: grid; */
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* grid-template-rows: repeat(1fr, 8) */ }
-  .numeneraoverhaul p {
-    padding: 1rem;
-    font-family: "Patrick Hand"; }
   .numeneraoverhaul a {
     text-decoration: none; }
   .numeneraoverhaul header {
