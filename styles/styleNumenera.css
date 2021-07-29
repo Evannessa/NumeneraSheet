@@ -167,8 +167,11 @@
     margin: 0.5rem;
     /* padding: 1rem; */ }
     .numeneraoverhaul .title input {
+      border-radius: 1px;
+      overflow: hidden;
       margin-inline: 0.5rem;
       min-width: 0;
+      width: 95%;
       background-color: bisque;
       border-style: none;
       font-size: 1.5rem;
@@ -300,7 +303,7 @@
   .numeneraoverhaul .card__wrapper > .card {
     width: 100%; }
   .numeneraoverhaul .expanded {
-    overflow: auto;
+    overflow: visible;
     height: max-content; }
   .numeneraoverhaul .card__title {
     text-transform: uppercase;
@@ -322,7 +325,7 @@
     padding: 0.2rem;
     width: 100%; }
   .numeneraoverhaul .--extended {
-    min-height: 100%;
+    max-height: 100%;
     overflow: visible; }
   .numeneraoverhaul .panel-overlay {
     border-radius: 5px;
