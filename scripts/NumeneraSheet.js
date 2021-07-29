@@ -109,7 +109,7 @@ function preExpand(card){
 
 	//get the, add overlay
 	var panel = card.querySelector(".panel")
-	panel.prepend(returnOverlayHTML())
+	// panel.prepend(returnOverlayHTML())
 }
 
 function toggleExpandClass(event, actor){

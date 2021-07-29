@@ -329,7 +329,7 @@
     overflow: visible; }
   .numeneraoverhaul .panel-overlay {
     border-radius: 5px;
-    background: linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(236, 222, 209, 0.9) 70%, #ebdccf 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(236, 222, 209, 0.9) 70%, #ebdccf 100%);
     top: 0;
     left: 0;
     content: "";
