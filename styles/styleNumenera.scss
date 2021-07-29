@@ -377,7 +377,7 @@
 		position: relative;
 		// flex: 0 1 calc(100% - 0.2rem);
 		width: 100%;
-		height: 12rem;
+		height: 10rem;
 		border-radius: 10px;
 		border-top: 3px solid #e8e6e3;
 		border-right: 1px dotted #e8e6e3;
@@ -393,7 +393,7 @@
 		.stats {
 			margin: 0.5rem;
 		}
-		input[type="text"]{
+		input[type="text"], select{
 			@extend .dotted-textbox;
 
 			&.circle__input{
@@ -412,11 +412,15 @@
 		.item-settings{
 			height: max-content;
 		}
+		.item-name, .settings-list, .item-quantity{
+			font-size: 0.85rem;
+			font-weight: bold;
+		}
 
 	}
 	.card__wrapper{
 		width: 100%;
-		height: 12rem;
+		height: 10rem;
 		position: relative;
 		margin: 0.1rem;
 	}

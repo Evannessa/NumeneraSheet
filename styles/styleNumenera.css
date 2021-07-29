@@ -67,7 +67,7 @@
   .numeneraoverhaul input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
-  .numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type="text"] {
+  .numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type="text"], .numeneraoverhaul .card select {
     -webkit-appearance: none;
     margin: 0;
     margin-left: auto;
@@ -219,7 +219,7 @@
     text-align: center;
     font-size: 3rem;
     font-family: "Patrick Hand", cursive; }
-  .numeneraoverhaul .circularInput, .numeneraoverhaul .card input.circle__input[type="text"] {
+  .numeneraoverhaul .circularInput, .numeneraoverhaul .card input.circle__input[type="text"], .numeneraoverhaul .card select.circle__input {
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
@@ -270,7 +270,7 @@
   .numeneraoverhaul .card {
     position: relative;
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     border-radius: 10px;
     border-top: 3px solid #e8e6e3;
     border-right: 1px dotted #e8e6e3;
@@ -292,9 +292,12 @@
       height: 11rem; }
     .numeneraoverhaul .card .item-settings {
       height: max-content; }
+    .numeneraoverhaul .card .item-name, .numeneraoverhaul .card .settings-list, .numeneraoverhaul .card .item-quantity {
+      font-size: 0.85rem;
+      font-weight: bold; }
   .numeneraoverhaul .card__wrapper {
     width: 100%;
-    height: 12rem;
+    height: 10rem;
     position: relative;
     margin: 0.1rem; }
   .numeneraoverhaul .card__wrapper > .card {
