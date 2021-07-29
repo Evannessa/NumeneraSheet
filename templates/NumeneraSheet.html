@@ -14,7 +14,8 @@
 						value="{{data.basic.focus}}" id="" placeholder="Focus">
 				</div>
 				<div class="logo">
-					<img src="\modules\NumeneraSheet\templates\Original Numenera Corebook Legacy Content - Monte Cook Games  Numenera.png" alt="logo" srcset="">
+					<img src="\modules\NumeneraSheet\templates\Original Numenera Corebook Legacy Content - Monte Cook Games  Numenera.png"
+						alt="logo" srcset="">
 					<!-- <img src="" alt="logo"> -->
 				</div>
 				<div class="tierEffortXP">
@@ -612,35 +613,28 @@
 						<h1 class="card__title">Damage Track</h1>
 						<div class="panel">
 							<div class="damage-track__wrapper">
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id=""
-											checked="checked">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Hale</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Impaired</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Debilitated</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Dead</span>
-								</label>
+								<div class="item-damage">
+									<select name="data.damage.damageTrack"
+										style="min-width: 95px">
+										{{#select data.damage.damageTrack}}
+										<option value="Hale">
+											{{localize 'CYPHERSYSTEM.Hale'}}
+										</option>
+										<option value="Impaired">
+											{{localize 'CYPHERSYSTEM.Impaired'}}
+										</option>
+										<option value="Debilitated">
+											{{localize 'CYPHERSYSTEM.Debilitated'}}
+										</option>
+										<option value="Dead">
+											{{localize 'CYPHERSYSTEM.Dead'}}
+										</option>
+										{{/select}}
+									</select>
+								</div>
+							</div>
+							<div class="damage__slider">
+								<span class="hale"></span>
 							</div>
 							<div class="special-damage-wrapper">
 								<button class="rest color-brown"><i

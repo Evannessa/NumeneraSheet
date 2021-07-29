@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
@@ -65,7 +66,7 @@
   .numeneraoverhaul input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0; }
-  .numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type="text"], .numeneraoverhaul .card select {
+  .numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type="text"] {
     -webkit-appearance: none;
     margin: 0;
     margin-left: auto;
@@ -220,7 +221,7 @@
     text-align: center;
     font-size: 3rem;
     font-family: "Patrick Hand", cursive; }
-  .numeneraoverhaul .circularInput, .numeneraoverhaul .card input.circle__input[type="text"], .numeneraoverhaul .card select.circle__input {
+  .numeneraoverhaul .circularInput, .numeneraoverhaul .card input.circle__input[type="text"] {
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
@@ -285,6 +286,40 @@
     overflow: hidden; }
     .numeneraoverhaul .card .stats {
       margin: 0.5rem; }
+    .numeneraoverhaul .card select {
+      border: 1px dotted rgba(176, 146, 123, 0.65);
+      font-family: "Patrick Hand";
+      color: rgba(114, 88, 71, 0.85); }
+    .numeneraoverhaul .card .card__title::before, .numeneraoverhaul .card .card__title::after {
+      content: "⬩"; }
+    .numeneraoverhaul .card .damage__slider {
+      padding: 0.2rem 0.5rem;
+      margin: 0.3rem 0;
+      border-radius: 5px;
+      border: 1px dotted rgba(176, 146, 123, 0.65);
+      width: 100%;
+      height: 30%;
+      position: relative; }
+      .numeneraoverhaul .card .damage__slider span {
+        border-radius: 5px;
+        display: block;
+        position: relative;
+        height: 100%;
+        background-color: blue;
+        z-index: 1;
+        overflow: hidden; }
+        .numeneraoverhaul .card .damage__slider span.hale {
+          background-color: blueviolet;
+          width: 100%; }
+        .numeneraoverhaul .card .damage__slider span.impaired {
+          background-color: darkmagenta;
+          width: 60%; }
+        .numeneraoverhaul .card .damage__slider span.debilitated {
+          background-color: firebrick;
+          width: 30%; }
+        .numeneraoverhaul .card .damage__slider span.dead {
+          background-color: transparent;
+          width: 0%; }
     .numeneraoverhaul .card#damageTrack {
       height: 6rem; }
     .numeneraoverhaul .card#recoveryPanel {

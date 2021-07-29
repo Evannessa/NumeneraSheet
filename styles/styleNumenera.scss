@@ -401,13 +401,69 @@
 		.stats {
 			margin: 0.5rem;
 		}
-		input[type="text"], select{
+		input[type="text"]{
 			@extend .dotted-textbox;
 
 			&.circle__input{
 				@extend .circularInput;
 			}
 		}
+		select{
+			border: 1px dotted $clr-gradient3;
+			font-family: $ff-indie;
+			color: $clr-gradient1;
+		}
+		.card__title{
+			&::before, &::after{
+				content: "⬩";
+			}
+		}
+		.damage__slider{
+			padding: 0.2rem 0.5rem;
+			margin: 0.3rem 0;
+			// background-color: red;
+			border-radius: 5px;
+			border: 1px dotted $clr-gradient3;
+			width: 100%;
+			height: 30%;
+			position: relative;
+			span{
+				border-radius: 5px;
+				display: block;
+				position: relative;
+				height: 100%;
+				background-color: blue;
+				z-index: 1;
+				overflow: hidden;
+				&.hale{
+					background-color: blueviolet;
+					width: 100%;
+				}
+				&.impaired{
+					background-color: darkmagenta;
+					width: 60%;
+				}
+				&.debilitated{
+					background-color: firebrick;
+					width: 30%;
+				}
+				&.dead{
+					background-color:transparent;
+					width: 0%;
+				}
+			}
+			// &::before{
+			// 	content: "";
+			// 	position: absolute;
+			// 	background-color: blue;
+			// 	border-radius: 5px;
+			// 	width: 40%;
+			// 	height: 27%;
+			// 	z-index: 1;
+
+			// }
+		}
+		
 		&#damageTrack{
 			height: 6rem;
 		}

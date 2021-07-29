@@ -2,6 +2,9 @@
 // CypherSystem
 // } from "../../../systems/cyphersystem/module/cyphersystem.js";
 // import CypherSystemActorSheet, { CypherActorSheet } from "../../../systems/cyphersystem/module/actor/actor-sheet.js";
+let groupName = "importantChoice";
+let choices = {a: "Choice A", b: "Choice B"};
+let chosen = "a";
 import {
 	CypherActorSheetPC
 } from "../../../systems/cyphersystem/module/actor/pc-sheet.js";
@@ -82,9 +85,35 @@ export class NumeneraSheet extends CypherActorSheetPC {
 			})
 		}
 		desaturateRankingColors(html)
+		let damageTrackSelect = Array.from(html.find('[name="data.damage.damageTrack"]'))[0];
+		changeSlider(damageTrackSelect, html)
+		damageTrackSelect.addEventListener("change", (event)=> { changeSlider(event.currentTarget, html) })
 
 	}
 
+}
+
+function changeSlider(select, html){
+	console.log("Slider changed")
+	var damage = select.value;
+	let damageSlider = Array.from(html.find(".damage__slider"))[0];
+	let span = damageSlider.querySelector("span");
+	switch(damage){
+		case("Hale"):
+			span.classList.add("hale")
+			break;
+		case "Impaired":
+			span.classList.add("impaired")
+			break;
+		case "Debilitated":
+			span.classList.add("debilitated")
+			break;
+		case "Dead":
+			span.classList.add("dead")
+			break;
+	}
+	// span.style.width = width;
+	// span.style.backgroundColor = color;
 }
 
 Hooks.on('renderActorSheet', (app, html, data) => {
