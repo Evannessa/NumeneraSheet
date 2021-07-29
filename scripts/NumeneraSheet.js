@@ -114,7 +114,6 @@ function preExpand(card){
 
 function toggleExpandClass(event, actor){
 	var button = event.currentTarget;
-	console.log(button)
 	//switch the icon
 	if(button.firstChild.className == "fas fa-chevron-circle-down"){
 		button.firstChild.className = "fas fa-chevron-circle-up";
@@ -131,15 +130,9 @@ function toggleExpandClass(event, actor){
 
 	//set a boolean value for if the classlist is expanded
 	let expanded = cardParent.classList.contains("expanded")
-	console.log(expanded)
 
-	//save the toggle state as a flag
-	// let expandedFlag = {}
-	// let key = cardParent.id;
-	// expandedFlag[key] = expanded;
-	
 	actor.setFlag("world", cardParent.id, expanded)
-	console.log(cardParent.id + " expanded is " + actor.getFlag("world", cardParent.id))
+	// console.log(cardParent.id + " expanded is " + actor.getFlag("world", cardParent.id))
 
 	//get the, add overlay
 	var panel = cardParent.querySelector(".panel")

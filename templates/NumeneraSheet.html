@@ -33,389 +33,101 @@
 				</div>
 			</header>
 			<section class="stats-section">
-				<!-- MIGHT SPEED INTELLECT STATS -->
-				<div class="card" id="mightSpeedIntellect">
-					<div class="stats">
-						<div class="stat" id="might">
-							<button id="might-btn" class="header__button might-roll"><i
-									class="fas fa-dice-d20"></i>Might</button>
-							<div class="stat-graph">
-								<div class="stat-graph__current">
-									<input type="number"
-										name="data.pools.might.value"
-										value={{data.pools.might.value}}>
-									<label
-										for="data.pools.might.value">Current</label>
-								</div>
-								<div class="stat-graph__pool">
-									<label for="data.pools.might.max">Pool</label>
-									<input type="number" name="data.pools.might.max"
-										value={{data.pools.might.max}}>
-								</div>
-								<div class="stat-graph__edge">
-									<label for="data.pools.mightEdge">Edge</label>
-									<input type="number" name="data.pools.mightEdge"
-										value={{data.pools.mightEdge}}>
-								</div>
-							</div>
-						</div>
-						<div class="stat" id="speed">
-							<button id="speed-btn" class="header__button speed-roll"><i
-									class="fas fa-dice-d20"></i>Speed</button>
-							<div class="stat-graph">
-								<div class="stat-graph__current">
-									<input type="number"
-										name="data.pools.speed.value"
-										value={{data.pools.speed.value}}>
-									<label
-										for="data.pools.speed.value">Current</label>
-								</div>
-								<div class="stat-graph__pool">
-									<label for="data.pools.speed.max">Pool</label>
-									<input type="number" name="data.pools.speed.max"
-										value={{data.pools.speed.max}}>
-								</div>
-								<div class="stat-graph__edge">
-									<label for="data.pools.speedEdge">Edge</label>
-									<input type="number" name="data.pools.speedEdge"
-										value={{data.pools.speedEdge}}>
-								</div>
-							</div>
-						</div>
-						<div class="stat" id="intellect">
-							<button id="intellect-btn"
-								class="header__button intellect-roll"><i
-									class="fas fa-dice-d20"></i>Intellect</button>
-							<div class="stat-graph">
-								<div class="stat-graph__current">
-									<input type="number"
-										name="data.pools.intellect.value"
-										value={{data.pools.intellect.value}}>
-									<label
-										for="data.pools.intellect.value">Current</label>
-								</div>
-								<div class="stat-graph__pool">
-									<label
-										for="data.pools.intellect.max">Pool</label>
-									<input type="number"
-										name="data.pools.intellect.max"
-										value={{data.pools.intellect.max}}>
-								</div>
-								<div class="stat-graph__edge">
-									<label
-										for="data.pools.intellectEdge">Edge</label>
-									<input type="number"
-										name="data.pools.intellectEdge"
-										value={{data.pools.intellectEdge}}>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- ADVANCEMENT -->
-				<div class="card" id="advancement">
-					<div class="card__header">
-						<div class="invisible__div"></div>
-						<h1 class="card__title">Advancement</h1>
-						<button class="expand-toggle"><i
-								class="fas fa-chevron-circle-down"></i></button>
-					</div>
-					<div class="panel --extended">
-						<div class="tier" id="tier1">
-							<h2>Tier 1</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-						<div class="tier" id="tier2">
-							<h2>Tier 2</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-						<div class="tier" id="tier3">
-							<h2>Tier 3</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-						<div class="tier" id="tier4">
-							<h2>Tier 4</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-						<div class="tier" id="tier5">
-							<h2>Tier 5</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-						<div class="tier" id="tier6">
-							<h2>Tier 6</h2>
-							<div class="tier__input-wrapper">
-								<input class="advancement" type="text"
-									placeholder="Tier 1 Adv. #1">
-								<input class="advancement" type="text"
-									placeholder="Tier 2 Adv. #2">
-								<input class="advancement" type="text"
-									placeholder="Tier 3 Adv. #3">
-								<input class="advancement" type="text"
-									placeholder="Tier 4 Adv. #4">
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- DAMAGE TRACK -->
-				<div class="card" id="damageTrack">
-					<h1 class="card__title">Damage Track</h1>
-					<div class="panel">
-						<div class="damage-track__wrapper">
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="radio" name="radio" id=""
-										checked="checked">
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">Hale</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="radio" name="radio" id="">
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">Impaired</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="radio" name="radio" id="">
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">Debilitated</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="radio" name="radio" id="">
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">Dead</span>
-							</label>
-						</div>
-						<div class="special-damage-wrapper">
-							<label class="special-damage-label" for="special-damage">Special
-								Damage
-								<input type="number" value=0 id="special-damage">
-							</label>
-							<button class="rest color-brown"><i
-									class="icon fa fa-heart"></i>Rest</button>
-						</div>
-					</div>
-				</div>
-				<!-- Skills -->
-				<div class="card" id="skills">
-					<div class="card__header">
-						<div class="invisible__div"></div>
-						<h1 class="card__title">Background</h1>
-						<button class="expand-toggle"><i
-								class="fas fa-chevron-circle-down"></i></button>
-					</div>
-					<div class="panel">
-						<div class="flexrow">
-							<ol class="items-list">
-								<li class="item flexrow item-header">
-									<div class="item-name">
-										{{localize 'CYPHERSYSTEM.Skills'}}</div>
-									<div class="item-quantity">
-										{{localize 'CYPHERSYSTEM.Level'}}</div>
-									<div class="item-controls">
-										{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="teen Skill"><i
-												class="fas fa-plus"></i></a>
-										{{else}}
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="skill"><i
-												class="fas fa-plus"></i></a>
-										{{/if}}
+				<div class="column --one">
+					<!-- MIGHT SPEED INTELLECT STATS -->
+					<div class="card" id="mightSpeedIntellect">
+						<div class="stats">
+							<div class="stat" id="might">
+								<button id="might-btn"
+									class="header__button might-roll"><i
+										class="fas fa-dice-d20"></i>Might</button>
+								<div class="stat-graph">
+									<div class="stat-graph__current">
+										<input type="number"
+											name="data.pools.might.value"
+											value={{data.pools.might.value}}>
+										<label
+											for="data.pools.might.value">Current</label>
 									</div>
-								</li>
-								{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-								{{#if data.settings.skills.sortByRating}}
-								{{> systems/cyphersystem/templates/tabs/teenSkillsSortedByRating.html}}
-								{{else}}
-								{{> systems/cyphersystem/templates/tabs/teenSkills.html}}
-								{{/if}}
-								{{else}}
-								{{#if data.settings.skills.sortByRating}}
-								{{> systems/cyphersystem/templates/tabs/skillsSortedByRating.html}}
-								{{else}}
-								{{> systems/cyphersystem/templates/tabs/skills.html}}
-								{{/if}}
-								{{/if}}
-							</ol>
+									<div class="stat-graph__pool">
+										<label
+											for="data.pools.might.max">Pool</label>
+										<input type="number"
+											name="data.pools.might.max"
+											value={{data.pools.might.max}}>
+									</div>
+									<div class="stat-graph__edge">
+										<label
+											for="data.pools.mightEdge">Edge</label>
+										<input type="number"
+											name="data.pools.mightEdge"
+											value={{data.pools.mightEdge}}>
+									</div>
+								</div>
+							</div>
+							<div class="stat" id="speed">
+								<button id="speed-btn"
+									class="header__button speed-roll"><i
+										class="fas fa-dice-d20"></i>Speed</button>
+								<div class="stat-graph">
+									<div class="stat-graph__current">
+										<input type="number"
+											name="data.pools.speed.value"
+											value={{data.pools.speed.value}}>
+										<label
+											for="data.pools.speed.value">Current</label>
+									</div>
+									<div class="stat-graph__pool">
+										<label
+											for="data.pools.speed.max">Pool</label>
+										<input type="number"
+											name="data.pools.speed.max"
+											value={{data.pools.speed.max}}>
+									</div>
+									<div class="stat-graph__edge">
+										<label
+											for="data.pools.speedEdge">Edge</label>
+										<input type="number"
+											name="data.pools.speedEdge"
+											value={{data.pools.speedEdge}}>
+									</div>
+								</div>
+							</div>
+							<div class="stat" id="intellect">
+								<button id="intellect-btn"
+									class="header__button intellect-roll"><i
+										class="fas fa-dice-d20"></i>Intellect</button>
+								<div class="stat-graph">
+									<div class="stat-graph__current">
+										<input type="number"
+											name="data.pools.intellect.value"
+											value={{data.pools.intellect.value}}>
+										<label
+											for="data.pools.intellect.value">Current</label>
+									</div>
+									<div class="stat-graph__pool">
+										<label
+											for="data.pools.intellect.max">Pool</label>
+										<input type="number"
+											name="data.pools.intellect.max"
+											value={{data.pools.intellect.max}}>
+									</div>
+									<div class="stat-graph__edge">
+										<label
+											for="data.pools.intellectEdge">Edge</label>
+										<input type="number"
+											name="data.pools.intellectEdge"
+											value={{data.pools.intellectEdge}}>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!-- ABILITIES -->
-				<div class="card__wrapper">
-					<div class="card" id="abilities">
+					<!-- Skills -->
+					<div class="card" id="skills">
 						<div class="card__header">
 							<div class="invisible__div"></div>
-							<h1 class="card__title">Abilities</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div>
-						<div class="panel --extended item-list-overhaul">
-							<ol class="items-list item-list-overhaul">
-								<li class="item item-header">
-									<div class="item-controls">
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="ability"><i
-												class="fas fa-plus"></i></a>
-									</div>
-								</li>
-								{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-								{{> systems/cyphersystem/templates/tabs/teenAbilities.html}}
-								{{else}}
-								{{> systems/cyphersystem/templates/tabs/abilities.html}}
-								{{/if}}
-							</ol>
-						</div>
-					</div>
-				</div>
-				<!-- COMBAT -->
-				<div class="card__wrapper">
-					<div class="circle-input__wrapper corner-style">
-						<input class="circularInput --small" type="number"
-							name="data.armor.armorValueTotal"
-							value={{data.armor.armorValueTotal}} readonly>
-						<h3 class="overlapLabel">Armor</h3>
-					</div>
-					<div class="card" id="combat">
-						<div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Combat</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div>
-						<div class="panel --extended item-list-overhaul">
-							<!-- <ol class="items-list item-list-overhaul">
-								<li class="item item-header">
-									<div class="item-controls">
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="ability"><i
-												class="fas fa-plus"></i></a>
-									</div>
-								</li> -->
-							{{> systems/cyphersystem/templates/tabs/attacks.html}}
-							{{#if data.settings.ammo}}
-							{{> systems/cyphersystem/templates/tabs/ammo.html}}
-							{{/if}}
-							</ol>
-						</div>
-					</div>
-				</div>
-				<!-- RECOVERY -->
-				<div class="card recovery" id="recoveryPanel">
-					<button id="recovery" class="header__button"><i
-							class="fas fa-dice-d20"></i>Recovery</button>
-					<div class="panel">
-						<div class="circle-input__wrapper">
-							<input class="circle__input" type="text"
-								name="data.recoveries.recoveryRoll"
-								value="{{data.recoveries.recoveryRoll}}"
-								data.dtype="String">
-							<h3 class="overlapLabel">1D6+</h3>
-						</div>
-						<div class="damage-track__wrapper">
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="checkbox"
-										name="data.recoveries.oneAction" id=""
-										data-dtype="boolean"
-										{{checked data.recoveries.oneAction}}>
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">1 Action</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="checkbox"
-										name="data.recoveries.tenMinutes" id=""
-										data-dtype="boolean"
-										{{checked data.recoveries.tenMinutes}}>
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">10 Mins</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="checkbox"
-										name="data.recoveries.oneHour" id=""
-										data-dtype="boolean"
-										{{checked data.recoveries.oneHour}}>
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">1 Hour</span>
-							</label>
-							<label class="radio">
-								<span class="radio__wrapper">
-									<input type="checkbox"
-										name="data.recoveries.tenHours" id=""
-										data-dtype="boolean"
-										{{checked data.recoveries.tenHours}}>
-									<span class="custom__radio"></span>
-								</span>
-								<span class="radio__label">10 Hours</span>
-							</label>
-						</div>
-					</div>
-
-				</div>
-				<div class="card__wrapper">
-					<div class="card" id="settings">
-						<div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Settings</h1>
+							<h1 class="card__title">Background</h1>
 							<button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button>
 						</div>
@@ -424,363 +136,714 @@
 								<ol class="items-list">
 									<li class="item flexrow item-header">
 										<div class="item-name">
-											{{localize 'CYPHERSYSTEM.GeneralSettings'}}
+											{{localize 'CYPHERSYSTEM.Skills'}}
+										</div>
+										<div class="item-quantity">
+											{{localize 'CYPHERSYSTEM.Level'}}
+										</div>
+										<div class="item-controls">
+											{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
+											<a class="item-control item-create"
+												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+												data-type="teen Skill"><i
+													class="fas fa-plus"></i></a>
+											{{else}}
+											<a class="item-control item-create"
+												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+												data-type="skill"><i
+													class="fas fa-plus"></i></a>
+											{{/if}}
 										</div>
 									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.gameMode.active"
-												data-dtype="boolean"
-												{{checked data.settings.gameMode.active}}
-												disabled>&nbsp;{{localize 'CYPHERSYSTEM.GameMode'}}
-										</div>
-										<div class="item-quantity"><select
-												class="auto-margin"
-												name="data.settings.gameMode.current"
-												style="width: 135px">
-												{{#select data.settings.gameMode.current}}
-												<option
-													value="{{data.settings.gameMode.cypher}}">
-													{{data.settings.gameMode.cypher}}
-												</option>
-												<option
-													value="{{data.settings.gameMode.unmasked}}">
-													{{data.settings.gameMode.unmasked}}
-												</option>
-												{{/select}}
-											</select></div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.initiative.active"
-												data-dtype="boolean"
-												{{checked data.settings.initiative.active}}
-												disabled>&nbsp;{{localize 'CYPHERSYSTEM.InitiativeBonus'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.initiative.initiativeBonus"
-												type="text"
-												value="{{data.settings.initiative.initiativeBonus}}"
-												data-dtype="Number"
-												placeholder="0"
-												style="width: auto;" />
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.additionalSentence.active"
-												data-dtype="boolean"
-												{{checked data.settings.additionalSentence.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalSentenceField'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.additionalSentence.name"
-												type="text"
-												value="{{data.settings.additionalSentence.name}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.AdditionalSentence'}}"
-												style="width: auto;" />
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.additionalPool.active"
-												data-dtype="boolean"
-												{{checked data.additionalPool.active}}>&nbsp;{{#if (eq data.settings.gameMode.current "Unmasked")}}{{localize 'CYPHERSYSTEM.AdditionalPoolUnmasked'}}{{else}}{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}{{/if}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.additionalPool.additionalPoolName"
-												type="text"
-												value="{{data.additionalPool.additionalPoolName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
-												style="width: auto;" />
-										</div>
-									</li>
-									{{#if (eq data.settings.gameMode.current "Unmasked")}}
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.additionalPool.teenActive"
-												data-dtype="boolean"
-												{{checked data.additionalPool.teenActive}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalPoolTeen'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.additionalPool.additionalTeenPoolName"
-												type="text"
-												value="{{data.additionalPool.additionalTeenPoolName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
-												style="width: auto;" />
-										</div>
-										{{/if}}
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.hideArchived"
-												data-dtype="boolean"
-												{{checked data.settings.hideArchived}}>&nbsp;{{localize 'CYPHERSYSTEM.HideArchive'}}
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="flexrow">
-								<ol class="items-list">
-									<li class="item flexrow item-header">
-										<div class="item-name">
-											{{localize 'CYPHERSYSTEM.SkillsTab'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.skills.sortByRating"
-												data-dtype="boolean"
-												{{checked data.settings.skills.sortByRating}}>&nbsp;{{localize 'CYPHERSYSTEM.SortSkillsByRating'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.powerShifts.active"
-												data-dtype="boolean"
-												{{checked data.settings.powerShifts.active}}>&nbsp;{{localize 'CYPHERSYSTEM.PowerShifts'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.powerShifts.powerShiftsName"
-												type="text"
-												value="{{data.settings.powerShifts.powerShiftsName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.PowerShifts'}}"
-												style="width: auto;" />
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="flexrow">
-								<ol class="items-list">
-									<li class="item flexrow item-header">
-										<div class="item-name">
-											{{localize 'CYPHERSYSTEM.CombatTab'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.additionalRecoveries.active"
-												data-dtype="boolean"
-												{{checked data.settings.additionalRecoveries.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalRecoveryRolls'}}
-										</div>
-										<div class="item-quantity"><select
-												class="auto-margin"
-												name="data.settings.additionalRecoveries.howManyRecoveries"
-												style="width: 135px">
-												{{#select data.settings.additionalRecoveries.howManyRecoveries}}
-												<option value="1">1
-												</option>
-												<option value="2">2
-												</option>
-												<option value="3">3
-												</option>
-												<option value="4">4
-												</option>
-												{{/select}}
-											</select></div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.lastingDamage.active"
-												data-dtype="boolean"
-												{{checked data.settings.lastingDamage.active}}>&nbsp;{{localize 'CYPHERSYSTEM.LastingAndPermanentDamageSetting'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.ammo"
-												data-dtype="boolean"
-												{{checked data.settings.ammo}}>&nbsp;{{localize 'CYPHERSYSTEM.AmmoList'}}
-										</div>
-									</li>
-								</ol>
-							</div>
-							<div class="flexrow">
-								<ol class="items-list">
-									<li class="item flexrow item-header">
-										<div class="item-name">
-											{{localize 'CYPHERSYSTEM.EquipmentTab'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.currency.active"
-												data-dtype="boolean"
-												{{checked data.settings.currency.active}}>&nbsp;{{localize 'CYPHERSYSTEM.Currency'}}
-										</div>
-										<div class="item-quantity"><select
-												class="auto-margin"
-												name="data.settings.currency.howMany"
-												style="width: 135px"
-												type="Number">
-												{{#select data.settings.currency.howMany}}
-												<option value="1">1
-												</option>
-												<option value="2">2
-												</option>
-												<option value="3">3
-												</option>
-												<option value="4">4
-												</option>
-												<option value="5">5
-												</option>
-												<option value="6">6
-												</option>
-												{{/select}}
-											</select></div>
-									</li>
-									{{#if data.settings.currency.active}}
-									<li class="item flexrow item-settings"
-										style="border-top-style: dashed">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.currency.namesHidden"
-												data-dtype="boolean"
-												{{checked data.settings.currency.namesHidden}}>&nbsp;{{localize 'CYPHERSYSTEM.HideCurrency'}}
-										</div>
-									</li>
-									<li class="item flexrow item-settings"
-										style="border-top-style: dashed">
-										<div class="grid grid-6col"
-											style="margin: 0px">
-											<input class="auto-margin"
-												name="data.settings.currency.name6"
-												type="text"
-												value="{{data.settings.currency.name6}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Adamantine'}}"
-												{{#unless (gte data.settings.currency.howMany 6)}}disabled>{{else}}>{{/unless}}
-											<input class="auto-margin"
-												name="data.settings.currency.name5"
-												type="text"
-												value="{{data.settings.currency.name5}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Mithral'}}"
-												{{#unless (gte data.settings.currency.howMany 5)}}disabled>{{else}}>{{/unless}}
-											<input class="auto-margin"
-												name="data.settings.currency.name4"
-												type="text"
-												value="{{data.settings.currency.name4}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Platinum'}}"
-												{{#unless (gte data.settings.currency.howMany 4)}}disabled>{{else}}>{{/unless}}
-											<input class="auto-margin"
-												name="data.settings.currency.name3"
-												type="text"
-												value="{{data.settings.currency.name3}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Gold'}}"
-												{{#unless (gte data.settings.currency.howMany 3)}}disabled>{{else}}>{{/unless}}
-											<input class="auto-margin"
-												name="data.settings.currency.name2"
-												type="text"
-												value="{{data.settings.currency.name2}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Silver'}}"
-												{{#unless (gte data.settings.currency.howMany 2)}}disabled>{{else}}>{{/unless}}
-											<input class="auto-margin"
-												name="data.settings.currency.name"
-												type="text"
-												value="{{data.settings.currency.name}}"
-												data-dtype="String"
-												placeholder="{{#if (eq data.settings.currency.howMany '1')}}{{localize 'CYPHERSYSTEM.Shins'}}{{else}}{{localize 'CYPHERSYSTEM.Copper'}}{{/if}}">
-										</div>
-									</li>
+									{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
+									{{#if data.settings.skills.sortByRating}}
+									{{> systems/cyphersystem/templates/tabs/teenSkillsSortedByRating.html}}
+									{{else}}
+									{{> systems/cyphersystem/templates/tabs/teenSkills.html}}
 									{{/if}}
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.equipment.cyphers"
-												data-dtype="boolean"
-												checked
-												disabled>&nbsp;{{localize 'CYPHERSYSTEM.Cyphers'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.equipment.cyphersName"
-												type="text"
-												value="{{data.settings.equipment.cyphersName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Cyphers'}}"
-												style="width: auto;" />
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.equipment.artifacts"
-												data-dtype="boolean"
-												{{checked data.settings.equipment.artifacts}}>&nbsp;{{localize 'CYPHERSYSTEM.Artifacts'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.equipment.artifactsName"
-												type="text"
-												value="{{data.settings.equipment.artifactsName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Artifacts'}}"
-												style="width: auto;" />
+									{{else}}
+									{{#if data.settings.skills.sortByRating}}
+									{{> systems/cyphersystem/templates/tabs/skillsSortedByRating.html}}
+									{{else}}
+									{{> systems/cyphersystem/templates/tabs/skills.html}}
+									{{/if}}
+									{{/if}}
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- ABILITIES -->
+					<div class="card__wrapper">
+						<div class="card" id="abilities">
+							<div class="card__header">
+								<div class="invisible__div"></div>
+								<h1 class="card__title">Abilities</h1>
+								<button class="expand-toggle"><i
+										class="fas fa-chevron-circle-down"></i></button>
+							</div>
+							<div class="panel --extended item-list-overhaul">
+								<ol class="items-list item-list-overhaul">
+									<li class="item item-header">
+										<div class="item-controls">
+											<a class="item-control item-create"
+												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+												data-type="ability"><i
+													class="fas fa-plus"></i></a>
 										</div>
 									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.equipment.oddities"
-												data-dtype="boolean"
-												{{checked data.settings.equipment.oddities}}>&nbsp;{{localize 'CYPHERSYSTEM.Oddities'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.equipment.odditiesName"
-												type="text"
-												value="{{data.settings.equipment.odditiesName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.Oddities'}}"
-												style="width: auto;" />
-										</div>
-									</li>
-									<li class="item flexrow item-settings">
-										<div class="settings-list"><input
-												type="checkbox"
-												name="data.settings.equipment.materials"
-												data-dtype="boolean"
-												{{checked data.settings.equipment.materials}}>&nbsp;{{localize 'CYPHERSYSTEM.CraftingMaterial'}}
-										</div>
-										<div class="item-quantity"><input
-												class="auto-margin"
-												name="data.settings.equipment.materialName"
-												type="text"
-												value="{{data.settings.equipment.materialName}}"
-												data-dtype="String"
-												placeholder="{{localize 'CYPHERSYSTEM.IotumAndParts'}}"
-												style="width: auto;" />
-										</div>
-									</li>
+									{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
+									{{> systems/cyphersystem/templates/tabs/teenAbilities.html}}
+									{{else}}
+									{{> systems/cyphersystem/templates/tabs/abilities.html}}
+									{{/if}}
 								</ol>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="column --two">
+					<!--portrait-->
+					<div class="card" id="portrait">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Advancement</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended">
+							<img src="{{actor.img}}" data=edit="img" title="{{actor.name}}"
+								alt="" class="profile-img">
+						</div>
+					</div>
+					<!-- DAMAGE TRACK -->
+					<div class="card" id="damageTrack">
+						<h1 class="card__title">Damage Track</h1>
+						<div class="panel">
+							<div class="damage-track__wrapper">
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id=""
+											checked="checked">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Hale</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Impaired</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Debilitated</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Dead</span>
+								</label>
+							</div>
+							<div class="special-damage-wrapper">
+								<label class="special-damage-label"
+									for="special-damage">Special
+									Damage
+									<input type="number" value=0
+										id="special-damage">
+								</label>
+								<button class="rest color-brown"><i
+										class="icon fa fa-heart"></i>Rest</button>
+							</div>
+						</div>
+					</div>
+					<!-- COMBAT -->
+					<div class="card__wrapper">
+						<div class="circle-input__wrapper corner-style">
+							<input class="circularInput --small" type="number"
+								name="data.armor.armorValueTotal"
+								value={{data.armor.armorValueTotal}} readonly>
+							<h3 class="overlapLabel">Armor</h3>
+						</div>
+						<div class="card" id="combat">
+							<div class="card__header">
+								<div class="invisible__div"></div>
+								<h1 class="card__title">Combat</h1>
+								<button class="expand-toggle"><i
+										class="fas fa-chevron-circle-down"></i></button>
+							</div>
+							<div class="panel --extended item-list-overhaul">
+								<!-- <ol class="items-list item-list-overhaul">
+								<li class="item item-header">
+									<div class="item-controls">
+										<a class="item-control item-create"
+											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+											data-type="ability"><i
+												class="fas fa-plus"></i></a>
+									</div>
+								</li> -->
+								{{> systems/cyphersystem/templates/tabs/attacks.html}}
+								{{#if data.settings.ammo}}
+								{{> systems/cyphersystem/templates/tabs/ammo.html}}
+								{{/if}}
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- ADVANCEMENT -->
+					<div class="card" id="advancement">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Advancement</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended">
+							<div class="tier" id="tier1">
+								<h2>Tier 1</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier2">
+								<h2>Tier 2</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier3">
+								<h2>Tier 3</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier4">
+								<h2>Tier 4</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier5">
+								<h2>Tier 5</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier6">
+								<h2>Tier 6</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column --three">
+					<!-- RECOVERY -->
+					<div class="card recovery" id="recoveryPanel">
+						<button id="recovery" class="header__button"><i
+								class="fas fa-dice-d20"></i>Recovery</button>
+						<div class="panel">
+							<div class="circle-input__wrapper">
+								<input class="circle__input" type="text"
+									name="data.recoveries.recoveryRoll"
+									value="{{data.recoveries.recoveryRoll}}"
+									data.dtype="String">
+								<h3 class="overlapLabel">1D6+</h3>
+							</div>
+							<div class="damage-track__wrapper">
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="checkbox"
+											name="data.recoveries.oneAction"
+											id="" data-dtype="boolean"
+											{{checked data.recoveries.oneAction}}>
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">1 Action</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="checkbox"
+											name="data.recoveries.tenMinutes"
+											id="" data-dtype="boolean"
+											{{checked data.recoveries.tenMinutes}}>
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">10 Mins</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="checkbox"
+											name="data.recoveries.oneHour"
+											id="" data-dtype="boolean"
+											{{checked data.recoveries.oneHour}}>
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">1 Hour</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="checkbox"
+											name="data.recoveries.tenHours"
+											id="" data-dtype="boolean"
+											{{checked data.recoveries.tenHours}}>
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">10 Hours</span>
+								</label>
+							</div>
+						</div>
+
+					</div>
+					<div class="card__wrapper">
+						<div class="card" id="settings">
+							<div class="card__header">
+								<div class="invisible__div"></div>
+								<h1 class="card__title">Settings</h1>
+								<button class="expand-toggle"><i
+										class="fas fa-chevron-circle-down"></i></button>
+							</div>
+							<div class="panel">
+								<div class="flexrow">
+									<ol class="items-list">
+										<li class="item flexrow item-header">
+											<div class="item-name">
+												{{localize 'CYPHERSYSTEM.GeneralSettings'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.gameMode.active"
+													data-dtype="boolean"
+													{{checked data.settings.gameMode.active}}
+													disabled>&nbsp;{{localize 'CYPHERSYSTEM.GameMode'}}
+											</div>
+											<div class="item-quantity">
+												<select class="auto-margin"
+													name="data.settings.gameMode.current"
+													style="width: 135px">
+													{{#select data.settings.gameMode.current}}
+													<option
+														value="{{data.settings.gameMode.cypher}}">
+														{{data.settings.gameMode.cypher}}
+													</option>
+													<option
+														value="{{data.settings.gameMode.unmasked}}">
+														{{data.settings.gameMode.unmasked}}
+													</option>
+													{{/select}}
+												</select></div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.initiative.active"
+													data-dtype="boolean"
+													{{checked data.settings.initiative.active}}
+													disabled>&nbsp;{{localize 'CYPHERSYSTEM.InitiativeBonus'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.initiative.initiativeBonus"
+													type="text"
+													value="{{data.settings.initiative.initiativeBonus}}"
+													data-dtype="Number"
+													placeholder="0"
+													style="width: auto;" />
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.additionalSentence.active"
+													data-dtype="boolean"
+													{{checked data.settings.additionalSentence.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalSentenceField'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.additionalSentence.name"
+													type="text"
+													value="{{data.settings.additionalSentence.name}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.AdditionalSentence'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.additionalPool.active"
+													data-dtype="boolean"
+													{{checked data.additionalPool.active}}>&nbsp;{{#if (eq data.settings.gameMode.current "Unmasked")}}{{localize 'CYPHERSYSTEM.AdditionalPoolUnmasked'}}{{else}}{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}{{/if}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.additionalPool.additionalPoolName"
+													type="text"
+													value="{{data.additionalPool.additionalPoolName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+										{{#if (eq data.settings.gameMode.current "Unmasked")}}
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.additionalPool.teenActive"
+													data-dtype="boolean"
+													{{checked data.additionalPool.teenActive}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalPoolTeen'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.additionalPool.additionalTeenPoolName"
+													type="text"
+													value="{{data.additionalPool.additionalTeenPoolName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
+													style="width: auto;" />
+											</div>
+											{{/if}}
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.hideArchived"
+													data-dtype="boolean"
+													{{checked data.settings.hideArchived}}>&nbsp;{{localize 'CYPHERSYSTEM.HideArchive'}}
+											</div>
+										</li>
+									</ol>
+								</div>
+								<div class="flexrow">
+									<ol class="items-list">
+										<li class="item flexrow item-header">
+											<div class="item-name">
+												{{localize 'CYPHERSYSTEM.SkillsTab'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.skills.sortByRating"
+													data-dtype="boolean"
+													{{checked data.settings.skills.sortByRating}}>&nbsp;{{localize 'CYPHERSYSTEM.SortSkillsByRating'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.powerShifts.active"
+													data-dtype="boolean"
+													{{checked data.settings.powerShifts.active}}>&nbsp;{{localize 'CYPHERSYSTEM.PowerShifts'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.powerShifts.powerShiftsName"
+													type="text"
+													value="{{data.settings.powerShifts.powerShiftsName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.PowerShifts'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+									</ol>
+								</div>
+								<div class="flexrow">
+									<ol class="items-list">
+										<li class="item flexrow item-header">
+											<div class="item-name">
+												{{localize 'CYPHERSYSTEM.CombatTab'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.additionalRecoveries.active"
+													data-dtype="boolean"
+													{{checked data.settings.additionalRecoveries.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalRecoveryRolls'}}
+											</div>
+											<div class="item-quantity">
+												<select class="auto-margin"
+													name="data.settings.additionalRecoveries.howManyRecoveries"
+													style="width: 135px">
+													{{#select data.settings.additionalRecoveries.howManyRecoveries}}
+													<option
+														value="1">
+														1
+													</option>
+													<option
+														value="2">
+														2
+													</option>
+													<option
+														value="3">
+														3
+													</option>
+													<option
+														value="4">
+														4
+													</option>
+													{{/select}}
+												</select></div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.lastingDamage.active"
+													data-dtype="boolean"
+													{{checked data.settings.lastingDamage.active}}>&nbsp;{{localize 'CYPHERSYSTEM.LastingAndPermanentDamageSetting'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.ammo"
+													data-dtype="boolean"
+													{{checked data.settings.ammo}}>&nbsp;{{localize 'CYPHERSYSTEM.AmmoList'}}
+											</div>
+										</li>
+									</ol>
+								</div>
+								<div class="flexrow">
+									<ol class="items-list">
+										<li class="item flexrow item-header">
+											<div class="item-name">
+												{{localize 'CYPHERSYSTEM.EquipmentTab'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.currency.active"
+													data-dtype="boolean"
+													{{checked data.settings.currency.active}}>&nbsp;{{localize 'CYPHERSYSTEM.Currency'}}
+											</div>
+											<div class="item-quantity">
+												<select class="auto-margin"
+													name="data.settings.currency.howMany"
+													style="width: 135px"
+													type="Number">
+													{{#select data.settings.currency.howMany}}
+													<option
+														value="1">
+														1
+													</option>
+													<option
+														value="2">
+														2
+													</option>
+													<option
+														value="3">
+														3
+													</option>
+													<option
+														value="4">
+														4
+													</option>
+													<option
+														value="5">
+														5
+													</option>
+													<option
+														value="6">
+														6
+													</option>
+													{{/select}}
+												</select></div>
+										</li>
+										{{#if data.settings.currency.active}}
+										<li class="item flexrow item-settings"
+											style="border-top-style: dashed">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.currency.namesHidden"
+													data-dtype="boolean"
+													{{checked data.settings.currency.namesHidden}}>&nbsp;{{localize 'CYPHERSYSTEM.HideCurrency'}}
+											</div>
+										</li>
+										<li class="item flexrow item-settings"
+											style="border-top-style: dashed">
+											<div class="grid grid-6col"
+												style="margin: 0px">
+												<input class="auto-margin"
+													name="data.settings.currency.name6"
+													type="text"
+													value="{{data.settings.currency.name6}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Adamantine'}}"
+													{{#unless (gte data.settings.currency.howMany 6)}}disabled>{{else}}>{{/unless}}
+												<input class="auto-margin"
+													name="data.settings.currency.name5"
+													type="text"
+													value="{{data.settings.currency.name5}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Mithral'}}"
+													{{#unless (gte data.settings.currency.howMany 5)}}disabled>{{else}}>{{/unless}}
+												<input class="auto-margin"
+													name="data.settings.currency.name4"
+													type="text"
+													value="{{data.settings.currency.name4}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Platinum'}}"
+													{{#unless (gte data.settings.currency.howMany 4)}}disabled>{{else}}>{{/unless}}
+												<input class="auto-margin"
+													name="data.settings.currency.name3"
+													type="text"
+													value="{{data.settings.currency.name3}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Gold'}}"
+													{{#unless (gte data.settings.currency.howMany 3)}}disabled>{{else}}>{{/unless}}
+												<input class="auto-margin"
+													name="data.settings.currency.name2"
+													type="text"
+													value="{{data.settings.currency.name2}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Silver'}}"
+													{{#unless (gte data.settings.currency.howMany 2)}}disabled>{{else}}>{{/unless}}
+												<input class="auto-margin"
+													name="data.settings.currency.name"
+													type="text"
+													value="{{data.settings.currency.name}}"
+													data-dtype="String"
+													placeholder="{{#if (eq data.settings.currency.howMany '1')}}{{localize 'CYPHERSYSTEM.Shins'}}{{else}}{{localize 'CYPHERSYSTEM.Copper'}}{{/if}}">
+											</div>
+										</li>
+										{{/if}}
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.equipment.cyphers"
+													data-dtype="boolean"
+													checked
+													disabled>&nbsp;{{localize 'CYPHERSYSTEM.Cyphers'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.equipment.cyphersName"
+													type="text"
+													value="{{data.settings.equipment.cyphersName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Cyphers'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.equipment.artifacts"
+													data-dtype="boolean"
+													{{checked data.settings.equipment.artifacts}}>&nbsp;{{localize 'CYPHERSYSTEM.Artifacts'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.equipment.artifactsName"
+													type="text"
+													value="{{data.settings.equipment.artifactsName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Artifacts'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.equipment.oddities"
+													data-dtype="boolean"
+													{{checked data.settings.equipment.oddities}}>&nbsp;{{localize 'CYPHERSYSTEM.Oddities'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.equipment.odditiesName"
+													type="text"
+													value="{{data.settings.equipment.odditiesName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.Oddities'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+										<li class="item flexrow item-settings">
+											<div class="settings-list">
+												<input type="checkbox"
+													name="data.settings.equipment.materials"
+													data-dtype="boolean"
+													{{checked data.settings.equipment.materials}}>&nbsp;{{localize 'CYPHERSYSTEM.CraftingMaterial'}}
+											</div>
+											<div class="item-quantity">
+												<input class="auto-margin"
+													name="data.settings.equipment.materialName"
+													type="text"
+													value="{{data.settings.equipment.materialName}}"
+													data-dtype="String"
+													placeholder="{{localize 'CYPHERSYSTEM.IotumAndParts'}}"
+													style="width: auto;" />
+											</div>
+										</li>
+									</ol>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
 			</section>
 	</div>
 </form>

@@ -263,7 +263,7 @@
 
 	.stats-section {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: row;
 		min-width: 800px;
 		overflow: scroll;
 	}
@@ -366,13 +366,17 @@
 		grid-row: 1/3;
 	}
 
+	.column{
+		display: flex;
+		flex-direction: column;
+	}
 	
 
 	/* #endregion */
 	.card {
 		position: relative;
-		flex: 0 1 calc(33% - 0.2rem);
-		width: 33%;
+		// flex: 0 1 calc(100% - 0.2rem);
+		width: 100%;
 		height: 12rem;
 		border-radius: 10px;
 		border-top: 3px solid #e8e6e3;
@@ -399,7 +403,8 @@
 
 	}
 	.card__wrapper{
-		width: 33%;
+		width: 100%;
+		height: 12rem;
 		position: relative;
 	}
 	.card__wrapper > .card{
