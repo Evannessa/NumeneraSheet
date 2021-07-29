@@ -283,6 +283,10 @@
     overflow: hidden; }
     .numeneraoverhaul .card .stats {
       margin: 0.5rem; }
+    .numeneraoverhaul .card#damageTrack {
+      height: 6rem; }
+    .numeneraoverhaul .card#recoveryPanel {
+      height: 8rem; }
   .numeneraoverhaul .card__wrapper {
     width: 100%;
     height: 12rem;

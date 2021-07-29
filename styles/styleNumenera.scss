@@ -400,6 +400,12 @@
 				@extend .circularInput;
 			}
 		}
+		&#damageTrack{
+			height: 6rem;
+		}
+		&#recoveryPanel{
+			height: 8rem;
+		}
 
 	}
 	.card__wrapper{
