@@ -669,8 +669,8 @@
 										class="fas fa-chevron-circle-down"></i></button>
 							</div>
 							<div class="panel --extended item-list-overhaul">
-								<!-- <ol class="items-list item-list-overhaul">
-								<li class="item item-header">
+								<ol>
+									<!-- <li class="item item-header">
 									<div class="item-controls">
 										<a class="item-control item-create"
 											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
@@ -678,10 +678,14 @@
 												class="fas fa-plus"></i></a>
 									</div>
 								</li> -->
-								{{> systems/cyphersystem/templates/tabs/attacks.html}}
-								{{#if data.settings.ammo}}
-								{{> systems/cyphersystem/templates/tabs/ammo.html}}
-								{{/if}}
+									{{> systems/cyphersystem/templates/tabs/attacks.html}}
+									{{#if data.settings.ammo}}
+									{{> systems/cyphersystem/templates/tabs/ammo.html}}
+									{{/if}}
+
+									{{#if data.settings.lastingDamage.active}}
+									{{> modules/NumeneraSheet/templates/LastingDamage.html}}
+									{{/if}}
 								</ol>
 							</div>
 						</div>
@@ -795,29 +799,37 @@
 										<span class="radio__wrapper">
 											<input type="checkbox"
 												name="data.recoveries.oneAction"
-												id="" data-dtype="boolean"
+												id=""
+												data-dtype="boolean"
 												{{checked data.recoveries.oneAction}}>
-											<span class="custom__radio"></span>
+											<span
+												class="custom__radio"></span>
 										</span>
-										<span class="radio__label">1 Action</span>
+										<span class="radio__label">1
+											Action</span>
 									</label>
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
 												name="data.recoveries.tenMinutes"
-												id="" data-dtype="boolean"
+												id=""
+												data-dtype="boolean"
 												{{checked data.recoveries.tenMinutes}}>
-											<span class="custom__radio"></span>
+											<span
+												class="custom__radio"></span>
 										</span>
-										<span class="radio__label">10 Mins</span>
+										<span class="radio__label">10
+											Mins</span>
 									</label>
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
 												name="data.recoveries.oneHour"
-												id="" data-dtype="boolean"
+												id=""
+												data-dtype="boolean"
 												{{checked data.recoveries.oneHour}}>
-											<span class="custom__radio"></span>
+											<span
+												class="custom__radio"></span>
 										</span>
 										<span class="radio__label">1 Hour</span>
 									</label>
@@ -825,11 +837,14 @@
 										<span class="radio__wrapper">
 											<input type="checkbox"
 												name="data.recoveries.tenHours"
-												id="" data-dtype="boolean"
+												id=""
+												data-dtype="boolean"
 												{{checked data.recoveries.tenHours}}>
-											<span class="custom__radio"></span>
+											<span
+												class="custom__radio"></span>
 										</span>
-										<span class="radio__label">10 Hours</span>
+										<span class="radio__label">10
+											Hours</span>
 									</label>
 								</div>
 							</div>
@@ -882,11 +897,6 @@
 								{{/if}}
 
 								{{> systems/cyphersystem/templates/tabs/equipment.html}}
-
-
-								{{#if data.settings.equipment.artifacts}}
-								{{> systems/cyphersystem/templates/tabs/artifacts.html}}
-								{{/if}}
 
 								{{#if data.settings.equipment.oddities}}
 								{{> systems/cyphersystem/templates/tabs/oddities.html}}

@@ -196,7 +196,8 @@
     display: flex;
     flex-direction: row;
     min-width: 800px;
-    overflow: scroll; }
+    overflow: scroll;
+    height: max-content; }
   .numeneraoverhaul .logo img {
     width: 100%;
     object-fit: contain; }

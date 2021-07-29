@@ -221,6 +221,16 @@ function SaveAdvancements(actor, thisHTML) {
     //clear incentives and objections array  so they are fresh on restart
 
 }
+
+Hooks.once("init", function(){
+	loadHandleBarTemplates();
+});
+async function loadHandleBarTemplates(){
+	const templatePaths = [
+		"modules/NumeneraSheet/templates/LastingDamage.html"
+	];
+	return loadTemplates(templatePaths);
+}
 Actors.registerSheet("cypher", NumeneraSheet, {
 	types:["PC"],
 	makeDefault: true
