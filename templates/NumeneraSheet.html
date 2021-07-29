@@ -200,301 +200,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="column --two">
-					<!--portrait-->
-					<div class="card" id="portrait">
-						<div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Portrait</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div>
-						<div class="panel --extended">
-							<img src="{{actor.img}}" data=edit="img" title="{{actor.name}}"
-								alt="" class="profile-img">
-						</div>
-					</div>
-					<!-- DAMAGE TRACK -->
-					<div class="card" id="damageTrack">
-						<h1 class="card__title">Damage Track</h1>
-						<div class="panel">
-							<div class="damage-track__wrapper">
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id=""
-											checked="checked">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Hale</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Impaired</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Debilitated</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="radio" name="radio" id="">
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">Dead</span>
-								</label>
-							</div>
-							<div class="special-damage-wrapper">
-								<label class="special-damage-label"
-									for="special-damage">Special
-									Damage
-									<input type="number" value=0
-										id="special-damage">
-								</label>
-								<button class="rest color-brown"><i
-										class="icon fa fa-heart"></i>Rest</button>
-							</div>
-						</div>
-					</div>
-					<!-- COMBAT -->
-					<div class="card__wrapper">
-						<div class="circle-input__wrapper corner-style">
-							<input class="circularInput --small" type="number"
-								name="data.armor.armorValueTotal"
-								value={{data.armor.armorValueTotal}} readonly>
-							<h3 class="overlapLabel">Armor</h3>
-						</div>
-						<div class="card" id="combat">
-							<div class="card__header">
-								<div class="invisible__div"></div>
-								<h1 class="card__title">Combat</h1>
-								<button class="expand-toggle"><i
-										class="fas fa-chevron-circle-down"></i></button>
-							</div>
-							<div class="panel --extended item-list-overhaul">
-								<!-- <ol class="items-list item-list-overhaul">
-								<li class="item item-header">
-									<div class="item-controls">
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="ability"><i
-												class="fas fa-plus"></i></a>
-									</div>
-								</li> -->
-								{{> systems/cyphersystem/templates/tabs/attacks.html}}
-								{{#if data.settings.ammo}}
-								{{> systems/cyphersystem/templates/tabs/ammo.html}}
-								{{/if}}
-								</ol>
-							</div>
-						</div>
-					</div>
-					<!-- ADVANCEMENT -->
-					<div class="card" id="advancement">
-						<div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Advancement</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div>
-						<div class="panel --extended">
-							<div class="tier" id="tier1">
-								<h2>Tier 1</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-							<div class="tier" id="tier2">
-								<h2>Tier 2</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-							<div class="tier" id="tier3">
-								<h2>Tier 3</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-							<div class="tier" id="tier4">
-								<h2>Tier 4</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-							<div class="tier" id="tier5">
-								<h2>Tier 5</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-							<div class="tier" id="tier6">
-								<h2>Tier 6</h2>
-								<div class="tier__input-wrapper">
-									<input class="advancement" type="text"
-										placeholder="Tier 1 Adv. #1">
-									<input class="advancement" type="text"
-										placeholder="Tier 2 Adv. #2">
-									<input class="advancement" type="text"
-										placeholder="Tier 3 Adv. #3">
-									<input class="advancement" type="text"
-										placeholder="Tier 4 Adv. #4">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="column --three">
-					<!-- RECOVERY -->
-					<div class="card recovery" id="recoveryPanel">
-						<button id="recovery" class="header__button"><i
-								class="fas fa-dice-d20"></i>Recovery</button>
-						<div class="panel">
-							<div class="circle-input__wrapper">
-								<input class="circle__input" type="text"
-									name="data.recoveries.recoveryRoll"
-									value="{{data.recoveries.recoveryRoll}}"
-									data.dtype="String">
-								<h3 class="overlapLabel">1D6+</h3>
-							</div>
-							<div class="damage-track__wrapper">
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="checkbox"
-											name="data.recoveries.oneAction"
-											id="" data-dtype="boolean"
-											{{checked data.recoveries.oneAction}}>
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">1 Action</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="checkbox"
-											name="data.recoveries.tenMinutes"
-											id="" data-dtype="boolean"
-											{{checked data.recoveries.tenMinutes}}>
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">10 Mins</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="checkbox"
-											name="data.recoveries.oneHour"
-											id="" data-dtype="boolean"
-											{{checked data.recoveries.oneHour}}>
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">1 Hour</span>
-								</label>
-								<label class="radio">
-									<span class="radio__wrapper">
-										<input type="checkbox"
-											name="data.recoveries.tenHours"
-											id="" data-dtype="boolean"
-											{{checked data.recoveries.tenHours}}>
-										<span class="custom__radio"></span>
-									</span>
-									<span class="radio__label">10 Hours</span>
-								</label>
-							</div>
-						</div>
-
-					</div>
-					<div class="card" id="cyphers">
-						<div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Cyphers</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div>
-						<div class="panel --extended item-list-overhaul" id="cyphers">
-							{{> systems/cyphersystem/templates/tabs/cyphers.html}}
-						</div>
-					</div>
-					<div class="card__wrapper">
-						<div class="card" id="equipment">
-							<div class="card__header">
-								<div class="invisible__div"></div>
-								<h1 class="card__title">Items</h1>
-								<button class="expand-toggle"><i
-										class="fas fa-chevron-circle-down"></i></button>
-							</div>
-							<div class="panel --extended item-list-overhaul">
-								{{#if data.settings.currency.active}}
-								{{#if data.settings.currency.namesHidden}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
-								{{else}}
-								{{#if (gte data.settings.currency.howMany 4)}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
-								{{else}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToThree.html}}
-								{{/if}}
-								{{/if}}
-								{{/if}}
-
-								{{> systems/cyphersystem/templates/tabs/equipment.html}}
-
-
-								{{#if data.settings.equipment.artifacts}}
-								{{> systems/cyphersystem/templates/tabs/artifacts.html}}
-								{{/if}}
-
-								{{#if data.settings.equipment.oddities}}
-								{{> systems/cyphersystem/templates/tabs/oddities.html}}
-								{{/if}}
-
-								{{#if data.settings.equipment.materials}}
-								{{> systems/cyphersystem/templates/tabs/materials.html}}
-								{{/if}}
-							</div>
-
-
-						</div>
-					</div>
-
+					<!--SETTINGS-->
 					<div class="card__wrapper">
 						<div class="card" id="numenera-sheet-settings">
 							<div class="card__header">
@@ -885,6 +591,316 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="column --two">
+					<!--portrait-->
+					<div class="card" id="portrait">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Portrait</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended">
+							<img src="{{actor.img}}" data=edit="img" title="{{actor.name}}"
+								alt="" class="profile-img">
+						</div>
+					</div>
+					<!-- DAMAGE TRACK -->
+					<div class="card" id="damageTrack">
+						<h1 class="card__title">Damage Track</h1>
+						<div class="panel">
+							<div class="damage-track__wrapper">
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id=""
+											checked="checked">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Hale</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Impaired</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Debilitated</span>
+								</label>
+								<label class="radio">
+									<span class="radio__wrapper">
+										<input type="radio" name="radio" id="">
+										<span class="custom__radio"></span>
+									</span>
+									<span class="radio__label">Dead</span>
+								</label>
+							</div>
+							<div class="special-damage-wrapper">
+								<label class="special-damage-label"
+									for="special-damage">Special
+									Damage
+									<input type="number" value=0
+										id="special-damage">
+								</label>
+								<button class="rest color-brown"><i
+										class="icon fa fa-heart"></i>Rest</button>
+							</div>
+						</div>
+					</div>
+					<!-- COMBAT -->
+					<div class="card__wrapper">
+						<div class="circle-input__wrapper corner-style">
+							<input class="circularInput --small" type="number"
+								name="data.armor.armorValueTotal"
+								value={{data.armor.armorValueTotal}} readonly>
+							<h3 class="overlapLabel">Armor</h3>
+						</div>
+						<div class="card" id="combat">
+							<div class="card__header">
+								<div class="invisible__div"></div>
+								<h1 class="card__title">Combat</h1>
+								<button class="expand-toggle"><i
+										class="fas fa-chevron-circle-down"></i></button>
+							</div>
+							<div class="panel --extended item-list-overhaul">
+								<!-- <ol class="items-list item-list-overhaul">
+								<li class="item item-header">
+									<div class="item-controls">
+										<a class="item-control item-create"
+											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
+											data-type="ability"><i
+												class="fas fa-plus"></i></a>
+									</div>
+								</li> -->
+								{{> systems/cyphersystem/templates/tabs/attacks.html}}
+								{{#if data.settings.ammo}}
+								{{> systems/cyphersystem/templates/tabs/ammo.html}}
+								{{/if}}
+								</ol>
+							</div>
+						</div>
+					</div>
+					<!-- ADVANCEMENT -->
+					<div class="card" id="advancement">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Advancement</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended">
+							<div class="tier" id="tier1">
+								<h2>Tier 1</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier2">
+								<h2>Tier 2</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier3">
+								<h2>Tier 3</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier4">
+								<h2>Tier 4</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier5">
+								<h2>Tier 5</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+							<div class="tier" id="tier6">
+								<h2>Tier 6</h2>
+								<div class="tier__input-wrapper">
+									<input class="advancement" type="text"
+										placeholder="Tier 1 Adv. #1">
+									<input class="advancement" type="text"
+										placeholder="Tier 2 Adv. #2">
+									<input class="advancement" type="text"
+										placeholder="Tier 3 Adv. #3">
+									<input class="advancement" type="text"
+										placeholder="Tier 4 Adv. #4">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column --three">
+					<!-- RECOVERY -->
+					<div class="card recovery" id="recoveryPanel">
+						<button id="recovery" class="header__button"><i
+								class="fas fa-dice-d20"></i>Recovery</button>
+						<div class="panel --extended">
+							<div class="recovery__wrapper">
+								<div class="circle-input__wrapper">
+									<input class="circle__input" type="text"
+										name="data.recoveries.recoveryRoll"
+										value="{{data.recoveries.recoveryRoll}}"
+										data.dtype="String">
+									<h3 class="overlapLabel">1D6+</h3>
+								</div>
+								<div class="damage-track__wrapper">
+									<label class="radio">
+										<span class="radio__wrapper">
+											<input type="checkbox"
+												name="data.recoveries.oneAction"
+												id="" data-dtype="boolean"
+												{{checked data.recoveries.oneAction}}>
+											<span class="custom__radio"></span>
+										</span>
+										<span class="radio__label">1 Action</span>
+									</label>
+									<label class="radio">
+										<span class="radio__wrapper">
+											<input type="checkbox"
+												name="data.recoveries.tenMinutes"
+												id="" data-dtype="boolean"
+												{{checked data.recoveries.tenMinutes}}>
+											<span class="custom__radio"></span>
+										</span>
+										<span class="radio__label">10 Mins</span>
+									</label>
+									<label class="radio">
+										<span class="radio__wrapper">
+											<input type="checkbox"
+												name="data.recoveries.oneHour"
+												id="" data-dtype="boolean"
+												{{checked data.recoveries.oneHour}}>
+											<span class="custom__radio"></span>
+										</span>
+										<span class="radio__label">1 Hour</span>
+									</label>
+									<label class="radio">
+										<span class="radio__wrapper">
+											<input type="checkbox"
+												name="data.recoveries.tenHours"
+												id="" data-dtype="boolean"
+												{{checked data.recoveries.tenHours}}>
+											<span class="custom__radio"></span>
+										</span>
+										<span class="radio__label">10 Hours</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- Cyphers -->
+					<div class="card" id="cyphers">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Cyphers</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended item-list-overhaul">
+							{{> systems/cyphersystem/templates/tabs/cyphers.html}}
+						</div>
+					</div>
+					<div class="card" id="artifacts">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Artifacts</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended item-list-overhaul">
+							{{> systems/cyphersystem/templates/tabs/artifacts.html}}
+						</div>
+					</div>
+					<!-- EQUIPMENT -->
+					<div class="card__wrapper">
+						<div class="card" id="equipment">
+							<div class="card__header">
+								<div class="invisible__div"></div>
+								<h1 class="card__title">Items & Oddities</h1>
+								<button class="expand-toggle"><i
+										class="fas fa-chevron-circle-down"></i></button>
+							</div>
+							<div class="panel --extended item-list-overhaul">
+								{{#if data.settings.currency.active}}
+								{{#if data.settings.currency.namesHidden}}
+								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
+								{{else}}
+								{{#if (gte data.settings.currency.howMany 4)}}
+								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
+								{{else}}
+								{{> systems/cyphersystem/templates/tabs/currenciesUpToThree.html}}
+								{{/if}}
+								{{/if}}
+								{{/if}}
+
+								{{> systems/cyphersystem/templates/tabs/equipment.html}}
+
+
+								{{#if data.settings.equipment.artifacts}}
+								{{> systems/cyphersystem/templates/tabs/artifacts.html}}
+								{{/if}}
+
+								{{#if data.settings.equipment.oddities}}
+								{{> systems/cyphersystem/templates/tabs/oddities.html}}
+								{{/if}}
+
+								{{#if data.settings.equipment.materials}}
+								{{> systems/cyphersystem/templates/tabs/materials.html}}
+								{{/if}}
+							</div>
+
+
+						</div>
+					</div>
+
 				</div>
 
 

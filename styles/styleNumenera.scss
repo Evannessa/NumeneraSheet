@@ -377,7 +377,7 @@
 		position: relative;
 		// flex: 0 1 calc(100% - 0.2rem);
 		width: 100%;
-		height: 10rem;
+		height: 8rem;
 		border-radius: 10px;
 		border-top: 3px solid #e8e6e3;
 		border-right: 1px dotted #e8e6e3;
@@ -404,7 +404,16 @@
 			height: 6rem;
 		}
 		&#recoveryPanel{
-			height: 8rem;
+			height: 11rem;
+			.panel{
+				height: 100%;
+			}
+			.recovery__wrapper{
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
 		}
 		&#mightSpeedIntellect{
 			height: 11rem;
@@ -420,7 +429,7 @@
 	}
 	.card__wrapper{
 		width: 100%;
-		height: 10rem;
+		height: 8rem;
 		position: relative;
 		margin: 0.1rem;
 	}
@@ -481,7 +490,7 @@
 		top: 0;
 		left: 0;
 		content: "";
-		height: 12rem;
+		height: 8rem;
 		// height: min(100%, 12rem);
 		position: absolute;
 		width: 100%;

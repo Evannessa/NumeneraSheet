@@ -270,7 +270,7 @@
   .numeneraoverhaul .card {
     position: relative;
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     border-radius: 10px;
     border-top: 3px solid #e8e6e3;
     border-right: 1px dotted #e8e6e3;
@@ -287,7 +287,14 @@
     .numeneraoverhaul .card#damageTrack {
       height: 6rem; }
     .numeneraoverhaul .card#recoveryPanel {
-      height: 8rem; }
+      height: 11rem; }
+      .numeneraoverhaul .card#recoveryPanel .panel {
+        height: 100%; }
+      .numeneraoverhaul .card#recoveryPanel .recovery__wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
     .numeneraoverhaul .card#mightSpeedIntellect {
       height: 11rem; }
     .numeneraoverhaul .card .item-settings {
@@ -297,7 +304,7 @@
       font-weight: bold; }
   .numeneraoverhaul .card__wrapper {
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     position: relative;
     margin: 0.1rem; }
   .numeneraoverhaul .card__wrapper > .card {
@@ -333,7 +340,7 @@
     top: 0;
     left: 0;
     content: "";
-    height: 12rem;
+    height: 8rem;
     position: absolute;
     width: 100%;
     pointer-events: none; }
