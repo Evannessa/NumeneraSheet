@@ -37,7 +37,8 @@
 				<div class="card" id="mightSpeedIntellect">
 					<div class="stats">
 						<div class="stat" id="might">
-							<h1>Might</h1>
+							<button id="might-btn" class="header__button might-roll"><i
+									class="fas fa-dice-d20"></i>Might</button>
 							<div class="stat-graph">
 								<div class="stat-graph__current">
 									<input type="number"
@@ -59,7 +60,8 @@
 							</div>
 						</div>
 						<div class="stat" id="speed">
-							<h1>Speed</h1>
+							<button id="speed-btn" class="header__button speed-roll"><i
+									class="fas fa-dice-d20"></i>Speed</button>
 							<div class="stat-graph">
 								<div class="stat-graph__current">
 									<input type="number"
@@ -81,7 +83,9 @@
 							</div>
 						</div>
 						<div class="stat" id="intellect">
-							<h1>Intellect</h1>
+							<button id="intellect-btn"
+								class="header__button intellect-roll"><i
+									class="fas fa-dice-d20"></i>Intellect</button>
 							<div class="stat-graph">
 								<div class="stat-graph__current">
 									<input type="number"
@@ -116,13 +120,84 @@
 						<button class="expand-toggle"><i
 								class="fas fa-chevron-circle-down"></i></button>
 					</div>
-					<div class="tier panel --extended">
-						<h2>Tier 1</h2>
-						<div class="tier__input-wrapper">
-							<input type="text" placeholder="Tier 1 Adv. #1">
-							<input type="text" placeholder="Tier 2 Adv. #2">
-							<input type="text" placeholder="Tier 3 Adv. #3">
-							<input type="text" placeholder="Tier 4 Adv. #4">
+					<div class="panel --extended">
+						<div class="tier" id="tier1">
+							<h2>Tier 1</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
+						</div>
+						<div class="tier" id="tier2">
+							<h2>Tier 2</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
+						</div>
+						<div class="tier" id="tier3">
+							<h2>Tier 3</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
+						</div>
+						<div class="tier" id="tier4">
+							<h2>Tier 4</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
+						</div>
+						<div class="tier" id="tier5">
+							<h2>Tier 5</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
+						</div>
+						<div class="tier" id="tier6">
+							<h2>Tier 6</h2>
+							<div class="tier__input-wrapper">
+								<input class="advancement" type="text"
+									placeholder="Tier 1 Adv. #1">
+								<input class="advancement" type="text"
+									placeholder="Tier 2 Adv. #2">
+								<input class="advancement" type="text"
+									placeholder="Tier 3 Adv. #3">
+								<input class="advancement" type="text"
+									placeholder="Tier 4 Adv. #4">
+							</div>
 						</div>
 					</div>
 				</div>
@@ -337,10 +412,10 @@
 
 				</div>
 				<div class="card__wrapper">
-					<div class="card">
+					<div class="card" id="settings">
 						<div class="card__header">
 							<div class="invisible__div"></div>
-							<h1 class="card__title">Skills</h1>
+							<h1 class="card__title">Settings</h1>
 							<button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button>
 						</div>
