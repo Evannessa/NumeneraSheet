@@ -48,6 +48,7 @@ export class NumeneraSheet extends CypherActorSheetPC {
 				"data.pools.might.value": this.actor.data.data.pools.might.max,
 				"data.pools.speed.value": this.actor.data.data.pools.speed.max,
 				"data.pools.intellect.value": this.actor.data.data.pools.intellect.max,
+				"data.damage.damageTrack": "Hale",
 			})
 		})
 		if (this.actor.getFlag("world", "Advancement") == null) {
@@ -91,6 +92,19 @@ export class NumeneraSheet extends CypherActorSheetPC {
 
 	}
 
+}
+
+function expandForEditor(html){
+	var editors = Array.from(html.find(".sheet-editor"))
+	for(let editor of editors){
+		//for the editors on our sheet
+		if(editor.querySelectorAll(".tox-tinymce").length > 0){
+			console.log('Weve got editor child');
+			//if they have a tox-tinymce class as a child
+			//expand them
+			preExpand(editor.closest(".card"))
+		}
+	}
 }
 
 function changeSlider(select, html){

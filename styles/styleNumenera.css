@@ -284,16 +284,39 @@
     flex-direction: column;
     align-items: center;
     overflow: hidden; }
+    .numeneraoverhaul .card label {
+      font-weight: bold;
+      color: rgba(114, 88, 71, 0.85); }
     .numeneraoverhaul .card .stats {
       margin: 0.5rem; }
+    .numeneraoverhaul .card input[type="checkbox"] {
+      filter: sepia(100%);
+      -webkit-filter: sepia(100%) grayscale(50%); }
     .numeneraoverhaul .card select {
       border: 1px dotted rgba(176, 146, 123, 0.65);
       font-family: "Patrick Hand";
-      color: rgba(114, 88, 71, 0.85); }
+      color: rgba(114, 88, 71, 0.85);
+      font-weight: bold; }
     .numeneraoverhaul .card .card__title::before, .numeneraoverhaul .card .card__title::after {
       content: "⬩"; }
+    .numeneraoverhaul .card#damageTrack .panel {
+      height: 100%; }
+    .numeneraoverhaul .card .editor {
+      min-height: 100%; }
+    .numeneraoverhaul .card .editor-content {
+      font-family: "Patrick Hand";
+      font-weight: bold;
+      color: rgba(114, 88, 71, 0.85);
+      opacity: 90%;
+      position: relative; }
+    .numeneraoverhaul .card.sheet-editor {
+      height: max-content;
+      overflow: visible;
+      font-weight: bold; }
+      .numeneraoverhaul .card.sheet-editor .tox-tinymce {
+        min-height: 20rem; }
     .numeneraoverhaul .card .damage__slider {
-      padding: 0.2rem 0.5rem;
+      padding: 0.1rem 0.5rem;
       margin: 0.3rem 0;
       border-radius: 5px;
       border: 1px dotted rgba(176, 146, 123, 0.65);
@@ -305,20 +328,20 @@
         display: block;
         position: relative;
         height: 100%;
-        background-color: blue;
         z-index: 1;
         overflow: hidden; }
         .numeneraoverhaul .card .damage__slider span.hale {
-          background-color: blueviolet;
+          background-color: #36C9C6;
+          background: linear-gradient(to left, #36C9C6, #6184d8);
           width: 100%; }
         .numeneraoverhaul .card .damage__slider span.impaired {
-          background-color: darkmagenta;
+          background: linear-gradient(to left, #6184d8, darkmagenta);
           width: 60%; }
         .numeneraoverhaul .card .damage__slider span.debilitated {
-          background-color: firebrick;
+          background: linear-gradient(to left, darkmagenta, firebrick);
           width: 30%; }
         .numeneraoverhaul .card .damage__slider span.dead {
-          background-color: transparent;
+          background: transparent;
           width: 0%; }
     .numeneraoverhaul .card#damageTrack {
       height: 6rem; }
@@ -331,6 +354,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around; }
+      .numeneraoverhaul .card#recoveryPanel input[type=checkbox] {
+        margin-right: 0.5rem; }
+      .numeneraoverhaul .card#recoveryPanel .circle-input__wrapper {
+        color: rgba(114, 88, 71, 0.85); }
+      .numeneraoverhaul .card#recoveryPanel .circularInput, .numeneraoverhaul .card#recoveryPanel input.circle__input[type="text"] {
+        color: rgba(76, 68, 70, 0.95);
+        font-size: 1.5rem;
+        font-family: "Shadows Into Light";
+        font-weight: bold; }
     .numeneraoverhaul .card#mightSpeedIntellect {
       height: 11rem; }
     .numeneraoverhaul .card .item-settings {
@@ -390,10 +422,12 @@
     height: 8rem;
     position: absolute;
     width: 100%;
-    pointer-events: none; }
+    pointer-events: none;
+    z-index: 10; }
   .numeneraoverhaul .special-damage-wrapper {
     display: flex;
-    justify-content: space-evenly; }
+    justify-content: space-evenly;
+    align-items: center; }
   .numeneraoverhaul .special-damage-label {
     display: flex;
     align-items: center; }
@@ -410,6 +444,8 @@
   .numeneraoverhaul .stats {
     display: flex;
     justify-content: space-between; }
+    .numeneraoverhaul .stats .header__button {
+      width: 100%; }
   .numeneraoverhaul .stat > h1 {
     font-size: 1rem;
     text-align: center; }

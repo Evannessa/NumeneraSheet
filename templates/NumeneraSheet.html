@@ -202,6 +202,8 @@
 							</div>
 						</div>
 					</div>
+
+					
 					<!--SETTINGS-->
 					<div class="card__wrapper">
 						<div class="card" id="numenera-sheet-settings">
@@ -593,6 +595,19 @@
 							</div>
 						</div>
 					</div>
+					<!-- Description-->
+					<div class="card sheet-editor" id="description">
+						<h1 class="card__title">Description</h1>
+						<!-- <div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Description</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button> -->
+						<!-- </div> --> 
+						<div class="panel --extended">
+							{{editor content=data.basic.description target="data.basic.description" button=true owner=owner editable=true}}
+						</div>
+					</div>
 				</div>
 				<div class="column --two">
 					<!--portrait-->
@@ -612,7 +627,10 @@
 					<div class="card" id="damageTrack">
 						<h1 class="card__title">Damage Track</h1>
 						<div class="panel">
-							<div class="damage-track__wrapper">
+							<div class="damage__slider">
+								<span class="hale"></span>
+							</div>
+							<div class="special-damage-wrapper">
 								<div class="item-damage">
 									<select name="data.damage.damageTrack"
 										style="min-width: 95px">
@@ -632,11 +650,6 @@
 										{{/select}}
 									</select>
 								</div>
-							</div>
-							<div class="damage__slider">
-								<span class="hale"></span>
-							</div>
-							<div class="special-damage-wrapper">
 								<button class="rest color-brown"><i
 										class="icon fa fa-heart"></i>Rest</button>
 							</div>
@@ -659,15 +672,8 @@
 							</div>
 							<div class="panel --extended item-list-overhaul">
 								<ol>
-									<!-- <li class="item item-header">
-									<div class="item-controls">
-										<a class="item-control item-create"
-											title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-											data-type="ability"><i
-												class="fas fa-plus"></i></a>
-									</div>
-								</li> -->
 									{{> systems/cyphersystem/templates/tabs/attacks.html}}
+									{{> systems/cyphersystem/templates/tabs/armorTotal.html}}
 									{{#if data.settings.ammo}}
 									{{> systems/cyphersystem/templates/tabs/ammo.html}}
 									{{/if}}
@@ -781,7 +787,10 @@
 										name="data.recoveries.recoveryRoll"
 										value="{{data.recoveries.recoveryRoll}}"
 										data.dtype="String">
-									<h3 class="overlapLabel">1D6+</h3>
+									<!-- <h3 class="overlapLabel">1D6+</h3> -->
+									<a class="item-control reset-recovery-rolls overlapLabel"
+										title="Reset Recovery Rolls"><i
+											class="fas fa-sync-alt"></i></a>
 								</div>
 								<div class="damage-track__wrapper">
 									<label class="radio">
@@ -899,6 +908,19 @@
 
 						</div>
 					</div>
+					<div class="card sheet-editor" id="notes">
+						<h1 class="card__title">Notes</h1>
+						<!-- <div class="card__header">
+							<div class="invisible__div"></div> -->
+							<!-- <h1 class="card__title">Notes</h1> -->
+							<!-- <button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button> -->
+						<!-- </div> --> 
+						<div class="panel --extended">
+							{{editor content=data.basic.notes target="data.basic.notes" button=true owner=owner editable=true}}
+						</div>
+					</div>
+
 
 				</div>
 
@@ -909,6 +931,10 @@
 
 
 
+
+
+			</section>
+			<section class="description">
 
 
 			</section>
