@@ -14,17 +14,15 @@ export class NumeneraSheet extends CypherActorSheetPC {
 		return "modules/NumeneraSheet/templates/NumeneraSheet.html";
 	}
 	static get defaultOptions() {
-		return foundry.utils.mergeObject(super.defaultOptions, {})
+		// return foundry.utils.mergeObject(super.defaultOptions, {})
 
-		// return foundry.utils.mergeObject(super.defaultOptions, {
-		// 	classes: ["cyphersystem", "sheet", "actor", "pc"],
-		// 	template: "modules/cyphersystem/templates/actor/pc-sheet.html",
-		// 	width: 650,
-		// 	height: false,
-		// 	resizable: false,
-		// 	tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body"}],
-		// 	scrollY: [".sheet-body", ".tab", ".skills", ".biography", ".combat", ".items", ".abilities", ".settings"]
-		//       });
+		return foundry.utils.mergeObject(super.defaultOptions, {
+			template: "modules/NumeneraSheet/templates/NumeneraSheet.html",
+			width: 1000,
+			height: false,
+			resizable: false,
+			// overflow: auto,
+		      });
 	}
 	getData() {
 		const data = super.getData();
@@ -94,21 +92,21 @@ export class NumeneraSheet extends CypherActorSheetPC {
 
 }
 
-function expandForEditor(html){
-	var editors = Array.from(html.find(".sheet-editor"))
-	for(let editor of editors){
-		//for the editors on our sheet
-		if(editor.querySelectorAll(".tox-tinymce").length > 0){
-			console.log('Weve got editor child');
-			//if they have a tox-tinymce class as a child
-			//expand them
-			preExpand(editor.closest(".card"))
-		}
-	}
-}
+// function expandForEditor(html){
+// 	var editors = Array.from(html.find(".sheet-editor"))
+// 	for(let editor of editors){
+// 		//for the editors on our sheet
+// 		if(editor.querySelectorAll(".tox-tinymce").length > 0){
+// 			console.log('Weve got editor child');
+// 			//if they have a tox-tinymce class as a child
+// 			//expand them
+// 			preExpand(editor.closest(".card"))
+// 		}
+// 	}
+// }
 
 function changeSlider(select, html){
-	console.log("Slider changed")
+	// console.log("Slider changed")
 	var damage = select.value;
 	let damageSlider = Array.from(html.find(".damage__slider"))[0];
 	let span = damageSlider.querySelector("span");
@@ -262,7 +260,7 @@ function desaturateRankingColors(html){
 	var rankings = Array.from(html.find(".item-quantity"))
 	for(var ranking of rankings){
 		if(ranking.style.color == "grey"){
-			console.log("ranking is archived")
+			// console.log("ranking is archived")
 			continue;
 		}
 		switch(ranking.innerText){
