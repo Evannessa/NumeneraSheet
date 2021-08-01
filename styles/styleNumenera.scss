@@ -1,6 +1,7 @@
 @import './fontsandvariables';
+@use "./styleNPC.scss";
 
-@mixin min-height($value){
+@mixin min-height($value) {
 	min-height: ($value/16)+rem;
 }
 
@@ -66,7 +67,8 @@
 		padding: 0;
 
 	}
-	img{
+
+	img {
 		border-style: none;
 	}
 
@@ -96,7 +98,7 @@
 	// 	font-family: $ff-shadows, cursive;
 
 	// }
-	.dotted-textbox{
+	.dotted-textbox {
 		-webkit-appearance: none;
 		margin: 0;
 		margin-left: auto;
@@ -124,17 +126,21 @@
 		cursor: pointer;
 
 	}
-	.header__button{
+
+	.header__button {
 		display: flex;
 		justify-content: center;
 		align-items: baseline;
 	}
-	.header__button > i{
+
+	.header__button>i {
 		margin-right: 0.5rem;
 	}
 
 
-	button:hover, button:active, button:focus{
+	button:hover,
+	button:active,
+	button:focus {
 		appearance: none;
 		border: none;
 		box-shadow: none;
@@ -143,9 +149,14 @@
 		text-shadow: 1px 1px 4px $clr-gradient2;
 	}
 
-	input[type="text"], input[type="number"], textarea{
+	input[type="text"],
+	input[type="number"],
+	textarea {
 		color: $clr-gradient0;
-		&:focus, &:hover, &:active{
+
+		&:focus,
+		&:hover,
+		&:active {
 			outline: none;
 			background: none;
 			box-shadow: 0px 0px 5px #d5a02d;
@@ -181,7 +192,8 @@
 		font-family: $ff-shadows;
 	}
 
-	h1, .header__button {
+	h1,
+	.header__button {
 		text-transform: uppercase;
 		color: $clr-light;
 		text-shadow: 3px 4px 4px $clr-gradient0;
@@ -230,7 +242,7 @@
 		margin: 0.5rem;
 		/* padding: 1rem; */
 
-		input{
+		input {
 			border-radius: 1px;
 			overflow: hidden;
 			margin-inline: 0.5rem;
@@ -242,27 +254,33 @@
 			text-align: center;
 			font-family: $ff-indie;
 		}
-		&__name{
+
+		&__name {
 			grid-column: 2/4;
 			grid-row: 1/2;
 		}
-		&__is-a{
+
+		&__is-a {
 			grid-column: 1/2;
 			grid-row: 2/3;
 		}
-		&__descriptor{
+
+		&__descriptor {
 			grid-column: 2/3;
 			grid-row: 2/3;
 		}
-		&__type{
+
+		&__type {
 			grid-column: 3/4;
 			grid-row: 2/3;
 		}
-		&__who{
+
+		&__who {
 			grid-column: 1/2;
 			grid-row: 3/4;
 		}
-		&__focus{
+
+		&__focus {
 			grid-column: 2/4;
 			grid-row: 3/4;
 		}
@@ -318,23 +336,26 @@
 		text-align: center;
 		font-size: 3rem;
 		font-family: $ff-indie, cursive;
-		
+
 	}
-	.roundedText{
+
+	.roundedText {
 		width: 4rem;
 		height: 4rem;
 		font-size: 2rem;
 	}
-	
-	.--small{
+
+	.--small {
 		width: 3rem;
 		height: 3rem;
 	}
+
 	.circle-input__wrapper {
 		position: relative;
 		text-align: center;
 	}
-	.corner-style{
+
+	.corner-style {
 		position: absolute;
 		margin-top: -5px;
 		left: -5px;
@@ -361,26 +382,29 @@
 		width: 100%;
 		overflow: visible;
 	}
+
 	@import './recovery';
 
 	#stats {
 		grid-row: 1/3;
 	}
 
-	.column{
+	.column {
 		display: flex;
 		flex-direction: column;
 		width: 33%;
-		+.column{
+
+		+.column {
 			margin-left: 0.2rem;
 		}
-		&.--one{
-			.card{
+
+		&.--one {
+			.card {
 				border-top-left-radius: 40px;
 			}
 		}
 	}
-	
+
 
 	/* #endregion */
 	.card {
@@ -400,63 +424,74 @@
 		align-items: center;
 		overflow: hidden;
 
-		label{
+		label {
 			font-weight: bold;
 			color: $clr-gradient1;
 		}
+
 		.stats {
 			margin: 0.5rem;
 		}
-		input[type="text"]{
+
+		input[type="text"] {
 			@extend .dotted-textbox;
 
-			&.circle__input{
+			&.circle__input {
 				@extend .circularInput;
 			}
 		}
-		input[type="checkbox"]{
+
+		input[type="checkbox"] {
 			filter: sepia(100%);
 			-webkit-filter: sepia(100%) grayscale(50%);
 		}
-		select{
+
+		select {
 			border: 1px dotted $clr-gradient3;
 			font-family: $ff-indie;
 			color: $clr-gradient1;
 			font-weight: bold;
 		}
-		.card__title{
-			&::before, &::after{
+
+		.card__title {
+
+			&::before,
+			&::after {
 				content: "⬩";
 			}
 		}
-		&#damageTrack{
-			.panel{
+
+		&#damageTrack {
+			.panel {
 				height: 100%;
 			}
 		}
-		.editor{
+
+		.editor {
 			min-height: 100%;
 		}
-		.editor-content{
+
+		.editor-content {
 			font-family: $ff-indie;
 			font-weight: bold;
 			color: $clr-gradient1;
 			opacity: 90%;
 			position: relative;
 		}
-		&.sheet-editor{
+
+		&.sheet-editor {
 			height: max-content;
-			overflow:visible;
+			overflow: visible;
 			font-weight: bold;
-			.tox-tinymce{
+
+			.tox-tinymce {
 				min-height: 20rem;
 			}
 		}
 
-		.editor-edit{
+		.editor-edit {}
 
-		}
-		.damage__slider{
+		.damage__slider {
 			padding: 0.1rem 0.5rem;
 			margin: 0.3rem 0;
 			border-radius: 5px;
@@ -464,54 +499,65 @@
 			width: 100%;
 			height: 30%;
 			position: relative;
-			span{
+
+			span {
 				border-radius: 5px;
 				display: block;
 				position: relative;
 				height: 100%;
 				z-index: 1;
 				overflow: hidden;
-				&.hale{
+
+				&.hale {
 					background-color: #36C9C6;
-					background: linear-gradient(to left,  #36C9C6, #6184d8 );
+					background: linear-gradient(to left, #36C9C6, #6184d8);
 					width: 100%;
 				}
-				&.impaired{
-					background: linear-gradient(to left, #6184d8,darkmagenta);
+
+				&.impaired {
+					background: linear-gradient(to left, #6184d8, darkmagenta);
 					width: 60%;
 				}
-				&.debilitated{
+
+				&.debilitated {
 					background: linear-gradient(to left, darkmagenta, firebrick);
 					width: 30%;
 				}
-				&.dead{
-					background:transparent;
+
+				&.dead {
+					background: transparent;
 					width: 0%;
 				}
 			}
 		}
-		
-		&#damageTrack{
+
+		&#damageTrack {
 			height: 6rem;
 		}
-		&#recoveryPanel{
+
+		&#recoveryPanel {
 			height: 11rem;
-			.panel{
+
+			.panel {
 				height: 100%;
 			}
-			.recovery__wrapper{
+
+			.recovery__wrapper {
 				height: 100%;
 				display: flex;
 				flex-direction: column;
 				justify-content: space-around;
 			}
-			input[type=checkbox]{
+
+			input[type=checkbox] {
 				margin-right: 0.5rem;
 			}
-			.circle-input__wrapper{
+
+			.circle-input__wrapper {
 				color: $clr-gradient1;
 			}
-			.circularInput{
+
+			.circularInput {
 				color: lighten($clr-gradient0, 10%);
 				font-size: 1.5rem;
 				font-family: $ff-shadows;
@@ -519,43 +565,55 @@
 
 			}
 		}
-		&#mightSpeedIntellect{
+
+		&#mightSpeedIntellect {
 			height: 11rem;
 		}
-		.item-settings{
+
+		.item-settings {
 			height: max-content;
 		}
-		.item-name, .settings-list, .item-quantity{
+
+		.item-name,
+		.settings-list,
+		.item-quantity {
 			font-size: 0.85rem;
 			font-weight: bold;
 			opacity: 85%;
 		}
-		.item-header{
+
+		.item-header {
 			// color: darken($clr-accent, 10%);
 			text-transform: uppercase;
 			font-family: $ff-indie;
-			.item-name, .settings-list, .item-quantity{
+
+			.item-name,
+			.settings-list,
+			.item-quantity {
 				opacity: 100%;
+			}
 		}
-		}
-		.items-list .item~.item{
+
+		.items-list .item~.item {
 			border-top: 1px dotted $clr-gradient2;
 		}
-		.items-list .item:last-child{
+
+		.items-list .item:last-child {
 			border-bottom: 1px dotted $clr-gradient2;
 		}
-		.item-quantity{
 
-		}
+		.item-quantity {}
 
 	}
-	.card__wrapper{
+
+	.card__wrapper {
 		width: 100%;
 		height: 8rem;
 		position: relative;
 		margin: 0.1rem;
 	}
-	.card__wrapper > .card{
+
+	.card__wrapper>.card {
 		width: 100%;
 	}
 
@@ -594,16 +652,17 @@
 		padding: 0.2rem;
 		width: 100%;
 
-		
+
 	}
-	.--extended{
+
+	.--extended {
 		// min-height: 100%;
 		@include min-height(111.208);
 		max-height: 100%;
 		overflow: visible;
 	}
 
-	.panel-overlay{
+	.panel-overlay {
 		border-radius: 5px;
 		background: linear-gradient(to bottom,
 				rgba(255, 255, 255, 0) 0%,
@@ -620,34 +679,56 @@
 		pointer-events: none;
 		z-index: 10;
 	}
-	.special-damage-wrapper{
+
+	.special-damage-wrapper {
 		display: flex;
 		justify-content: space-evenly;
 		align-items: center;
 	}
-	.special-damage-label{
+
+	.special-damage-label {
 		display: flex;
 		align-items: center;
 	}
-	#special-damage{
+
+	#special-damage {
 		width: 2em;
 		flex: 0 1 auto;
 	}
-	.rest{
+
+	.rest {
 		display: flex;
 		flex-wrap: nowrap;
 		width: min-content;
 		height: min-content;
 		align-items: center;
-		justify-content:center;
+		justify-content: center;
 	}
 
 	/* #region STATS  */
 	.stats {
 		display: flex;
 		justify-content: space-between;
-		.header__button{
+
+		.header__button {
 			width: 100%;
+		}
+	}
+
+	.npc-stats {
+		align-items: center;
+
+		input {
+			border-radius: 1px;
+			overflow: hidden;
+			margin-inline: 0.5rem;
+			min-width: 0;
+			width: 95%;
+			background-color: bisque;
+			border-style: none;
+			font-size: 1.5rem;
+			text-align: center;
+			font-family: $ff-indie;
 		}
 	}
 
@@ -660,8 +741,8 @@
 	// 	min-width: 96px;
 	// }
 	.stat+.stat {
-		margin-left: 0.5rem;//min(10%, 100px);
-	
+		margin-left: 0.5rem; //min(10%, 100px);
+
 	}
 
 	.stat-graph {
@@ -670,62 +751,120 @@
 		grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
 		font-weight: bold;
 		color: rgba(114, 88, 71, 1);
+
+		&.--simplified {
+			display: flex;
+			flex-direction: column;
+		}
+
+		>div {
+			background-color: $clr-light;
+			border-radius: 2px;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			align-items: center;
+			justify-content: stretch;
+
+			>input {
+				height: 2.5rem;
+				font-size: 2rem;
+				max-width: 3.5rem;
+				text-align: center;
+				background-color: transparent;
+				border-style: none;
+				vertical-align: middle;
+				font-family: $ff-shadows;
+			}
+		}
+
+		&__current {
+			grid-column: 1/3;
+			grid-row: 1/2;
+			border-bottom: 2px solid $clr-gradient3;
+
+			>input {
+				color: #d5a02d;
+				font-weight: bold;
+			}
+		}
+
+		&__pool {
+			grid-column: 1/2;
+			grid-row: 2/3;
+			border-right: 2px solid $clr-gradient3;
+
+			input {
+				font-size: 1.5rem !important;
+				font-weight: normal !important;
+				color: dimgray;
+			}
+		}
+		&__edge{
+			grid-column: 2/3;
+			grid-row: 2/3;
+			input{
+				font-size: 1.5rem !important;
+				font-weight: normal !important;
+				color: dimgray;
+			}
+		}
 	}
 
-	.stat-graph>div {
-		background-color: $clr-light;
-		border-radius: 2px;
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		align-items: center;
-		justify-content: stretch;
-	}
+	// .stat-graph>div {
+	// 	background-color: $clr-light;
+	// 	border-radius: 2px;
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	text-align: center;
+	// 	align-items: center;
+	// 	justify-content: stretch;
+	// }
 
-	.stat-graph>div>input {
-		height: 2.5rem;
-		font-size: 2rem;
-		max-width: 3.5rem;
-		text-align: center;
-		background-color: transparent;
-		border-style: none;
-		vertical-align: middle;
-		font-family: $ff-shadows;
-	}
+	// .stat-graph>div>input {
+	// 	height: 2.5rem;
+	// 	font-size: 2rem;
+	// 	max-width: 3.5rem;
+	// 	text-align: center;
+	// 	background-color: transparent;
+	// 	border-style: none;
+	// 	vertical-align: middle;
+	// 	font-family: $ff-shadows;
+	// }
 
-	.stat-graph__current {
-		grid-column: 1/3;
-		grid-row: 1/2;
-		border-bottom: 2px solid $clr-gradient3;
-	}
+	// .stat-graph__current {
+	// 	grid-column: 1/3;
+	// 	grid-row: 1/2;
+	// 	border-bottom: 2px solid $clr-gradient3;
+	// }
 
-	.stat-graph__current>input {
-		color: #d5a02d;
-		font-weight: bold;
-	}
+	// .stat-graph__current>input {
+	// 	color: #d5a02d;
+	// 	font-weight: bold;
+	// }
 
-	.stat-graph__pool {
-		grid-column: 1/2;
-		grid-row: 2/3;
-		border-right: 2px solid $clr-gradient3;
-	}
+	// .stat-graph__pool {
+	// 	grid-column: 1/2;
+	// 	grid-row: 2/3;
+	// 	border-right: 2px solid $clr-gradient3;
+	// }
 
-	.stat-graph__pool input {
-		font-size: 1.5rem !important;
-		font-weight: normal !important;
-		color: dimgray;
-	}
+	// .stat-graph__pool input {
+	// 	font-size: 1.5rem !important;
+	// 	font-weight: normal !important;
+	// 	color: dimgray;
+	// }
 
-	.stat-graph__edge input {
-		font-size: 1.5rem !important;
-		font-weight: normal !important;
-		color: dimgray;
-	}
+	// .stat-graph__edge input {
+	// 	font-size: 1.5rem !important;
+	// 	font-weight: normal !important;
+	// 	color: dimgray;
+	// }
 
-	.stat-graph__edge {
-		grid-column: 2/3;
-		grid-row: 2/3;
-	}
+	// .stat-graph__edge {
+	// 	grid-column: 2/3;
+	// 	grid-row: 2/3;
+	// }
 
 	/* #endregion */
 
@@ -777,7 +916,8 @@
 
 	.custom__radio {
 		display: grid;
-		display: none; /*TODO: Take this out once you figure the custom radio buttons out*/
+		display: none;
+		/*TODO: Take this out once you figure the custom radio buttons out*/
 		place-items: center;
 		top: 0;
 		left: 0;

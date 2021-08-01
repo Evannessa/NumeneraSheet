@@ -1,23 +1,74 @@
 <form class={{cssClass}} autocomplete="off">
 	<div class="numeneraoverhaul">
 		<section class="numenera-sheet">
+			<header>
+				<div class="title">
+					<input class="title__name" type="text" name="name" id="" value="{{actor.name}}">
+					<h1 class="title__is-a">Lvl</h1>
+					<input class="title__descriptor" name="data.level" type="text"
+						value="{{#if data.isLimited}}{{localize 'CYPHERSYSTEM.?'}}{{else}}{{data.level}}{{/if}}"
+						data-dtype="Number" placeholder="{{localize 'CYPHERSYSTEM.Level'}}"
+						title="{{localize 'CYPHERSYSTEM.Level'}}" />
+				</div>
+				<!-- <h1 class="title__who">Who</h1> -->
+				<!-- <input class="title__focus" type="text" name="data.basic.focus" -->
+				<!-- value="{{data.basic.focus}}" id="" placeholder="Focus"> -->
+				<div class="logo">
+					<img src="\modules\NumeneraSheet\templates\Original Numenera Corebook Legacy Content - Monte Cook Games  Numenera.png"
+						alt="logo" srcset="">
+					<!-- <img src="" alt="logo"> -->
+				</div>
+			</header>
 			<section class="stats-section">
 				<div class="column --one">
 					<div class="card">
-						<h1 class="card__title">Stats</h1>
+						<!-- <h1 class="card__title">Stats</h1> -->
 						<!-- <div class="card__header">
 							<div class="invisible__div"></div>
 							<h1 class="card__title">Skills</h1>
 							<button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button>
 						</div> -->
-						<div class="panel">
-
+						<div class="stats npc-stats">
+							<div class="stat">
+								<h1 class="card__title">Health</h1>
+								<div class="stat-graph --simplified">
+									<input class="stat-graph__current" type="number" name="data.health.value"
+										id="healthValue" value={{data.health.value}}>
+									<input type="number" name="data.health.max"
+										id="healthMax" value={{data.health.max}}>
+								</div>
+							</div>
+							<div class="stat">
+								<h1 class="card__title">Damage</h1>
+								<div class="stat-graph --simplified">
+									<input type="number" name="" id="damage"
+										value={{data.damage}}>
+								</div>
+							</div>
+							<div class="stat">
+								<h1 class="card__title">Armor</h1>
+								<div class="stat-graph --simplified">
+									<input type="number" name="data.armor"
+										id="armor" value={{data.armor}}>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="column --two">
-
+					<div class="card" id="portrait">
+						<div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Portrait</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div>
+						<div class="panel --extended">
+							<img src="{{actor.img}}" data=edit="img" title="{{actor.name}}"
+								alt="" class="profile-img">
+						</div>
+					</div>
 				</div>
 				<div class="column --three">
 
