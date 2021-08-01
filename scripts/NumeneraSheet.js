@@ -20,7 +20,7 @@ export class NumeneraSheet extends CypherActorSheetPC {
 			template: "modules/NumeneraSheet/templates/NumeneraSheet.html",
 			width: 1000,
 			height: false,
-			resizable: false,
+			resizable: true,
 			// overflow: auto,
 		      });
 	}

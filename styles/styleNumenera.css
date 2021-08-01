@@ -6,8 +6,8 @@
   overflow: auto; }
 
 .numeneraoverhaul {
-  overflow: auto;
-  min-width: 700px;
+  min-width: 900px;
+  max-width: 1000px;
   min-height: 300px;
   /* #endregion */
   /* #region HEADER SECTION */
@@ -188,7 +188,6 @@
     display: flex;
     flex-direction: row;
     min-width: 800px;
-    overflow: scroll;
     height: 100%; }
   .numeneraoverhaul .logo img {
     width: 100%;
@@ -441,7 +440,7 @@
     font-size: 1rem;
     text-align: center; }
   .numeneraoverhaul .stat + .stat {
-    margin-left: 1rem; }
+    margin-left: 0.5rem; }
   .numeneraoverhaul .stat-graph {
     display: grid;
     grid-template-columns: repeat(minmax(0, 1fr), 2);
