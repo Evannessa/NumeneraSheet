@@ -4,20 +4,65 @@
 @mixin min-height($value) {
 	min-height: ($value/16)+rem;
 }
+button {
+	background-color: #5e60ce !important;
+	&:hover, &active, &focus{
+		background-color: darken(#5e60ce, 10%) !important;
+	}
+}
 
-
-
-// .window-app .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item{
-// 	&:hover, &:active, &:focus{
-// 		background:rgba(200, 162, 136, 0.3) !important;
-// 		box-shadow: 0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset !important;
-// 	}
-// 	&.active{
-// 		background:rgba(189, 149, 122, 0.3) !important;
-// 		box-shadow: 0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset !important;
-// 	}
-
+// .journal-sheet .window-content {
+// 	background: #191716 !important;
 // }
+
+.monks-enhanced-journal {
+	.mainbar {
+
+		background: #191716 !important;
+	}
+
+	.journal-tab {
+
+		text-align: center;
+	}
+
+	.header-name {
+		display: none;
+	}
+
+	.sheet-navigation {
+		display: none;
+	}
+
+}
+
+// .monks-enhanced-journal .mainbar {
+// 	background: #191716 !important;
+// }
+
+// .monks-enhanced-journal .journal-tab {
+// 	text-align: center;
+// }
+
+.journal-sheet form.editable input[name="name"] {
+	display: none;
+	font-size: 2rem !important;
+	padding: 1rem !important;
+}
+
+.monks-journal-sheet.sheet .sheet-navigation .item {
+	border: none !important;
+	border-bottom: none !important;
+	font-family: $ff-shadows;
+	box-shadow: 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset !important;
+
+	&.active {
+		border-bottom: none !important;
+		background: rgba(200, 162, 136, 0.3) !important;
+	}
+
+}
+
 
 .cyphersystem .window-content {
 	overflow: auto;

@@ -3,6 +3,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @use "./styleNPC.scss";
+button {
+  background-color: #5e60ce !important; }
+  button:hover, buttonactive, buttonfocus {
+    background-color: #3a3cbf !important; }
+
+.monks-enhanced-journal .mainbar {
+  background: #191716 !important; }
+
+.monks-enhanced-journal .journal-tab {
+  text-align: center; }
+
+.monks-enhanced-journal .header-name {
+  display: none; }
+
+.monks-enhanced-journal .sheet-navigation {
+  display: none; }
+
+.journal-sheet form.editable input[name="name"] {
+  display: none;
+  font-size: 2rem !important;
+  padding: 1rem !important; }
+
+.monks-journal-sheet.sheet .sheet-navigation .item {
+  border: none !important;
+  border-bottom: none !important;
+  font-family: "Shadows Into Light";
+  box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
+  .monks-journal-sheet.sheet .sheet-navigation .item.active {
+    border-bottom: none !important;
+    background: rgba(200, 162, 136, 0.3) !important; }
+
 .cyphersystem .window-content {
   overflow: auto;
   max-width: 1000px;
