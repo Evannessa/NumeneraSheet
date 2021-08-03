@@ -21,40 +21,7 @@
 			</header>
 			<section class="stats-section">
 				<div class="column --one">
-					<div class="card">
-						<!-- <h1 class="card__title">Stats</h1> -->
-						<!-- <div class="card__header">
-							<div class="invisible__div"></div>
-							<h1 class="card__title">Skills</h1>
-							<button class="expand-toggle"><i
-									class="fas fa-chevron-circle-down"></i></button>
-						</div> -->
-						<div class="stats npc-stats">
-							<div class="stat">
-								<h1 class="card__title">Health</h1>
-								<div class="stat-graph --simplified">
-									<input class="stat-graph__current" type="number" name="data.health.value"
-										id="healthValue" value={{data.health.value}}>
-									<input type="number" name="data.health.max"
-										id="healthMax" value={{data.health.max}}>
-								</div>
-							</div>
-							<div class="stat">
-								<h1 class="card__title">Damage</h1>
-								<div class="stat-graph --simplified">
-									<input type="number" name="" id="damage"
-										value={{data.damage}}>
-								</div>
-							</div>
-							<div class="stat">
-								<h1 class="card__title">Armor</h1>
-								<div class="stat-graph --simplified">
-									<input type="number" name="data.armor"
-										id="armor" value={{data.armor}}>
-								</div>
-							</div>
-						</div>
-					</div>
+
 				</div>
 				<div class="column --two">
 					<div class="card" id="portrait">
@@ -71,7 +38,54 @@
 					</div>
 				</div>
 				<div class="column --three">
-
+					<div class="card" id="nonPlayerStats">
+						<!-- <h1 class="card__title">Stats</h1> -->
+						<!-- <div class="card__header">
+							<div class="invisible__div"></div>
+							<h1 class="card__title">Skills</h1>
+							<button class="expand-toggle"><i
+									class="fas fa-chevron-circle-down"></i></button>
+						</div> -->
+						<div class="stats npc-stats">
+							<div class="stat">
+								<h1 class="card__title">Health</h1>
+								<div class="stat-graph --simplified">
+									<div class="stat-graph__current">
+										<input type="number"
+											name="data.health.value"
+											id="healthValue"
+											value={{data.health.value}}>
+										<label for="">Current</label>
+									</div>
+									<div class="stat-graph__max">
+										<input type="number"
+											name="data.health.max"
+											id="healthMax"
+											value={{data.health.max}}>
+										<label for="">Max</label>
+									</div>
+								</div>
+							</div>
+							<div class="stat">
+								<h1 class="card__title">Damage</h1>
+								<div class="stat-graph --simplified">
+									<div>
+										<input type="number" name="" id="damage"
+											value={{data.damage}}>
+									</div>
+								</div>
+							</div>
+							<div class="stat">
+								<h1 class="card__title">Armor</h1>
+								<div class="stat-graph --simplified">
+									<div>
+										<input type="number" name="data.armor"
+											id="armor" value={{data.armor}}>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</section>

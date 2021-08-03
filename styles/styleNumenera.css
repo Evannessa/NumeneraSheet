@@ -3,8 +3,132 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @use "./styleNPC.scss";
-.window-app .window-content {
-  overflow: auto; }
+.cyphersystem .window-content {
+  overflow: auto;
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5)), url("../images/SheetBG.jpg") !important;
+  color: #e8e6e3; }
+  .cyphersystem .window-content .header-fields,
+  .cyphersystem .window-content .sheet-tabs,
+  .cyphersystem .window-content .sheet-body {
+    font-family: "Patrick Hand"; }
+    .cyphersystem .window-content .header-fields a.item,
+    .cyphersystem .window-content .header-fields .resource,
+    .cyphersystem .window-content .sheet-tabs a.item,
+    .cyphersystem .window-content .sheet-tabs .resource,
+    .cyphersystem .window-content .sheet-body a.item,
+    .cyphersystem .window-content .sheet-body .resource {
+      border: none;
+      border-style: dotted !important;
+      border-width: 1px !important;
+      border-color: rgba(159, 120, 91, 0.75) !important;
+      color: #e8e6e3;
+      font-family: "Shadows Into Light" !important;
+      text-transform: uppercase !important;
+      font-weight: bold !important; }
+    .cyphersystem .window-content .header-fields .stat-pool,
+    .cyphersystem .window-content .sheet-tabs .stat-pool,
+    .cyphersystem .window-content .sheet-body .stat-pool {
+      border: none; }
+      .cyphersystem .window-content .header-fields .stat-pool .stat-input,
+      .cyphersystem .window-content .sheet-tabs .stat-pool .stat-input,
+      .cyphersystem .window-content .sheet-body .stat-pool .stat-input {
+        color: rgba(49, 44, 45, 0.95);
+        font-family: "Patrick Hand" !important; }
+    .cyphersystem .window-content .header-fields .resource-content select,
+    .cyphersystem .window-content .header-fields .resource-content input,
+    .cyphersystem .window-content .sheet-tabs .resource-content select,
+    .cyphersystem .window-content .sheet-tabs .resource-content input,
+    .cyphersystem .window-content .sheet-body .resource-content select,
+    .cyphersystem .window-content .sheet-body .resource-content input {
+      margin: 0.1rem 0.5rem; }
+    .cyphersystem .window-content .header-fields h1,
+    .cyphersystem .window-content .header-fields h2,
+    .cyphersystem .window-content .header-fields label,
+    .cyphersystem .window-content .sheet-tabs h1,
+    .cyphersystem .window-content .sheet-tabs h2,
+    .cyphersystem .window-content .sheet-tabs label,
+    .cyphersystem .window-content .sheet-body h1,
+    .cyphersystem .window-content .sheet-body h2,
+    .cyphersystem .window-content .sheet-body label {
+      font-family: "Shadows Into Light";
+      color: #e8e6e3;
+      text-transform: uppercase;
+      font-weight: bold; }
+    .cyphersystem .window-content .header-fields input,
+    .cyphersystem .window-content .header-fields select,
+    .cyphersystem .window-content .header-fields .tabs a.item,
+    .cyphersystem .window-content .header-fields .tabs a.item.active,
+    .cyphersystem .window-content .header-fields .tab,
+    .cyphersystem .window-content .header-fields .profile-img,
+    .cyphersystem .window-content .header-fields nav > a,
+    .cyphersystem .window-content .sheet-tabs input,
+    .cyphersystem .window-content .sheet-tabs select,
+    .cyphersystem .window-content .sheet-tabs .tabs a.item,
+    .cyphersystem .window-content .sheet-tabs .tabs a.item.active,
+    .cyphersystem .window-content .sheet-tabs .tab,
+    .cyphersystem .window-content .sheet-tabs .profile-img,
+    .cyphersystem .window-content .sheet-tabs nav > a,
+    .cyphersystem .window-content .sheet-body input,
+    .cyphersystem .window-content .sheet-body select,
+    .cyphersystem .window-content .sheet-body .tabs a.item,
+    .cyphersystem .window-content .sheet-body .tabs a.item.active,
+    .cyphersystem .window-content .sheet-body .tab,
+    .cyphersystem .window-content .sheet-body .profile-img,
+    .cyphersystem .window-content .sheet-body nav > a {
+      border: none;
+      border-style: dotted !important;
+      border-width: 1px !important;
+      border-color: rgba(159, 120, 91, 0.75) !important;
+      color: #e8e6e3;
+      font-family: "Patrick Hand" !important; }
+      .cyphersystem .window-content .header-fields input::placeholder,
+      .cyphersystem .window-content .header-fields select::placeholder,
+      .cyphersystem .window-content .header-fields .tabs a.item::placeholder,
+      .cyphersystem .window-content .header-fields .tabs a.item.active::placeholder,
+      .cyphersystem .window-content .header-fields .tab::placeholder,
+      .cyphersystem .window-content .header-fields .profile-img::placeholder,
+      .cyphersystem .window-content .header-fields nav > a::placeholder,
+      .cyphersystem .window-content .sheet-tabs input::placeholder,
+      .cyphersystem .window-content .sheet-tabs select::placeholder,
+      .cyphersystem .window-content .sheet-tabs .tabs a.item::placeholder,
+      .cyphersystem .window-content .sheet-tabs .tabs a.item.active::placeholder,
+      .cyphersystem .window-content .sheet-tabs .tab::placeholder,
+      .cyphersystem .window-content .sheet-tabs .profile-img::placeholder,
+      .cyphersystem .window-content .sheet-tabs nav > a::placeholder,
+      .cyphersystem .window-content .sheet-body input::placeholder,
+      .cyphersystem .window-content .sheet-body select::placeholder,
+      .cyphersystem .window-content .sheet-body .tabs a.item::placeholder,
+      .cyphersystem .window-content .sheet-body .tabs a.item.active::placeholder,
+      .cyphersystem .window-content .sheet-body .tab::placeholder,
+      .cyphersystem .window-content .sheet-body .profile-img::placeholder,
+      .cyphersystem .window-content .sheet-body nav > a::placeholder {
+        color: #e8e6e3;
+        opacity: 50%; }
+    .cyphersystem .window-content .header-fields input,
+    .cyphersystem .window-content .header-fields select,
+    .cyphersystem .window-content .sheet-tabs input,
+    .cyphersystem .window-content .sheet-tabs select,
+    .cyphersystem .window-content .sheet-body input,
+    .cyphersystem .window-content .sheet-body select {
+      background-color: #fff4e7;
+      opacity: 95%;
+      color: rgba(49, 44, 45, 0.95); }
+      .cyphersystem .window-content .header-fields input::placeholder,
+      .cyphersystem .window-content .header-fields select::placeholder,
+      .cyphersystem .window-content .sheet-tabs input::placeholder,
+      .cyphersystem .window-content .sheet-tabs select::placeholder,
+      .cyphersystem .window-content .sheet-body input::placeholder,
+      .cyphersystem .window-content .sheet-body select::placeholder {
+        opacity: 90%; }
+  .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:hover, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:active, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:focus {
+    background: rgba(200, 162, 136, 0.3) !important;
+    box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
+  .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item.active {
+    background: rgba(189, 149, 122, 0.3) !important;
+    box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
 
 .numeneraoverhaul {
   min-width: 900px;
@@ -38,8 +162,6 @@
     max-width: 1000px;
     height: 100%;
     width: 100%;
-    background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5)), url("../images/SheetBG.jpg") !important;
-    background-size: 200% 200%;
     color: rgba(49, 44, 45, 0.95); }
   .numeneraoverhaul *,
   .numeneraoverhaul *::before,
@@ -86,6 +208,8 @@
     align-items: baseline; }
   .numeneraoverhaul .header__button > i {
     margin-right: 0.5rem; }
+  .numeneraoverhaul select:hover, .numeneraoverhaul select:active, .numeneraoverhaul select:focus {
+    box-shadow: 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset; }
   .numeneraoverhaul button:hover,
   .numeneraoverhaul button:active,
   .numeneraoverhaul button:focus {
@@ -93,6 +217,7 @@
     border: none;
     box-shadow: none;
     color: #d5a02d;
+    background-color: transparent;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(159, 120, 91, 0.75); }
   .numeneraoverhaul input[type="text"],
@@ -298,7 +423,8 @@
       border: 1px dotted rgba(176, 146, 123, 0.65);
       font-family: "Patrick Hand";
       color: rgba(114, 88, 71, 0.85);
-      font-weight: bold; }
+      font-weight: bold;
+      background: transparent; }
     .numeneraoverhaul .card .card__title::before, .numeneraoverhaul .card .card__title::after {
       content: "⬩"; }
     .numeneraoverhaul .card#damageTrack .panel {
@@ -311,6 +437,11 @@
       color: rgba(114, 88, 71, 0.85);
       opacity: 90%;
       position: relative; }
+      .numeneraoverhaul .card .editor-content p,
+      .numeneraoverhaul .card .editor-content h1,
+      .numeneraoverhaul .card .editor-content h2 {
+        font-family: "Patrick Hand";
+        color: rgba(114, 88, 71, 0.85); }
     .numeneraoverhaul .card.sheet-editor {
       height: max-content;
       overflow: visible;
@@ -366,6 +497,8 @@
         font-family: "Shadows Into Light";
         font-weight: bold; }
     .numeneraoverhaul .card#mightSpeedIntellect {
+      height: 11rem; }
+    .numeneraoverhaul .card#nonPlayerStats {
       height: 11rem; }
     .numeneraoverhaul .card .item-settings {
       height: max-content; }
@@ -449,22 +582,14 @@
     justify-content: center; }
   .numeneraoverhaul .stats {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-around; }
     .numeneraoverhaul .stats .header__button {
       width: 100%; }
   .numeneraoverhaul .npc-stats {
-    align-items: center; }
-    .numeneraoverhaul .npc-stats input {
-      border-radius: 1px;
-      overflow: hidden;
-      margin-inline: 0.5rem;
-      min-width: 0;
-      width: 95%;
-      background-color: bisque;
-      border-style: none;
-      font-size: 1.5rem;
-      text-align: center;
-      font-family: "Patrick Hand"; }
+    width: 100%;
+    padding: 0 1rem; }
+    .numeneraoverhaul .npc-stats div {
+      width: 100%; }
   .numeneraoverhaul .stat > h1 {
     font-size: 1rem;
     text-align: center; }

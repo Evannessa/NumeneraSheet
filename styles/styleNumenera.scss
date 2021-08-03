@@ -5,24 +5,216 @@
 	min-height: ($value/16)+rem;
 }
 
-.app .window-app {
-	// width: min-content !important;
-}
 
-.window-app {
-	// width: max-content !important;
-}
 
-.window-app .window-content {
-	// background: unset;
-	// height: 100%;
-	// width: 100%;
+// .window-app .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item{
+// 	&:hover, &:active, &:focus{
+// 		background:rgba(200, 162, 136, 0.3) !important;
+// 		box-shadow: 0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset !important;
+// 	}
+// 	&.active{
+// 		background:rgba(189, 149, 122, 0.3) !important;
+// 		box-shadow: 0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset,0 0 3px $clr-gradient1 inset !important;
+// 	}
+
+// }
+
+.cyphersystem .window-content {
 	overflow: auto;
+	max-width: 1000px;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+	color: $clr-light;
 
-	// form {
-	// 	height: 100%;
-	// }
+	.header-fields,
+	.sheet-tabs,
+	.sheet-body {
+		font-family: $ff-indie;
+
+		a.item,
+		.resource {
+			border: none;
+			border-style: dotted !important;
+			border-width: 1px !important;
+			border-color: $clr-gradient2 !important;
+			color: $clr-light;
+			font-family: $ff-shadows !important;
+			text-transform: uppercase !important;
+			font-weight: bold !important;
+		}
+
+		.stat-pool {
+			border: none;
+
+			.stat-input {
+				color: $clr-gradient0;
+				font-family: $ff-indie !important;
+			}
+		}
+
+		.resource-content {
+
+			select,
+			input {
+				margin: 0.1rem 0.5rem;
+			}
+		}
+
+		h1,
+		h2,
+		label {
+			font-family: $ff-shadows;
+			color: $clr-light;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+
+		input,
+		select,
+		.tabs a.item,
+		.tabs a.item.active,
+		.tab,
+		.profile-img,
+		nav>a {
+			border: none;
+			border-style: dotted !important;
+			border-width: 1px !important;
+			border-color: $clr-gradient2 !important;
+			color: $clr-light;
+			font-family: $ff-indie !important;
+
+			&::placeholder {
+				color: $clr-light;
+				opacity: 50%;
+			}
+		}
+
+		input,
+		select {
+			background-color: rgb(255, 244, 231);
+			opacity: 95%;
+			color: $clr-gradient0;
+
+			&::placeholder {
+				opacity: 90%;
+			}
+		}
+	}
+
+	.tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item {
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: rgba(200, 162, 136, 0.3) !important;
+			box-shadow: 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset !important;
+		}
+
+		&.active {
+			background: rgba(189, 149, 122, 0.3) !important;
+			box-shadow: 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset, 0 0 3px $clr-gradient1 inset !important;
+		}
+
+	}
 }
+
+// .window-app .window-content{
+// 	// background: unset;
+// 	// height: 100%;
+// 	// width: 100%;
+// 	overflow: auto;
+// 	max-width: 1000px;
+// 	height: 100%;
+// 	width: 100%;
+// 	background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+// 	color: $clr-light;
+// 	// input, textarea, select{
+// 	// 	border: none;
+// 	// 	border-style: dotted !important;
+// 	// 	border-width: 1px !important;
+// 	// 	border-color: $clr-gradient2 !important;
+// 	// 	color: $clr-gradient0;
+// 	// 	background-color: #fff8eed0;
+// 	// 	font-family: $ff-indie !important;
+// 	// 	&::placeholder{
+// 	// 		opacity: 50%;
+// 	// 	}
+// 	// }
+// 	// button{
+// 	// 	border: none;
+// 	// 	// background-color: #e7d2b1b7;
+// 	// }
+// 	// .journal-tab{
+// 	// 	background-color: $clr-gradient2;
+// 	// }
+// 	// .sidebar{
+// 	// 	margin: 1rem;
+// 	// 	padding: 1rem 0.2rem 1rem 0.2rem;
+// 	// 	background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4);
+// 	// }
+// 	// .settings-list, .directory-list, #module-list{
+// 	// 	// background-color: #e7d2b1b7;
+// 	// 	margin: 1rem;
+// 	// 	padding: 1rem 0.2rem 1rem 0.2rem;
+// 	// 	background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+
+// 	// }
+// 	// .settings-list, .directory-list,  
+// 	.header-fields, .sheet-tabs, .sheet-body{
+// 		font-family: $ff-indie;
+// 		a.item, .resource{
+// 			border: none;
+// 			border-style: dotted !important;
+// 			border-width: 1px !important;
+// 			border-color: $clr-gradient2 !important;
+// 			color: $clr-light;
+// 			font-family: $ff-shadows !important;
+// 			text-transform: uppercase !important;
+// 			font-weight: bold !important;
+// 		}
+// 		.stat-pool{
+// 			border: none;
+// 			.stat-input{
+// 				color: $clr-gradient0;
+// 				font-family: $ff-indie !important;
+// 			}
+// 		}
+// 		.resource-content{
+// 			select, input{ margin: 0.1rem 0.5rem;}
+// 		}
+// 		h1, h2, label{
+// 			font-family: $ff-shadows;
+// 			color: $clr-light;
+// 			text-transform: uppercase;
+// 			font-weight: bold;
+// 		}
+
+// 		input, select, .tabs a.item, .tabs a.item.active, .tab, .profile-img, nav > a{
+// 			border: none;
+// 			border-style: dotted !important;
+// 			border-width: 1px !important;
+// 			border-color: $clr-gradient2 !important;
+// 			color: $clr-light;
+// 			font-family: $ff-indie !important;
+// 			&::placeholder{
+// 				color: $clr-light;
+// 				opacity: 50%;
+// 			}
+// 		}
+// 		input, select{
+// 			background-color:rgb(255, 244, 231);
+// 			opacity: 95%;
+// 			color: $clr-gradient0;
+// 			&::placeholder{
+// 				opacity: 90%;
+// 			}
+// 		}
+// 	}
+// 	// form {
+// 	// 	height: 100%;
+// 	// }
+// }
 
 .numeneraoverhaul {
 	// overflow: auto;
@@ -46,8 +238,8 @@
 		max-width: 1000px;
 		height: 100%;
 		width: 100%;
-		background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
-		background-size: 200% 200%;
+		// background: linear-gradient($clr-gradient0, $clr-gradient1, $clr-gradient2, $clr-gradient3, $clr-gradient4), url("../images/SheetBG.jpg") !important;
+		// background-size: 200% 200%;
 		color: $clr-gradient0;
 	}
 
@@ -137,6 +329,16 @@
 		margin-right: 0.5rem;
 	}
 
+	select {
+
+		&:hover,
+		&:active,
+		&:focus {
+			box-shadow: 0 0 3px $clr-gradient4 inset, 0 0 3px $clr-gradient4 inset, 0 0 3px $clr-gradient4 inset, 0 0 3px $clr-gradient4 inset;
+		}
+
+	}
+
 
 	button:hover,
 	button:active,
@@ -145,6 +347,7 @@
 		border: none;
 		box-shadow: none;
 		color: #d5a02d;
+		background-color: transparent;
 		font-weight: bold;
 		text-shadow: 1px 1px 4px $clr-gradient2;
 	}
@@ -451,6 +654,7 @@
 			font-family: $ff-indie;
 			color: $clr-gradient1;
 			font-weight: bold;
+			background: transparent;
 		}
 
 		.card__title {
@@ -477,6 +681,13 @@
 			color: $clr-gradient1;
 			opacity: 90%;
 			position: relative;
+
+			p,
+			h1,
+			h2 {
+				font-family: $ff-indie;
+				color: $clr-gradient1;
+			}
 		}
 
 		&.sheet-editor {
@@ -567,6 +778,10 @@
 		}
 
 		&#mightSpeedIntellect {
+			height: 11rem;
+		}
+
+		&#nonPlayerStats {
 			height: 11rem;
 		}
 
@@ -708,7 +923,7 @@
 	/* #region STATS  */
 	.stats {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 
 		.header__button {
 			width: 100%;
@@ -716,21 +931,30 @@
 	}
 
 	.npc-stats {
-		align-items: center;
+		width: 100%;
+		padding: 0 1rem;
 
-		input {
-			border-radius: 1px;
-			overflow: hidden;
-			margin-inline: 0.5rem;
-			min-width: 0;
-			width: 95%;
-			background-color: bisque;
-			border-style: none;
-			font-size: 1.5rem;
-			text-align: center;
-			font-family: $ff-indie;
+		div {
+			width: 100%;
 		}
 	}
+
+	// .npc-stats {
+	// 	align-items: center;
+
+	// 	input {
+	// 		border-radius: 1px;
+	// 		overflow: hidden;
+	// 		margin-inline: 0.5rem;
+	// 		min-width: 0;
+	// 		width: 95%;
+	// 		background-color: bisque;
+	// 		border-style: none;
+	// 		font-size: 1.5rem;
+	// 		text-align: center;
+	// 		font-family: $ff-indie;
+	// 	}
+	// }
 
 	.stat>h1 {
 		font-size: 1rem;
@@ -800,10 +1024,12 @@
 				color: dimgray;
 			}
 		}
-		&__edge{
+
+		&__edge {
 			grid-column: 2/3;
 			grid-row: 2/3;
-			input{
+
+			input {
 				font-size: 1.5rem !important;
 				font-weight: normal !important;
 				color: dimgray;
