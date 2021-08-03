@@ -4,15 +4,17 @@
 @mixin min-height($value) {
 	min-height: ($value/16)+rem;
 }
-button {
-	background-color: #5e60ce !important;
-	&:hover, &active, &focus{
-		background-color: darken(#5e60ce, 10%) !important;
-	}
-}
 
-// .journal-sheet .window-content {
-// 	background: #191716 !important;
+// :not(.numeneraoverhaul *) {
+// 	button {
+// 		background-color: #5e60ce !important;
+
+// 		&:hover,
+// 		&active,
+// 		&focus {
+// 			background-color: darken(#5e60ce, 10%) !important;
+// 		}
+// 	}
 // }
 
 .monks-enhanced-journal {
@@ -36,14 +38,6 @@ button {
 
 }
 
-// .monks-enhanced-journal .mainbar {
-// 	background: #191716 !important;
-// }
-
-// .monks-enhanced-journal .journal-tab {
-// 	text-align: center;
-// }
-
 .journal-sheet form.editable input[name="name"] {
 	display: none;
 	font-size: 2rem !important;
@@ -63,6 +57,9 @@ button {
 
 }
 
+#controls.app.control-tools-flexcol {
+	display: block;
+}
 
 .cyphersystem .window-content {
 	overflow: auto;
@@ -355,7 +352,7 @@ button {
 	button {
 		appearance: none;
 		border: none;
-		background-color: transparent;
+		background-color: transparent !important;
 		font-size: 1rem !important;
 		font-family: $ff-shadows;
 		text-transform: uppercase;

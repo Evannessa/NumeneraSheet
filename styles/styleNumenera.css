@@ -3,11 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @use "./styleNPC.scss";
-button {
-  background-color: #5e60ce !important; }
-  button:hover, buttonactive, buttonfocus {
-    background-color: #3a3cbf !important; }
-
 .monks-enhanced-journal .mainbar {
   background: #191716 !important; }
 
@@ -33,6 +28,9 @@ button {
   .monks-journal-sheet.sheet .sheet-navigation .item.active {
     border-bottom: none !important;
     background: rgba(200, 162, 136, 0.3) !important; }
+
+#controls.app.control-tools-flexcol {
+  display: block; }
 
 .cyphersystem .window-content {
   overflow: auto;
@@ -227,7 +225,7 @@ button {
   .numeneraoverhaul button {
     appearance: none;
     border: none;
-    background-color: transparent;
+    background-color: transparent !important;
     font-size: 1rem !important;
     font-family: "Shadows Into Light";
     text-transform: uppercase;
