@@ -29,8 +29,8 @@
         }
     ],
     "url": "https://github.com/Evannessa/NumeneraSheet",
-    "manifest": "https://raw.githubusercontent.com/Evannessa/NumeneraSheet/master/module.json?token=GHSAT0AAAAAAB2LPGL4GXHVJ6VDCTIDLALSY4U332A",
-    "download": "https://github.com/Evannessa/NumeneraSheet/archive/refs/heads/master.zip",
+    "manifest": "https://github.com/Evannessa/NumeneraSheet/releases/download/v1.2.0/module.json",
+    "download": "https://github.com/Evannessa/NumeneraSheet/releases/download/v1.2.0/module.zip",
     "media": [
         {
             "type": "icon",
