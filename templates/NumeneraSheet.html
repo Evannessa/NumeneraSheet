@@ -20,16 +20,18 @@
 				</div>
 				<div class="tierEffortXP">
 					<div>
-						<input type="number" name="data.basic.tier" value="{{data.basic.tier}}">
+						<div class="circle-border"><input type="number" name="data.basic.tier" value="{{data.basic.tier}}"></div>
 						<h1>TIER</h1>
 					</div>
 					<div>
-						<input type="number" name="data.basic.effort"
-							value="{{data.basic.effort}}">
+						<div class="circle-border">
+							<input type="number" name="data.basic.effort"
+								value="{{data.basic.effort}}">
+						</div>
 						<h1>EFFORT</h1>
 					</div>
 					<div>
-						<input type="number" name="data.basic.xp" value="{{data.basic.xp}}">
+						<div class="circle-border"><input type="number" name="data.basic.xp" value="{{data.basic.xp}}"></div>
 						<h1>XP</h1>
 					</div>
 				</div>
@@ -658,9 +660,11 @@
 					<!-- COMBAT -->
 					<div class="card__wrapper">
 						<div class="circle-input__wrapper corner-style">
-							<input class="circularInput --small" type="number"
-								name="data.armor.armorValueTotal"
-								value={{data.armor.armorValueTotal}} readonly>
+							<div class="circle-border">
+								<input class="circularInput --small" type="number"
+									name="data.armor.armorValueTotal"
+									value={{data.armor.armorValueTotal}} readonly>
+							</div>
 							<h3 class="overlapLabel">Armor</h3>
 						</div>
 						<div class="card" id="combat">
@@ -783,10 +787,12 @@
 						<div class="panel --extended">
 							<div class="recovery__wrapper">
 								<div class="circle-input__wrapper">
-									<input class="circle__input" type="text"
-										name="data.recoveries.recoveryRoll"
-										value="{{data.recoveries.recoveryRoll}}"
-										data.dtype="String">
+									<div class="circle-border">
+										<input class="circle__input" type="text"
+											name="data.recoveries.recoveryRoll"
+											value="{{data.recoveries.recoveryRoll}}"
+											data.dtype="String">
+									</div>
 									<!-- <h3 class="overlapLabel">1D6+</h3> -->
 									<a class="item-control reset-recovery-rolls overlapLabel"
 										title="Reset Recovery Rolls"><i

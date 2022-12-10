@@ -1,48 +1,40 @@
 {
-  "name": "NumeneraSheet",
-  "title": "Numenera Sheet Override",
-  "description": "",
-  "version": "1.1.0",
-  "library": "false",
-  "manifestPlusVersion": "1.0.0",
-  "minimumCoreVersion": "0.8.6",
-  "compatibleCoreVersion": "0.8.6",
-  "authors": [
-    {
-      "name": "Eva"
-    }
-  ],
-  "dependencies": [
-
-  ],
-  "conflicts": [
-    
-  ],
-  "esmodules": [
-    "/scripts/NumeneraSheet.js",
-    "/scripts/NumeneraNPCSheet.js"
-  ],
-  "scripts": [
-    "/scripts/lib/lib.js"
-  ],
-  "styles": [
-    "/styles/module.css",
-    "/styles/styleNumenera.css"
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "languages/en.json"
-    }
-  ],
-  "url": "This is auto replaced",
-  "manifest": "This is auto replaced",
-  "download": "This is auto replaced",
-  "media": [
-    {
-      "type": "icon",
-      "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
-    }
-  ]
+    "id": "NumeneraSheet",
+    "title": "Numenera Sheet Override",
+    "description": "",
+    "version": "1.2.0",
+    "library": "false",
+    "minimumCoreVersion": 9,
+    "compatibleCoreVersion": "10.120",
+    "compatibility": {
+        "minimum": 9,
+        "verified": "10.120",
+        "maximum": 10
+    },
+    "authors": [
+        {
+            "name": "Eva"
+        }
+    ],
+    "dependencies": [],
+    "conflicts": [],
+    "esmodules": ["/scripts/NumeneraSheet.js", "/scripts/NumeneraNPCSheet.js"],
+    "scripts": ["/scripts/lib/lib.js"],
+    "styles": ["/styles/module.css", "/styles/styleNumenera.css"],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        }
+    ],
+    "url": "https://github.com/Evannessa/NumeneraSheet",
+    "manifest": "https://raw.githubusercontent.com/Evannessa/NumeneraSheet/master/module.json?token=GHSAT0AAAAAAB2LPGL4GXHVJ6VDCTIDLALSY4U332A",
+    "download": "https://github.com/Evannessa/NumeneraSheet/archive/refs/heads/master.zip",
+    "media": [
+        {
+            "type": "icon",
+            "url": "https://avatars2.githubusercontent.com/u/71292812?s=400&u=ccdb4eeb7abf551ca8f314e5a9bfd0479a4d3d41&v=4"
+        }
+    ]
 }

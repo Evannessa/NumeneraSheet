@@ -3,6 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @use "./styleNPC.scss";
+#controls .scene-control,
+#controls .control-tool {
+  display: block !important; }
+
+#sidebar *:not(#chat-controls) button:not(.dice-tray__button),
+#config-tabs *:not(#chat-controls) button:not(.dice-tray__button) {
+  background-color: #5e60ce !important; }
+  #sidebar *:not(#chat-controls) button:not(.dice-tray__button):hover, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):active, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):focus,
+  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):hover,
+  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):active,
+  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):focus {
+    background-color: #3a3cbf !important; }
+
 .monks-enhanced-journal .mainbar {
   background: #191716 !important; }
 
@@ -33,6 +46,9 @@
   display: block; }
 
 .cyphersystem .window-content {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: dark;
   overflow: auto;
   max-width: 1000px;
   height: 100%;
@@ -305,6 +321,20 @@
     color: rgba(114, 88, 71, 0.85);
     font-size: 1rem;
     font-family: "Patrick Hand"; }
+  .numeneraoverhaul .circle-border {
+    position: relative; }
+    .numeneraoverhaul .circle-border::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid #e8e6e3;
+      top: 0;
+      left: 0;
+      height: 3.1rem;
+      width: 3.1rem; }
+    .numeneraoverhaul .circle-border > .circularInput.--small .numeneraoverhaul .circle-border::before, .numeneraoverhaul .card .circle-border > input.--small.circle__input[type="text"] .numeneraoverhaul .circle-border::before {
+      width: 2rem;
+      height: 2rem; }
   .numeneraoverhaul .icon {
     margin-right: 0.2rem; }
   .numeneraoverhaul .title {
@@ -386,7 +416,16 @@
     box-shadow: inset 0 0 0 2px moccasin;
     text-align: center;
     font-size: 3rem;
-    font-family: "Patrick Hand", cursive; }
+    font-family: "Patrick Hand", cursive;
+    position: relative; }
+    .numeneraoverhaul .circularInput::before, .numeneraoverhaul .card input.circle__input[type="text"]::before {
+      position: absolute;
+      z-index: 10;
+      content: "";
+      display: block;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px; }
   .numeneraoverhaul .roundedText {
     width: 4rem;
     height: 4rem;
@@ -445,6 +484,12 @@
       color: rgba(114, 88, 71, 0.85); }
     .numeneraoverhaul .card .stats {
       margin: 0.5rem; }
+    .numeneraoverhaul .card input[type="text"].circle__input::before {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem; }
     .numeneraoverhaul .card input[type="checkbox"] {
       filter: sepia(100%);
       -webkit-filter: sepia(100%) grayscale(50%); }

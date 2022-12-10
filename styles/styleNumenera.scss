@@ -5,7 +5,7 @@
 	min-height: ($value/16)+rem;
 }
 
-// :not(.numeneraoverhaul *) {
+// #settings {
 // 	button {
 // 		background-color: #5e60ce !important;
 
@@ -16,6 +16,28 @@
 // 		}
 // 	}
 // }
+
+#controls .scene-control,
+#controls .control-tool {
+	display: block !important;
+}
+
+#sidebar,
+#config-tabs {
+	*:not(#chat-controls) {
+		button:not(.dice-tray__button) {
+
+			background-color: #5e60ce !important;
+
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: darken(#5e60ce, 10%) !important;
+			}
+		}
+	}
+
+}
 
 .monks-enhanced-journal {
 	.mainbar {
@@ -36,6 +58,12 @@
 		display: none;
 	}
 
+}
+
+a {
+	&.sound-link {
+		background-color: none;
+	}
 }
 
 .journal-sheet form.editable input[name="name"] {
@@ -62,6 +90,9 @@
 }
 
 .cyphersystem .window-content {
+	scroll-behavior: smooth;
+	scrollbar-width: thin;
+	scrollbar-color: dark;
 	overflow: auto;
 	max-width: 1000px;
 	height: 100%;
@@ -467,6 +498,32 @@
 		font-family: $ff-indie;
 	}
 
+	.circle-border {
+		$cb: &;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			// display: block;
+			border-radius: 50%;
+			border: 3px solid $clr-light;
+			top: 0;
+			left: 0;
+			height: 3.1rem;
+			width: 3.1rem;
+			// background-color: $clr-light;
+
+		}
+
+		>.circularInput.--small {
+			#{$cb}::before {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
+	}
+
 	/* #endregion */
 	.icon {
 		margin-right: 0.2rem;
@@ -581,6 +638,18 @@
 		text-align: center;
 		font-size: 3rem;
 		font-family: $ff-indie, cursive;
+		position: relative;
+
+		&::before {
+			position: absolute;
+			z-index: 10;
+			content: "";
+			display: block;
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+
+		}
 
 	}
 
@@ -683,6 +752,15 @@
 
 			&.circle__input {
 				@extend .circularInput;
+
+				&::before {
+					position: absolute;
+					content: "";
+					border-radius: 50%;
+					width: 5rem;
+					height: 5rem;
+
+				}
 			}
 		}
 
