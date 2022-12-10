@@ -5,9 +5,10 @@
 let groupName = "importantChoice";
 let choices = { a: "Choice A", b: "Choice B" };
 let chosen = "a";
-Hooks.once("ready", function () {
+Hooks.once("init", function () {
+    // Actors.unregisterSheet("cypher", CypherActorSheetPC);
     Actors.registerSheet("cypher", NumeneraSheet, {
-        types: ["PC-alt"],
+        types: ["pc"],
         makeDefault: true,
     });
 });
