@@ -171,7 +171,7 @@
 									<ol class="items-list">
 										<li class="item flexrow item-header">
 											<div class="item-name">
-												{{localize 'CYPHERdata.system.GeneralSettings'}}
+												General Settings
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
@@ -180,7 +180,7 @@
 													name="data.system.settings.general.gameMode.active"
 													data-dtype="boolean"
 													{{checked data.system.settings.general.gameMode.active}}
-													disabled>&nbsp;{{localize 'CYPHERdata.system.GameMode'}}
+													disabled>&nbsp;Game Mode
 											</div>
 											<div class="item-quantity">
 												<select class="auto-margin"
@@ -204,7 +204,7 @@
 													name="data.system.settings.initiative.active"
 													data-dtype="boolean"
 													{{checked data.system.settings.initiative.active}}
-													disabled>&nbsp;{{localize 'CYPHERdata.system.InitiativeBonus'}}
+													disabled>&nbsp;Initiative Bonus
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
@@ -221,7 +221,7 @@
 												<input type="checkbox"
 													name="data.system.settings.additionalSentence.active"
 													data-dtype="boolean"
-													{{checked data.system.settings.additionalSentence.active}}>&nbsp;{{localize 'CYPHERdata.system.AdditionalSentenceField'}}
+													{{checked data.system.settings.additionalSentence.active}}>&nbsp;Additional Sentence Field
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
@@ -589,16 +589,16 @@
 										style="min-width: 95px">
 										{{#select data.system.damage.damageTrack}}
 										<option value="Hale">
-											{{localize 'CYPHERdata.system.Hale'}}
+                                            Hale
 										</option>
 										<option value="Impaired">
-											{{localize 'CYPHERdata.system.Impaired'}}
+                                            Impaired
 										</option>
 										<option value="Debilitated">
-											{{localize 'CYPHERdata.system.Debilitated'}}
+                                            Debilitated
 										</option>
 										<option value="Dead">
-											{{localize 'CYPHERdata.system.Dead'}}
+                                            Dead
 										</option>
 										{{/select}}
 									</select>
