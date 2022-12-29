@@ -3,15 +3,15 @@
 		<section class="numenera-sheet">
 			<header>
 				<div class="title">
-					<input class="title__name" type="text" name="name" id="" value="{{actor.name}}">
-					<input class="title__descriptor" type="text" name="data.basic.descriptor"
-						value="{{data.basic.descriptor}}" id="" placeholder="Descriptor">
+					<input class="title__name" type="text" name="name" id="" value="{{data.name}}">
+					<input class="title__descriptor" type="text" name="data.system.basic.descriptor"
+						value="{{data.system.basic.descriptor}}" id="" placeholder="Descriptor">
 					<h1 class="title__is-a">Is a</h1>
-					<input class="title__type" type="text" name="data.basic.type"
-						value="{{data.basic.type}}" id="" placeholder="Type">
+					<input class="title__type" type="text" name="data.system.basic.type"
+						value="{{data.system.basic.type}}" id="" placeholder="Type">
 					<h1 class="title__who">Who</h1>
-					<input class="title__focus" type="text" name="data.basic.focus"
-						value="{{data.basic.focus}}" id="" placeholder="Focus">
+					<input class="title__focus" type="text" name="data.system.basic.focus"
+						value="{{data.system.basic.focus}}" id="" placeholder="Focus">
 				</div>
 				<div class="logo">
 					<img src="\modules\NumeneraSheet\templates\Original Numenera Corebook Legacy Content - Monte Cook Games  Numenera.png"
@@ -20,18 +20,18 @@
 				</div>
 				<div class="tierEffortXP">
 					<div>
-						<div class="circle-border"><input type="number" name="data.basic.tier" value="{{data.basic.tier}}"></div>
+						<div class="circle-border"><input type="number" name="data.system.basic.tier" value="{{data.system.basic.tier}}"></div>
 						<h1>TIER</h1>
 					</div>
 					<div>
 						<div class="circle-border">
-							<input type="number" name="data.basic.effort"
-								value="{{data.basic.effort}}">
+							<input type="number" name="data.system.basic.effort"
+								value="{{data.system.basic.effort}}">
 						</div>
 						<h1>EFFORT</h1>
 					</div>
 					<div>
-						<div class="circle-border"><input type="number" name="data.basic.xp" value="{{data.basic.xp}}"></div>
+						<div class="circle-border"><input type="number" name="data.system.basic.xp" value="{{data.system.basic.xp}}"></div>
 						<h1>XP</h1>
 					</div>
 				</div>
@@ -48,24 +48,24 @@
 								<div class="stat-graph">
 									<div class="stat-graph__current">
 										<input type="number"
-											name="data.pools.might.value"
-											value={{data.pools.might.value}}>
+											name="data.system.pools.might.value"
+											value={{data.system.pools.might.value}}>
 										<label
-											for="data.pools.might.value">Current</label>
+											for="data.system.pools.might.value">Current</label>
 									</div>
 									<div class="stat-graph__pool">
 										<label
-											for="data.pools.might.max">Pool</label>
+											for="data.system.pools.might.max">Pool</label>
 										<input type="number"
-											name="data.pools.might.max"
-											value={{data.pools.might.max}}>
+											name="data.system.pools.might.max"
+											value={{data.system.pools.might.max}}>
 									</div>
 									<div class="stat-graph__edge">
 										<label
-											for="data.pools.mightEdge">Edge</label>
+											for="data.system.pools.might.edge">Edge</label>
 										<input type="number"
-											name="data.pools.mightEdge"
-											value={{data.pools.mightEdge}}>
+											name="data.system.pools.might.edge"
+											value={{data.system.pools.might.edge}}>
 									</div>
 								</div>
 							</div>
@@ -76,24 +76,24 @@
 								<div class="stat-graph">
 									<div class="stat-graph__current">
 										<input type="number"
-											name="data.pools.speed.value"
-											value={{data.pools.speed.value}}>
+											name="data.system.pools.speed.value"
+											value={{data.system.pools.speed.value}}>
 										<label
-											for="data.pools.speed.value">Current</label>
+											for="data.system.pools.speed.value">Current</label>
 									</div>
 									<div class="stat-graph__pool">
 										<label
-											for="data.pools.speed.max">Pool</label>
+											for="data.system.pools.speed.max">Pool</label>
 										<input type="number"
-											name="data.pools.speed.max"
-											value={{data.pools.speed.max}}>
+											name="data.system.pools.speed.max"
+											value={{data.system.pools.speed.max}}>
 									</div>
 									<div class="stat-graph__edge">
 										<label
-											for="data.pools.speedEdge">Edge</label>
+											for="data.system.pools.speed.edge">Edge</label>
 										<input type="number"
-											name="data.pools.speedEdge"
-											value={{data.pools.speedEdge}}>
+											name="data.system.pools.speed.edge"
+											value={{data.system.pools.speed.edge}}>
 									</div>
 								</div>
 							</div>
@@ -104,24 +104,24 @@
 								<div class="stat-graph">
 									<div class="stat-graph__current">
 										<input type="number"
-											name="data.pools.intellect.value"
-											value={{data.pools.intellect.value}}>
+											name="data.system.pools.intellect.value"
+											value={{data.system.pools.intellect.value}}>
 										<label
-											for="data.pools.intellect.value">Current</label>
+											for="data.system.pools.intellect.value">Current</label>
 									</div>
 									<div class="stat-graph__pool">
 										<label
-											for="data.pools.intellect.max">Pool</label>
+											for="data.system.pools.intellect.max">Pool</label>
 										<input type="number"
-											name="data.pools.intellect.max"
-											value={{data.pools.intellect.max}}>
+											name="data.system.pools.intellect.max"
+											value={{data.system.pools.intellect.max}}>
 									</div>
 									<div class="stat-graph__edge">
 										<label
-											for="data.pools.intellectEdge">Edge</label>
+											for="data.system.pools.intellect.edge">Edge</label>
 										<input type="number"
-											name="data.pools.intellectEdge"
-											value={{data.pools.intellectEdge}}>
+											name="data.system.pools.intellect.edge"
+											value={{data.system.pools.intellect.edge}}>
 									</div>
 								</div>
 							</div>
@@ -137,42 +137,7 @@
 						</div>
 						<div class="panel --extended .item-list-overhaul">
 							<div class="flexrow">
-								<ol class="items-list">
-									<li class="item flexrow item-header">
-										<div class="item-name">
-											{{localize 'CYPHERSYSTEM.Skills'}}
-										</div>
-										<div class="item-quantity">
-											{{localize 'CYPHERSYSTEM.Level'}}
-										</div>
-										<div class="item-controls">
-											{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-											<a class="item-control item-create"
-												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-												data-type="teen Skill"><i
-													class="fas fa-plus"></i></a>
-											{{else}}
-											<a class="item-control item-create"
-												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-												data-type="skill"><i
-													class="fas fa-plus"></i></a>
-											{{/if}}
-										</div>
-									</li>
-									{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-									{{#if data.settings.skills.sortByRating}}
-									{{> systems/cyphersystem/templates/tabs/teenSkillsSortedByRating.html}}
-									{{else}}
-									{{> systems/cyphersystem/templates/tabs/teenSkills.html}}
-									{{/if}}
-									{{else}}
-									{{#if data.settings.skills.sortByRating}}
-									{{> systems/cyphersystem/templates/tabs/skillsSortedByRating.html}}
-									{{else}}
-									{{> systems/cyphersystem/templates/tabs/skills.html}}
-									{{/if}}
-									{{/if}}
-								</ol>
+								{{> systems/cyphersystem/templates/tabs/skills-tab/skills.html}}
 							</div>
 						</div>
 					</div>
@@ -186,26 +151,12 @@
 										class="fas fa-chevron-circle-down"></i></button>
 							</div>
 							<div class="panel --extended item-list-overhaul">
-								<ol class="items-list item-list-overhaul">
-									<li class="item item-header">
-										<div class="item-controls">
-											<a class="item-control item-create"
-												title="{{localize 'CYPHERSYSTEM.CreateItem'}}"
-												data-type="ability"><i
-													class="fas fa-plus"></i></a>
-										</div>
-									</li>
-									{{#if (eq data.settings.gameMode.currentSheet "Teen")}}
-									{{> systems/cyphersystem/templates/tabs/teenAbilities.html}}
-									{{else}}
-									{{> systems/cyphersystem/templates/tabs/abilities.html}}
-									{{/if}}
-								</ol>
+									{{> systems/cyphersystem/templates/tabs/abilities-tab/abilities.html}}
 							</div>
 						</div>
 					</div>
 
-					
+
 					<!--SETTINGS-->
 					<div class="card__wrapper">
 						<div class="card" id="numenera-sheet-settings">
@@ -220,29 +171,29 @@
 									<ol class="items-list">
 										<li class="item flexrow item-header">
 											<div class="item-name">
-												{{localize 'CYPHERSYSTEM.GeneralSettings'}}
+												{{localize 'CYPHERdata.system.GeneralSettings'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.gameMode.active"
+													name="data.system.settings.general.gameMode.active"
 													data-dtype="boolean"
-													{{checked data.settings.gameMode.active}}
-													disabled>&nbsp;{{localize 'CYPHERSYSTEM.GameMode'}}
+													{{checked data.system.settings.general.gameMode.active}}
+													disabled>&nbsp;{{localize 'CYPHERdata.system.GameMode'}}
 											</div>
 											<div class="item-quantity">
 												<select class="auto-margin"
-													name="data.settings.gameMode.current"
+													name="data.system.settings.general.gameMode.current"
 													style="width: 135px">
-													{{#select data.settings.gameMode.current}}
+													{{#select data.system.settings.general.gameMode.current}}
 													<option
-														value="{{data.settings.gameMode.cypher}}">
-														{{data.settings.gameMode.cypher}}
+														value="{{data.system.settings.general.gameMode.cypher}}">
+														{{data.system.settings.general.gameMode.cypher}}
 													</option>
 													<option
-														value="{{data.settings.gameMode.unmasked}}">
-														{{data.settings.gameMode.unmasked}}
+														value="{{data.system.settings.general.gameMode.unmasked}}">
+														{{data.system.settings.general.gameMode.unmasked}}
 													</option>
 													{{/select}}
 												</select></div>
@@ -250,16 +201,16 @@
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.initiative.active"
+													name="data.system.settings.initiative.active"
 													data-dtype="boolean"
-													{{checked data.settings.initiative.active}}
-													disabled>&nbsp;{{localize 'CYPHERSYSTEM.InitiativeBonus'}}
+													{{checked data.system.settings.initiative.active}}
+													disabled>&nbsp;{{localize 'CYPHERdata.system.InitiativeBonus'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.initiative.initiativeBonus"
+													name="data.system.settings.initiative.initiativeBonus"
 													type="text"
-													value="{{data.settings.initiative.initiativeBonus}}"
+													value="{{data.system.settings.initiative.initiativeBonus}}"
 													data-dtype="Number"
 													placeholder="0"
 													style="width: auto;" />
@@ -268,52 +219,52 @@
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.additionalSentence.active"
+													name="data.system.settings.additionalSentence.active"
 													data-dtype="boolean"
-													{{checked data.settings.additionalSentence.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalSentenceField'}}
+													{{checked data.system.settings.additionalSentence.active}}>&nbsp;{{localize 'CYPHERdata.system.AdditionalSentenceField'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.additionalSentence.name"
+													name="data.system.settings.additionalSentence.name"
 													type="text"
-													value="{{data.settings.additionalSentence.name}}"
+													value="{{data.system.settings.additionalSentence.name}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.AdditionalSentence'}}"
+													placeholder="{{localize 'CYPHERdata.system.AdditionalSentence'}}"
 													style="width: auto;" />
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.additionalPool.active"
+													name="data.system.additionalPool.active"
 													data-dtype="boolean"
-													{{checked data.additionalPool.active}}>&nbsp;{{#if (eq data.settings.gameMode.current "Unmasked")}}{{localize 'CYPHERSYSTEM.AdditionalPoolUnmasked'}}{{else}}{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}{{/if}}
+													{{checked data.system.additionalPool.active}}>&nbsp;{{#if (eq data.system.settings.general.gameMode.current "Unmasked")}}{{localize 'CYPHERdata.system.AdditionalPoolUnmasked'}}{{else}}{{localize 'CYPHERdata.system.AdditionalPoolSetting'}}{{/if}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.additionalPool.additionalPoolName"
+													name="data.system.additionalPool.additionalPoolName"
 													type="text"
-													value="{{data.additionalPool.additionalPoolName}}"
+													value="{{data.system.additionalPool.additionalPoolName}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
+													placeholder="{{localize 'CYPHERdata.system.AdditionalPoolSetting'}}"
 													style="width: auto;" />
 											</div>
 										</li>
-										{{#if (eq data.settings.gameMode.current "Unmasked")}}
+										{{#if (eq data.system.settings.general.gameMode.current "Unmasked")}}
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.additionalPool.teenActive"
+													name="data.system.additionalPool.teenActive"
 													data-dtype="boolean"
-													{{checked data.additionalPool.teenActive}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalPoolTeen'}}
+													{{checked data.system.additionalPool.teenActive}}>&nbsp;{{localize 'CYPHERdata.system.AdditionalPoolTeen'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.additionalPool.additionalTeenPoolName"
+													name="data.system.additionalPool.additionalTeenPoolName"
 													type="text"
-													value="{{data.additionalPool.additionalTeenPoolName}}"
+													value="{{data.system.additionalPool.additionalTeenPoolName}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.AdditionalPoolSetting'}}"
+													placeholder="{{localize 'CYPHERdata.system.AdditionalPoolSetting'}}"
 													style="width: auto;" />
 											</div>
 											{{/if}}
@@ -321,9 +272,9 @@
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.hideArchived"
+													name="data.system.settings.hideArchived"
 													data-dtype="boolean"
-													{{checked data.settings.hideArchived}}>&nbsp;{{localize 'CYPHERSYSTEM.HideArchive'}}
+													{{checked data.system.settings.hideArchived}}>&nbsp;{{localize 'CYPHERdata.system.HideArchive'}}
 											</div>
 										</li>
 									</ol>
@@ -332,31 +283,31 @@
 									<ol class="items-list">
 										<li class="item flexrow item-header">
 											<div class="item-name">
-												{{localize 'CYPHERSYSTEM.SkillsTab'}}
+												{{localize 'CYPHERdata.system.SkillsTab'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.skills.sortByRating"
+													name="data.system.settings.skills.sortByRating"
 													data-dtype="boolean"
-													{{checked data.settings.skills.sortByRating}}>&nbsp;{{localize 'CYPHERSYSTEM.SortSkillsByRating'}}
+													{{checked data.system.settings.skills.sortByRating}}>&nbsp;{{localize 'CYPHERdata.system.SortSkillsByRating'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.powerShifts.active"
+													name="data.system.settings.powerShifts.active"
 													data-dtype="boolean"
-													{{checked data.settings.powerShifts.active}}>&nbsp;{{localize 'CYPHERSYSTEM.PowerShifts'}}
+													{{checked data.system.settings.powerShifts.active}}>&nbsp;{{localize 'CYPHERdata.system.PowerShifts'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.powerShifts.powerShiftsName"
+													name="data.system.settings.powerShifts.powerShiftsName"
 													type="text"
-													value="{{data.settings.powerShifts.powerShiftsName}}"
+													value="{{data.system.settings.powerShifts.powerShiftsName}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.PowerShifts'}}"
+													placeholder="{{localize 'CYPHERdata.system.PowerShifts'}}"
 													style="width: auto;" />
 											</div>
 										</li>
@@ -366,21 +317,21 @@
 									<ol class="items-list">
 										<li class="item flexrow item-header">
 											<div class="item-name">
-												{{localize 'CYPHERSYSTEM.CombatTab'}}
+												{{localize 'CYPHERdata.system.CombatTab'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.additionalRecoveries.active"
+													name="data.system.settings.additionalRecoveries.active"
 													data-dtype="boolean"
-													{{checked data.settings.additionalRecoveries.active}}>&nbsp;{{localize 'CYPHERSYSTEM.AdditionalRecoveryRolls'}}
+													{{checked data.system.settings.additionalRecoveries.active}}>&nbsp;{{localize 'CYPHERdata.system.AdditionalRecoveryRolls'}}
 											</div>
 											<div class="item-quantity">
 												<select class="auto-margin"
-													name="data.settings.additionalRecoveries.howManyRecoveries"
+													name="data.system.settings.additionalRecoveries.howManyRecoveries"
 													style="width: 135px">
-													{{#select data.settings.additionalRecoveries.howManyRecoveries}}
+													{{#select data.system.settings.additionalRecoveries.howManyRecoveries}}
 													<option
 														value="1">
 														1
@@ -403,17 +354,17 @@
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.lastingDamage.active"
+													name="data.system.settings.lastingDamage.active"
 													data-dtype="boolean"
-													{{checked data.settings.lastingDamage.active}}>&nbsp;{{localize 'CYPHERSYSTEM.LastingAndPermanentDamageSetting'}}
+													{{checked data.system.settings.lastingDamage.active}}>&nbsp;{{localize 'CYPHERdata.system.LastingAndPermanentDamageSetting'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.ammo"
+													name="data.system.settings.ammo"
 													data-dtype="boolean"
-													{{checked data.settings.ammo}}>&nbsp;{{localize 'CYPHERSYSTEM.AmmoList'}}
+													{{checked data.system.settings.ammo}}>&nbsp;{{localize 'CYPHERdata.system.AmmoList'}}
 											</div>
 										</li>
 									</ol>
@@ -422,22 +373,22 @@
 									<ol class="items-list">
 										<li class="item flexrow item-header">
 											<div class="item-name">
-												{{localize 'CYPHERSYSTEM.EquipmentTab'}}
+												{{localize 'CYPHERdata.system.EquipmentTab'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.currency.active"
+													name="data.system.settings.equipment.currency.active"
 													data-dtype="boolean"
-													{{checked data.settings.currency.active}}>&nbsp;{{localize 'CYPHERSYSTEM.Currency'}}
+													{{checked data.system.settings.equipment.currency.active}}>&nbsp;{{localize 'CYPHERdata.system.Currency'}}
 											</div>
 											<div class="item-quantity">
 												<select class="auto-margin"
-													name="data.settings.currency.howMany"
+													name="data.system.settings.equipment.currency.howMany"
 													style="width: 135px"
 													type="Number">
-													{{#select data.settings.currency.howMany}}
+													{{#select data.system.settings.equipment.currency.howMany}}
 													<option
 														value="1">
 														1
@@ -465,14 +416,14 @@
 													{{/select}}
 												</select></div>
 										</li>
-										{{#if data.settings.currency.active}}
+										{{#if data.system.settings.equipment.currency.active}}
 										<li class="item flexrow item-settings"
 											style="border-top-style: dashed">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.currency.namesHidden"
+													name="data.system.settings.equipment.currency.namesHidden"
 													data-dtype="boolean"
-													{{checked data.settings.currency.namesHidden}}>&nbsp;{{localize 'CYPHERSYSTEM.HideCurrency'}}
+													{{checked data.system.settings.equipment.currency.namesHidden}}>&nbsp;{{localize 'CYPHERdata.system.HideCurrency'}}
 											</div>
 										</li>
 										<li class="item flexrow item-settings"
@@ -480,115 +431,115 @@
 											<div class="grid grid-6col"
 												style="margin: 0px">
 												<input class="auto-margin"
-													name="data.settings.currency.name6"
+													name="data.system.settings.equipment.currency.name6"
 													type="text"
-													value="{{data.settings.currency.name6}}"
+													value="{{data.system.settings.equipment.currency.name6}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Adamantine'}}"
-													{{#unless (gte data.settings.currency.howMany 6)}}disabled>{{else}}>{{/unless}}
+													placeholder="{{localize 'CYPHERdata.system.Adamantine'}}"
+													{{#unless (gte data.system.settings.equipment.currency.howMany 6)}}disabled>{{else}}>{{/unless}}
 												<input class="auto-margin"
-													name="data.settings.currency.name5"
+													name="data.system.settings.equipment.currency.name5"
 													type="text"
-													value="{{data.settings.currency.name5}}"
+													value="{{data.system.settings.equipment.currency.name5}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Mithral'}}"
-													{{#unless (gte data.settings.currency.howMany 5)}}disabled>{{else}}>{{/unless}}
+													placeholder="{{localize 'CYPHERdata.system.Mithral'}}"
+													{{#unless (gte data.system.settings.equipment.currency.howMany 5)}}disabled>{{else}}>{{/unless}}
 												<input class="auto-margin"
-													name="data.settings.currency.name4"
+													name="data.system.settings.equipment.currency.name4"
 													type="text"
-													value="{{data.settings.currency.name4}}"
+													value="{{data.system.settings.equipment.currency.name4}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Platinum'}}"
-													{{#unless (gte data.settings.currency.howMany 4)}}disabled>{{else}}>{{/unless}}
+													placeholder="{{localize 'CYPHERdata.system.Platinum'}}"
+													{{#unless (gte data.system.settings.equipment.currency.howMany 4)}}disabled>{{else}}>{{/unless}}
 												<input class="auto-margin"
-													name="data.settings.currency.name3"
+													name="data.system.settings.equipment.currency.name3"
 													type="text"
-													value="{{data.settings.currency.name3}}"
+													value="{{data.system.settings.equipment.currency.name3}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Gold'}}"
-													{{#unless (gte data.settings.currency.howMany 3)}}disabled>{{else}}>{{/unless}}
+													placeholder="{{localize 'CYPHERdata.system.Gold'}}"
+													{{#unless (gte data.system.settings.equipment.currency.howMany 3)}}disabled>{{else}}>{{/unless}}
 												<input class="auto-margin"
-													name="data.settings.currency.name2"
+													name="data.system.settings.equipment.currency.name2"
 													type="text"
-													value="{{data.settings.currency.name2}}"
+													value="{{data.system.settings.equipment.currency.name2}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Silver'}}"
-													{{#unless (gte data.settings.currency.howMany 2)}}disabled>{{else}}>{{/unless}}
+													placeholder="{{localize 'CYPHERdata.system.Silver'}}"
+													{{#unless (gte data.system.settings.equipment.currency.howMany 2)}}disabled>{{else}}>{{/unless}}
 												<input class="auto-margin"
-													name="data.settings.currency.name"
+													name="data.system.settings.equipment.currency.name"
 													type="text"
-													value="{{data.settings.currency.name}}"
+													value="{{data.system.settings.equipment.currency.name}}"
 													data-dtype="String"
-													placeholder="{{#if (eq data.settings.currency.howMany '1')}}{{localize 'CYPHERSYSTEM.Shins'}}{{else}}{{localize 'CYPHERSYSTEM.Copper'}}{{/if}}">
+													placeholder="{{#if (eq data.system.settings.equipment.currency.howMany '1')}}{{localize 'CYPHERdata.system.Shins'}}{{else}}{{localize 'CYPHERdata.system.Copper'}}{{/if}}">
 											</div>
 										</li>
 										{{/if}}
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.equipment.cyphers"
+													name="data.system.settings.equipment.cyphers"
 													data-dtype="boolean"
 													checked
-													disabled>&nbsp;{{localize 'CYPHERSYSTEM.Cyphers'}}
+													disabled>&nbsp;{{localize 'CYPHERdata.system.Cyphers'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.equipment.cyphersName"
+													name="data.system.settings.equipment.cyphersName"
 													type="text"
-													value="{{data.settings.equipment.cyphersName}}"
+													value="{{data.system.settings.equipment.cyphersName}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Cyphers'}}"
+													placeholder="{{localize 'CYPHERdata.system.Cyphers'}}"
 													style="width: auto;" />
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.equipment.artifacts"
+													name="data.system.settings.equipment.artifacts.active"
 													data-dtype="boolean"
-													{{checked data.settings.equipment.artifacts}}>&nbsp;{{localize 'CYPHERSYSTEM.Artifacts'}}
+													{{checked data.system.settings.equipment.artifacts.active}}>&nbsp;{{localize 'CYPHERdata.system.Artifacts'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.equipment.artifactsName"
+													name="data.system.settings.equipment.artifacts.label"
 													type="text"
-													value="{{data.settings.equipment.artifactsName}}"
+													value="{{data.system.settings.equipment.artifacts.label}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Artifacts'}}"
+													placeholder="{{localize 'CYPHERdata.system.Artifacts'}}"
 													style="width: auto;" />
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.equipment.oddities"
+													name="data.system.settings.equipment.oddities.active"
 													data-dtype="boolean"
-													{{checked data.settings.equipment.oddities}}>&nbsp;{{localize 'CYPHERSYSTEM.Oddities'}}
+													{{checked data.system.settings.equipment.oddities.active}}>&nbsp;{{localize 'CYPHERdata.system.Oddities'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.equipment.odditiesName"
+													name="data.system.settings.equipment.oddities.label"
 													type="text"
-													value="{{data.settings.equipment.odditiesName}}"
+													value="{{data.system.settings.equipment.oddities.label}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.Oddities'}}"
+													placeholder="{{localize 'CYPHERdata.system.Oddities'}}"
 													style="width: auto;" />
 											</div>
 										</li>
 										<li class="item flexrow item-settings">
 											<div class="settings-list">
 												<input type="checkbox"
-													name="data.settings.equipment.materials"
+													name="data.system.settings.equipment.materials.active"
 													data-dtype="boolean"
-													{{checked data.settings.equipment.materials}}>&nbsp;{{localize 'CYPHERSYSTEM.CraftingMaterial'}}
+													{{checked data.system.settings.equipment.materials.active}}>&nbsp;{{localize 'CYPHERdata.system.CraftingMaterial'}}
 											</div>
 											<div class="item-quantity">
 												<input class="auto-margin"
-													name="data.settings.equipment.materialName"
+													name="data.system.settings.equipment.material.label"
 													type="text"
-													value="{{data.settings.equipment.materialName}}"
+													value="{{data.system.settings.equipment.material.label}}"
 													data-dtype="String"
-													placeholder="{{localize 'CYPHERSYSTEM.IotumAndParts'}}"
+													placeholder="{{localize 'CYPHERdata.system.IotumAndParts'}}"
 													style="width: auto;" />
 											</div>
 										</li>
@@ -605,9 +556,9 @@
 							<h1 class="card__title">Description</h1>
 							<button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button> -->
-						<!-- </div> --> 
+						<!-- </div> -->
 						<div class="panel --extended">
-							{{editor content=data.basic.description target="data.basic.description" button=true owner=owner editable=true}}
+							{{editor data.system.basic.description target="data.system.basic.description" button=true owner=owner editable=true}}
 						</div>
 					</div>
 				</div>
@@ -634,20 +585,20 @@
 							</div>
 							<div class="special-damage-wrapper">
 								<div class="item-damage">
-									<select name="data.damage.damageTrack"
+									<select name="data.system.damage.damageTrack"
 										style="min-width: 95px">
-										{{#select data.damage.damageTrack}}
+										{{#select data.system.damage.damageTrack}}
 										<option value="Hale">
-											{{localize 'CYPHERSYSTEM.Hale'}}
+											{{localize 'CYPHERdata.system.Hale'}}
 										</option>
 										<option value="Impaired">
-											{{localize 'CYPHERSYSTEM.Impaired'}}
+											{{localize 'CYPHERdata.system.Impaired'}}
 										</option>
 										<option value="Debilitated">
-											{{localize 'CYPHERSYSTEM.Debilitated'}}
+											{{localize 'CYPHERdata.system.Debilitated'}}
 										</option>
 										<option value="Dead">
-											{{localize 'CYPHERSYSTEM.Dead'}}
+											{{localize 'CYPHERdata.system.Dead'}}
 										</option>
 										{{/select}}
 									</select>
@@ -662,8 +613,8 @@
 						<div class="circle-input__wrapper corner-style">
 							<div class="circle-border">
 								<input class="circularInput --small" type="number"
-									name="data.armor.armorValueTotal"
-									value={{data.armor.armorValueTotal}} readonly>
+									name="data.system.combat.armor.armorValueTotal"
+									value={{data.system.combat.armor.armorValueTotal}} >
 							</div>
 							<h3 class="overlapLabel">Armor</h3>
 						</div>
@@ -676,14 +627,12 @@
 							</div>
 							<div class="panel --extended item-list-overhaul">
 								<ol>
-									{{> systems/cyphersystem/templates/tabs/attacks.html}}
-									{{> systems/cyphersystem/templates/tabs/armorTotal.html}}
-									{{#if data.settings.ammo}}
-									{{> systems/cyphersystem/templates/tabs/ammo.html}}
-									{{/if}}
+									{{> systems/cyphersystem/templates/tabs/combat-tab/attacks.html}}
+									{{> systems/cyphersystem/templates/tabs/combat-tab/armor.html}}
+									{{> systems/cyphersystem/templates/tabs/combat-tab/ammo.html}}
 
-									{{#if data.settings.lastingDamage.active}}
-									{{> modules/NumeneraSheet/templates/LastingDamage.html}}
+									{{#if data.system.settings.combat.lastingDamage.active}}
+									{{> modules/NumeneraSheet/templates/tabs/combat-tab/lasting-damage.html}}
 									{{/if}}
 								</ol>
 							</div>
@@ -789,9 +738,9 @@
 								<div class="circle-input__wrapper">
 									<div class="circle-border">
 										<input class="circle__input" type="text"
-											name="data.recoveries.recoveryRoll"
-											value="{{data.recoveries.recoveryRoll}}"
-											data.dtype="String">
+											name="data.system.combat.recoveries.recoveryRoll"
+											value="{{data.system.combat.recoveries.recoveryRoll}}"
+											data.system.dtype="String">
 									</div>
 									<!-- <h3 class="overlapLabel">1D6+</h3> -->
 									<a class="item-control reset-recovery-rolls overlapLabel"
@@ -802,10 +751,10 @@
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
-												name="data.recoveries.oneAction"
+												name="data.system.combat.recoveries.oneAction"
 												id=""
 												data-dtype="boolean"
-												{{checked data.recoveries.oneAction}}>
+												{{checked data.system.combat.recoveries.oneAction}}>
 											<span
 												class="custom__radio"></span>
 										</span>
@@ -815,10 +764,10 @@
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
-												name="data.recoveries.tenMinutes"
+												name="data.system.combat.recoveries.tenMinutes"
 												id=""
 												data-dtype="boolean"
-												{{checked data.recoveries.tenMinutes}}>
+												{{checked data.system.combat.recoveries.tenMinutes}}>
 											<span
 												class="custom__radio"></span>
 										</span>
@@ -828,10 +777,10 @@
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
-												name="data.recoveries.oneHour"
+												name="data.system.combat.recoveries.oneHour"
 												id=""
 												data-dtype="boolean"
-												{{checked data.recoveries.oneHour}}>
+												{{checked data.system.combat.recoveries.oneHour}}>
 											<span
 												class="custom__radio"></span>
 										</span>
@@ -840,10 +789,10 @@
 									<label class="radio">
 										<span class="radio__wrapper">
 											<input type="checkbox"
-												name="data.recoveries.tenHours"
+												name="data.system.combat.recoveries.tenHours"
 												id=""
 												data-dtype="boolean"
-												{{checked data.recoveries.tenHours}}>
+												{{checked data.system.combat.recoveries.tenHours}}>
 											<span
 												class="custom__radio"></span>
 										</span>
@@ -864,7 +813,7 @@
 									class="fas fa-chevron-circle-down"></i></button>
 						</div>
 						<div class="panel --extended item-list-overhaul">
-							{{> systems/cyphersystem/templates/tabs/cyphers.html}}
+							{{> systems/cyphersystem/templates/tabs/equipment-tab/cyphers.html}}
 						</div>
 					</div>
 					<div class="card" id="artifacts">
@@ -875,7 +824,7 @@
 									class="fas fa-chevron-circle-down"></i></button>
 						</div>
 						<div class="panel --extended item-list-overhaul">
-							{{> systems/cyphersystem/templates/tabs/artifacts.html}}
+							{{> systems/cyphersystem/templates/tabs/equipment-tab/artifacts.html}}
 						</div>
 					</div>
 					<!-- EQUIPMENT -->
@@ -888,26 +837,26 @@
 										class="fas fa-chevron-circle-down"></i></button>
 							</div>
 							<div class="panel --extended item-list-overhaul">
-								{{#if data.settings.currency.active}}
-								{{#if data.settings.currency.namesHidden}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
+								{{#if data.system.settings.equipment.currency.active}}
+								{{#if data.system.settings.equipment.currency.namesHidden}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/currenciesUpToSix.html}}
 								{{else}}
-								{{#if (gte data.settings.currency.howMany 4)}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToSix.html}}
+								{{#if (gte data.system.settings.equipment.currency.howMany 4)}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/currenciesUpToSix.html}}
 								{{else}}
-								{{> systems/cyphersystem/templates/tabs/currenciesUpToThree.html}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/currenciesUpToThree.html}}
 								{{/if}}
 								{{/if}}
 								{{/if}}
 
-								{{> systems/cyphersystem/templates/tabs/equipment.html}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/equipment.html}}
 
-								{{#if data.settings.equipment.oddities}}
-								{{> systems/cyphersystem/templates/tabs/oddities.html}}
+								{{#if data.system.settings.equipment.oddities.active}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/oddities.html}}
 								{{/if}}
 
-								{{#if data.settings.equipment.materials}}
-								{{> systems/cyphersystem/templates/tabs/materials.html}}
+								{{#if data.system.settings.equipment.materials.active}}
+								{{> systems/cyphersystem/templates/tabs/equipment-tab/materials.html}}
 								{{/if}}
 							</div>
 
@@ -921,9 +870,9 @@
 							<!-- <h1 class="card__title">Notes</h1> -->
 							<!-- <button class="expand-toggle"><i
 									class="fas fa-chevron-circle-down"></i></button> -->
-						<!-- </div> --> 
+						<!-- </div> -->
 						<div class="panel --extended">
-							{{editor content=data.basic.notes target="data.basic.notes" button=true owner=owner editable=true}}
+							{{editor data.system.notes target="data.system.notes" button=true owner=owner editable=true}}
 						</div>
 					</div>
 

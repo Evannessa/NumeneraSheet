@@ -2,48 +2,75 @@
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
-@use "./styleNPC.scss";
+.npc-stats {
+  align-items: center;
+}
+.npc-stats input {
+  border-radius: 1px;
+  overflow: hidden;
+  margin-inline: 0.5rem;
+  min-width: 0;
+  width: 95%;
+  background-color: bisque;
+  border-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Patrick Hand";
+}
+
 #controls .scene-control,
 #controls .control-tool {
-  display: block !important; }
+  display: block !important;
+}
 
 #sidebar *:not(#chat-controls) button:not(.dice-tray__button),
 #config-tabs *:not(#chat-controls) button:not(.dice-tray__button) {
-  background-color: #5e60ce !important; }
-  #sidebar *:not(#chat-controls) button:not(.dice-tray__button):hover, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):active, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):focus,
-  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):hover,
-  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):active,
-  #config-tabs *:not(#chat-controls) button:not(.dice-tray__button):focus {
-    background-color: #3a3cbf !important; }
+  background-color: #5e60ce !important;
+}
+#sidebar *:not(#chat-controls) button:not(.dice-tray__button):hover, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):active, #sidebar *:not(#chat-controls) button:not(.dice-tray__button):focus,
+#config-tabs *:not(#chat-controls) button:not(.dice-tray__button):hover,
+#config-tabs *:not(#chat-controls) button:not(.dice-tray__button):active,
+#config-tabs *:not(#chat-controls) button:not(.dice-tray__button):focus {
+  background-color: #3a3cbf !important;
+}
 
 .monks-enhanced-journal .mainbar {
-  background: #191716 !important; }
-
+  background: #191716 !important;
+}
 .monks-enhanced-journal .journal-tab {
-  text-align: center; }
-
+  text-align: center;
+}
 .monks-enhanced-journal .header-name {
-  display: none; }
-
+  display: none;
+}
 .monks-enhanced-journal .sheet-navigation {
-  display: none; }
+  display: none;
+}
 
-.journal-sheet form.editable input[name="name"] {
+a.sound-link {
+  background-color: none;
+}
+
+.journal-sheet form.editable input[name=name] {
   display: none;
   font-size: 2rem !important;
-  padding: 1rem !important; }
+  padding: 1rem !important;
+}
 
 .monks-journal-sheet.sheet .sheet-navigation .item {
   border: none !important;
   border-bottom: none !important;
   font-family: "Shadows Into Light";
-  box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
-  .monks-journal-sheet.sheet .sheet-navigation .item.active {
-    border-bottom: none !important;
-    background: rgba(200, 162, 136, 0.3) !important; }
+  box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important;
+}
+.monks-journal-sheet.sheet .sheet-navigation .item.active {
+  border-bottom: none !important;
+  background: rgba(200, 162, 136, 0.3) !important;
+}
 
 #controls.app.control-tools-flexcol {
-  display: block; }
+  display: block;
+}
 
 .cyphersystem .window-content {
   scroll-behavior: smooth;
@@ -54,126 +81,153 @@
   height: 100%;
   width: 100%;
   background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5)), url("../images/SheetBG.jpg") !important;
-  color: #e8e6e3; }
-  .cyphersystem .window-content .header-fields,
-  .cyphersystem .window-content .sheet-tabs,
-  .cyphersystem .window-content .sheet-body {
-    font-family: "Patrick Hand"; }
-    .cyphersystem .window-content .header-fields a.item,
-    .cyphersystem .window-content .header-fields .resource,
-    .cyphersystem .window-content .sheet-tabs a.item,
-    .cyphersystem .window-content .sheet-tabs .resource,
-    .cyphersystem .window-content .sheet-body a.item,
-    .cyphersystem .window-content .sheet-body .resource {
-      border: none;
-      border-style: dotted !important;
-      border-width: 1px !important;
-      border-color: rgba(159, 120, 91, 0.75) !important;
-      color: #e8e6e3;
-      font-family: "Shadows Into Light" !important;
-      text-transform: uppercase !important;
-      font-weight: bold !important; }
-    .cyphersystem .window-content .header-fields .stat-pool,
-    .cyphersystem .window-content .sheet-tabs .stat-pool,
-    .cyphersystem .window-content .sheet-body .stat-pool {
-      border: none; }
-      .cyphersystem .window-content .header-fields .stat-pool .stat-input,
-      .cyphersystem .window-content .sheet-tabs .stat-pool .stat-input,
-      .cyphersystem .window-content .sheet-body .stat-pool .stat-input {
-        color: rgba(49, 44, 45, 0.95);
-        font-family: "Patrick Hand" !important; }
-    .cyphersystem .window-content .header-fields .resource-content select,
-    .cyphersystem .window-content .header-fields .resource-content input,
-    .cyphersystem .window-content .sheet-tabs .resource-content select,
-    .cyphersystem .window-content .sheet-tabs .resource-content input,
-    .cyphersystem .window-content .sheet-body .resource-content select,
-    .cyphersystem .window-content .sheet-body .resource-content input {
-      margin: 0.1rem 0.5rem; }
-    .cyphersystem .window-content .header-fields h1,
-    .cyphersystem .window-content .header-fields h2,
-    .cyphersystem .window-content .header-fields label,
-    .cyphersystem .window-content .sheet-tabs h1,
-    .cyphersystem .window-content .sheet-tabs h2,
-    .cyphersystem .window-content .sheet-tabs label,
-    .cyphersystem .window-content .sheet-body h1,
-    .cyphersystem .window-content .sheet-body h2,
-    .cyphersystem .window-content .sheet-body label {
-      font-family: "Shadows Into Light";
-      color: #e8e6e3;
-      text-transform: uppercase;
-      font-weight: bold; }
-    .cyphersystem .window-content .header-fields input,
-    .cyphersystem .window-content .header-fields select,
-    .cyphersystem .window-content .header-fields .tabs a.item,
-    .cyphersystem .window-content .header-fields .tabs a.item.active,
-    .cyphersystem .window-content .header-fields .tab,
-    .cyphersystem .window-content .header-fields .profile-img,
-    .cyphersystem .window-content .header-fields nav > a,
-    .cyphersystem .window-content .sheet-tabs input,
-    .cyphersystem .window-content .sheet-tabs select,
-    .cyphersystem .window-content .sheet-tabs .tabs a.item,
-    .cyphersystem .window-content .sheet-tabs .tabs a.item.active,
-    .cyphersystem .window-content .sheet-tabs .tab,
-    .cyphersystem .window-content .sheet-tabs .profile-img,
-    .cyphersystem .window-content .sheet-tabs nav > a,
-    .cyphersystem .window-content .sheet-body input,
-    .cyphersystem .window-content .sheet-body select,
-    .cyphersystem .window-content .sheet-body .tabs a.item,
-    .cyphersystem .window-content .sheet-body .tabs a.item.active,
-    .cyphersystem .window-content .sheet-body .tab,
-    .cyphersystem .window-content .sheet-body .profile-img,
-    .cyphersystem .window-content .sheet-body nav > a {
-      border: none;
-      border-style: dotted !important;
-      border-width: 1px !important;
-      border-color: rgba(159, 120, 91, 0.75) !important;
-      color: #e8e6e3;
-      font-family: "Patrick Hand" !important; }
-      .cyphersystem .window-content .header-fields input::placeholder,
-      .cyphersystem .window-content .header-fields select::placeholder,
-      .cyphersystem .window-content .header-fields .tabs a.item::placeholder,
-      .cyphersystem .window-content .header-fields .tabs a.item.active::placeholder,
-      .cyphersystem .window-content .header-fields .tab::placeholder,
-      .cyphersystem .window-content .header-fields .profile-img::placeholder,
-      .cyphersystem .window-content .header-fields nav > a::placeholder,
-      .cyphersystem .window-content .sheet-tabs input::placeholder,
-      .cyphersystem .window-content .sheet-tabs select::placeholder,
-      .cyphersystem .window-content .sheet-tabs .tabs a.item::placeholder,
-      .cyphersystem .window-content .sheet-tabs .tabs a.item.active::placeholder,
-      .cyphersystem .window-content .sheet-tabs .tab::placeholder,
-      .cyphersystem .window-content .sheet-tabs .profile-img::placeholder,
-      .cyphersystem .window-content .sheet-tabs nav > a::placeholder,
-      .cyphersystem .window-content .sheet-body input::placeholder,
-      .cyphersystem .window-content .sheet-body select::placeholder,
-      .cyphersystem .window-content .sheet-body .tabs a.item::placeholder,
-      .cyphersystem .window-content .sheet-body .tabs a.item.active::placeholder,
-      .cyphersystem .window-content .sheet-body .tab::placeholder,
-      .cyphersystem .window-content .sheet-body .profile-img::placeholder,
-      .cyphersystem .window-content .sheet-body nav > a::placeholder {
-        color: #e8e6e3;
-        opacity: 50%; }
-    .cyphersystem .window-content .header-fields input,
-    .cyphersystem .window-content .header-fields select,
-    .cyphersystem .window-content .sheet-tabs input,
-    .cyphersystem .window-content .sheet-tabs select,
-    .cyphersystem .window-content .sheet-body input,
-    .cyphersystem .window-content .sheet-body select {
-      background-color: #fff4e7;
-      opacity: 95%;
-      color: rgba(49, 44, 45, 0.95); }
-      .cyphersystem .window-content .header-fields input::placeholder,
-      .cyphersystem .window-content .header-fields select::placeholder,
-      .cyphersystem .window-content .sheet-tabs input::placeholder,
-      .cyphersystem .window-content .sheet-tabs select::placeholder,
-      .cyphersystem .window-content .sheet-body input::placeholder,
-      .cyphersystem .window-content .sheet-body select::placeholder {
-        opacity: 90%; }
-  .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:hover, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:active, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:focus {
-    background: rgba(200, 162, 136, 0.3) !important;
-    box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
-  .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item.active {
-    background: rgba(189, 149, 122, 0.3) !important;
-    box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important; }
+  color: #e8e6e3;
+}
+.cyphersystem .window-content .header-fields,
+.cyphersystem .window-content .sheet-tabs,
+.cyphersystem .window-content .sheet-body {
+  font-family: "Patrick Hand";
+}
+.cyphersystem .window-content .header-fields a.item,
+.cyphersystem .window-content .header-fields .resource,
+.cyphersystem .window-content .sheet-tabs a.item,
+.cyphersystem .window-content .sheet-tabs .resource,
+.cyphersystem .window-content .sheet-body a.item,
+.cyphersystem .window-content .sheet-body .resource {
+  border: none;
+  border-style: dotted !important;
+  border-width: 1px !important;
+  border-color: rgba(159, 120, 91, 0.75) !important;
+  color: #e8e6e3;
+  font-family: "Shadows Into Light" !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+.cyphersystem .window-content .header-fields .stat-pool,
+.cyphersystem .window-content .sheet-tabs .stat-pool,
+.cyphersystem .window-content .sheet-body .stat-pool {
+  border: none;
+}
+.cyphersystem .window-content .header-fields .stat-pool .stat-input,
+.cyphersystem .window-content .sheet-tabs .stat-pool .stat-input,
+.cyphersystem .window-content .sheet-body .stat-pool .stat-input {
+  color: rgba(49, 44, 45, 0.95);
+  font-family: "Patrick Hand" !important;
+}
+.cyphersystem .window-content .header-fields .resource-content select,
+.cyphersystem .window-content .header-fields .resource-content input,
+.cyphersystem .window-content .sheet-tabs .resource-content select,
+.cyphersystem .window-content .sheet-tabs .resource-content input,
+.cyphersystem .window-content .sheet-body .resource-content select,
+.cyphersystem .window-content .sheet-body .resource-content input {
+  margin: 0.1rem 0.5rem;
+}
+.cyphersystem .window-content .header-fields h1,
+.cyphersystem .window-content .header-fields h2,
+.cyphersystem .window-content .header-fields label,
+.cyphersystem .window-content .sheet-tabs h1,
+.cyphersystem .window-content .sheet-tabs h2,
+.cyphersystem .window-content .sheet-tabs label,
+.cyphersystem .window-content .sheet-body h1,
+.cyphersystem .window-content .sheet-body h2,
+.cyphersystem .window-content .sheet-body label {
+  font-family: "Shadows Into Light";
+  color: #e8e6e3;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.cyphersystem .window-content .header-fields input,
+.cyphersystem .window-content .header-fields select,
+.cyphersystem .window-content .header-fields .tabs a.item,
+.cyphersystem .window-content .header-fields .tabs a.item.active,
+.cyphersystem .window-content .header-fields .tab,
+.cyphersystem .window-content .header-fields .profile-img,
+.cyphersystem .window-content .header-fields nav > a,
+.cyphersystem .window-content .sheet-tabs input,
+.cyphersystem .window-content .sheet-tabs select,
+.cyphersystem .window-content .sheet-tabs .tabs a.item,
+.cyphersystem .window-content .sheet-tabs .tabs a.item.active,
+.cyphersystem .window-content .sheet-tabs .tab,
+.cyphersystem .window-content .sheet-tabs .profile-img,
+.cyphersystem .window-content .sheet-tabs nav > a,
+.cyphersystem .window-content .sheet-body input,
+.cyphersystem .window-content .sheet-body select,
+.cyphersystem .window-content .sheet-body .tabs a.item,
+.cyphersystem .window-content .sheet-body .tabs a.item.active,
+.cyphersystem .window-content .sheet-body .tab,
+.cyphersystem .window-content .sheet-body .profile-img,
+.cyphersystem .window-content .sheet-body nav > a {
+  border: none;
+  border-style: dotted !important;
+  border-width: 1px !important;
+  border-color: rgba(159, 120, 91, 0.75) !important;
+  color: #e8e6e3;
+  font-family: "Patrick Hand" !important;
+}
+.cyphersystem .window-content .header-fields input::-moz-placeholder, .cyphersystem .window-content .header-fields select::-moz-placeholder, .cyphersystem .window-content .header-fields .tabs a.item::-moz-placeholder, .cyphersystem .window-content .header-fields .tabs a.item.active::-moz-placeholder, .cyphersystem .window-content .header-fields .tab::-moz-placeholder, .cyphersystem .window-content .header-fields .profile-img::-moz-placeholder, .cyphersystem .window-content .header-fields nav > a::-moz-placeholder, .cyphersystem .window-content .sheet-tabs input::-moz-placeholder, .cyphersystem .window-content .sheet-tabs select::-moz-placeholder, .cyphersystem .window-content .sheet-tabs .tabs a.item::-moz-placeholder, .cyphersystem .window-content .sheet-tabs .tabs a.item.active::-moz-placeholder, .cyphersystem .window-content .sheet-tabs .tab::-moz-placeholder, .cyphersystem .window-content .sheet-tabs .profile-img::-moz-placeholder, .cyphersystem .window-content .sheet-tabs nav > a::-moz-placeholder, .cyphersystem .window-content .sheet-body input::-moz-placeholder, .cyphersystem .window-content .sheet-body select::-moz-placeholder, .cyphersystem .window-content .sheet-body .tabs a.item::-moz-placeholder, .cyphersystem .window-content .sheet-body .tabs a.item.active::-moz-placeholder, .cyphersystem .window-content .sheet-body .tab::-moz-placeholder, .cyphersystem .window-content .sheet-body .profile-img::-moz-placeholder, .cyphersystem .window-content .sheet-body nav > a::-moz-placeholder {
+  color: #e8e6e3;
+  opacity: 50%;
+}
+.cyphersystem .window-content .header-fields input:-ms-input-placeholder, .cyphersystem .window-content .header-fields select:-ms-input-placeholder, .cyphersystem .window-content .header-fields .tabs a.item:-ms-input-placeholder, .cyphersystem .window-content .header-fields .tabs a.item.active:-ms-input-placeholder, .cyphersystem .window-content .header-fields .tab:-ms-input-placeholder, .cyphersystem .window-content .header-fields .profile-img:-ms-input-placeholder, .cyphersystem .window-content .header-fields nav > a:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs input:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs select:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs .tabs a.item:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs .tabs a.item.active:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs .tab:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs .profile-img:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs nav > a:-ms-input-placeholder, .cyphersystem .window-content .sheet-body input:-ms-input-placeholder, .cyphersystem .window-content .sheet-body select:-ms-input-placeholder, .cyphersystem .window-content .sheet-body .tabs a.item:-ms-input-placeholder, .cyphersystem .window-content .sheet-body .tabs a.item.active:-ms-input-placeholder, .cyphersystem .window-content .sheet-body .tab:-ms-input-placeholder, .cyphersystem .window-content .sheet-body .profile-img:-ms-input-placeholder, .cyphersystem .window-content .sheet-body nav > a:-ms-input-placeholder {
+  color: #e8e6e3;
+  opacity: 50%;
+}
+.cyphersystem .window-content .header-fields input::placeholder,
+.cyphersystem .window-content .header-fields select::placeholder,
+.cyphersystem .window-content .header-fields .tabs a.item::placeholder,
+.cyphersystem .window-content .header-fields .tabs a.item.active::placeholder,
+.cyphersystem .window-content .header-fields .tab::placeholder,
+.cyphersystem .window-content .header-fields .profile-img::placeholder,
+.cyphersystem .window-content .header-fields nav > a::placeholder,
+.cyphersystem .window-content .sheet-tabs input::placeholder,
+.cyphersystem .window-content .sheet-tabs select::placeholder,
+.cyphersystem .window-content .sheet-tabs .tabs a.item::placeholder,
+.cyphersystem .window-content .sheet-tabs .tabs a.item.active::placeholder,
+.cyphersystem .window-content .sheet-tabs .tab::placeholder,
+.cyphersystem .window-content .sheet-tabs .profile-img::placeholder,
+.cyphersystem .window-content .sheet-tabs nav > a::placeholder,
+.cyphersystem .window-content .sheet-body input::placeholder,
+.cyphersystem .window-content .sheet-body select::placeholder,
+.cyphersystem .window-content .sheet-body .tabs a.item::placeholder,
+.cyphersystem .window-content .sheet-body .tabs a.item.active::placeholder,
+.cyphersystem .window-content .sheet-body .tab::placeholder,
+.cyphersystem .window-content .sheet-body .profile-img::placeholder,
+.cyphersystem .window-content .sheet-body nav > a::placeholder {
+  color: #e8e6e3;
+  opacity: 50%;
+}
+.cyphersystem .window-content .header-fields input,
+.cyphersystem .window-content .header-fields select,
+.cyphersystem .window-content .sheet-tabs input,
+.cyphersystem .window-content .sheet-tabs select,
+.cyphersystem .window-content .sheet-body input,
+.cyphersystem .window-content .sheet-body select {
+  background-color: rgb(255, 244, 231);
+  opacity: 95%;
+  color: rgba(49, 44, 45, 0.95);
+}
+.cyphersystem .window-content .header-fields input::-moz-placeholder, .cyphersystem .window-content .header-fields select::-moz-placeholder, .cyphersystem .window-content .sheet-tabs input::-moz-placeholder, .cyphersystem .window-content .sheet-tabs select::-moz-placeholder, .cyphersystem .window-content .sheet-body input::-moz-placeholder, .cyphersystem .window-content .sheet-body select::-moz-placeholder {
+  opacity: 90%;
+}
+.cyphersystem .window-content .header-fields input:-ms-input-placeholder, .cyphersystem .window-content .header-fields select:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs input:-ms-input-placeholder, .cyphersystem .window-content .sheet-tabs select:-ms-input-placeholder, .cyphersystem .window-content .sheet-body input:-ms-input-placeholder, .cyphersystem .window-content .sheet-body select:-ms-input-placeholder {
+  opacity: 90%;
+}
+.cyphersystem .window-content .header-fields input::placeholder,
+.cyphersystem .window-content .header-fields select::placeholder,
+.cyphersystem .window-content .sheet-tabs input::placeholder,
+.cyphersystem .window-content .sheet-tabs select::placeholder,
+.cyphersystem .window-content .sheet-body input::placeholder,
+.cyphersystem .window-content .sheet-body select::placeholder {
+  opacity: 90%;
+}
+.cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:hover, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:active, .cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item:focus {
+  background: rgba(200, 162, 136, 0.3) !important;
+  box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important;
+}
+.cyphersystem .window-content .tabs:not(.tidy5e-navigation):not(.sheet-navigation) .item.active {
+  background: rgba(189, 149, 122, 0.3) !important;
+  box-shadow: 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset, 0 0 3px rgba(114, 88, 71, 0.85) inset !important;
+}
 
 .numeneraoverhaul {
   min-width: 900px;
@@ -195,589 +249,727 @@
   /* #region   TIERS AND ADVANCEMENT */
   /* #endregion */
   /* #region random styles */
-  /* #endregion */ }
-  .numeneraoverhaul .sheet-body {
-    background: unset;
-    height: 100%;
-    width: 100%; }
-    .numeneraoverhaul .sheet-body form {
-      height: 100%;
-      width: 100%; }
-  .numeneraoverhaul .numenera-sheet {
-    max-width: 1000px;
-    height: 100%;
-    width: 100%;
-    color: rgba(49, 44, 45, 0.95); }
-  .numeneraoverhaul *,
-  .numeneraoverhaul *::before,
-  .numeneraoverhaul *::after {
-    box-sizing: inherit;
-    margin: 0;
-    padding: 0; }
-  .numeneraoverhaul img {
-    border-style: none; }
-  .numeneraoverhaul .sheet {
-    box-sizing: border-box;
-    height: 100%;
-    font-family: 'Shadows Into Light', cursive;
-    color: rgba(114, 88, 71, 0.85); }
-  .numeneraoverhaul input::-webkit-outer-spin-button,
-  .numeneraoverhaul input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; }
-  .numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type="text"] {
-    -webkit-appearance: none;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    -moz-appearance: textfield;
-    border: 1px dotted rgba(159, 120, 91, 0.75);
-    background-color: transparent;
-    font-family: "Shadows Into Light", cursive; }
-  .numeneraoverhaul input[type=number] {
-    font-family: 'Patrick Hand', cursive !important;
-    color: rgba(49, 44, 45, 0.95);
-    font-size: 1rem; }
-  .numeneraoverhaul button {
-    appearance: none;
-    border: none;
-    background-color: transparent !important;
-    font-size: 1rem !important;
-    font-family: "Shadows Into Light";
-    text-transform: uppercase;
-    width: min-content;
-    cursor: pointer; }
-  .numeneraoverhaul .header__button {
-    display: flex;
-    justify-content: center;
-    align-items: baseline; }
-  .numeneraoverhaul .header__button > i {
-    margin-right: 0.5rem; }
-  .numeneraoverhaul select:hover, .numeneraoverhaul select:active, .numeneraoverhaul select:focus {
-    box-shadow: 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset; }
-  .numeneraoverhaul button:hover,
-  .numeneraoverhaul button:active,
-  .numeneraoverhaul button:focus {
-    appearance: none;
-    border: none;
-    box-shadow: none;
-    color: #d5a02d;
-    background-color: transparent;
-    font-weight: bold;
-    text-shadow: 1px 1px 4px rgba(159, 120, 91, 0.75); }
-  .numeneraoverhaul input[type="text"],
-  .numeneraoverhaul input[type="number"],
-  .numeneraoverhaul textarea {
-    color: rgba(49, 44, 45, 0.95); }
-    .numeneraoverhaul input[type="text"]:focus, .numeneraoverhaul input[type="text"]:hover, .numeneraoverhaul input[type="text"]:active,
-    .numeneraoverhaul input[type="number"]:focus,
-    .numeneraoverhaul input[type="number"]:hover,
-    .numeneraoverhaul input[type="number"]:active,
-    .numeneraoverhaul textarea:focus,
-    .numeneraoverhaul textarea:hover,
-    .numeneraoverhaul textarea:active {
-      outline: none;
-      background: none;
-      box-shadow: 0px 0px 5px #d5a02d;
-      background-color: white !important; }
-  .numeneraoverhaul .sheet-body {
-    height: 100%;
-    background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5));
-    /* display: grid; */
-    /* grid-template-columns: 1fr 1fr 1fr; */
-    /* grid-template-rows: repeat(1fr, 8) */ }
-  .numeneraoverhaul a {
-    text-decoration: none; }
-  .numeneraoverhaul header {
-    display: flex;
-    align-items: center; }
-  .numeneraoverhaul header h1 {
-    color: #e8e6e3;
-    font-size: 1.2rem; }
-  .numeneraoverhaul label {
-    text-transform: uppercase;
-    font-family: "Shadows Into Light"; }
-  .numeneraoverhaul h1,
-  .numeneraoverhaul .header__button {
-    text-transform: uppercase;
-    color: #e8e6e3;
-    text-shadow: 3px 4px 4px rgba(49, 44, 45, 0.95);
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-family: "Shadows Into Light";
-    border-style: none;
-    font-weight: bold; }
-  .numeneraoverhaul h2 {
-    font-size: 1rem;
-    color: rgba(114, 88, 71, 0.85);
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-family: "Shadows Into Light";
-    border-style: none;
-    font-weight: bold; }
-  .numeneraoverhaul h3,
-  .numeneraoverhaul h4,
-  .numeneraoverhaul li {
-    color: rgba(114, 88, 71, 0.85);
-    font-size: 1rem;
-    font-family: "Patrick Hand"; }
-  .numeneraoverhaul .circle-border {
-    position: relative; }
-    .numeneraoverhaul .circle-border::before {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      border: 3px solid #e8e6e3;
-      top: 0;
-      left: 0;
-      height: 3.1rem;
-      width: 3.1rem; }
-    .numeneraoverhaul .circle-border > .circularInput.--small .numeneraoverhaul .circle-border::before, .numeneraoverhaul .card .circle-border > input.--small.circle__input[type="text"] .numeneraoverhaul .circle-border::before {
-      width: 2rem;
-      height: 2rem; }
-  .numeneraoverhaul .icon {
-    margin-right: 0.2rem; }
-  .numeneraoverhaul .title {
-    min-width: 0;
-    align-items: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    width: 33%;
-    flex: 0 1 auto;
-    display: grid;
-    grid-template-rows: 20% 20% 20%;
-    grid-template-columns: 10% 60% 30%;
-    grid-row-gap: 1rem;
-    /* grid-column-gap: 4px; */
-    margin: 0.5rem;
-    /* padding: 1rem; */ }
-    .numeneraoverhaul .title input {
-      border-radius: 1px;
-      overflow: hidden;
-      margin-inline: 0.5rem;
-      min-width: 0;
-      width: 95%;
-      background-color: bisque;
-      border-style: none;
-      font-size: 1.5rem;
-      text-align: center;
-      font-family: "Patrick Hand"; }
-    .numeneraoverhaul .title__name {
-      grid-column: 2/4;
-      grid-row: 1/2; }
-    .numeneraoverhaul .title__is-a {
-      grid-column: 1/2;
-      grid-row: 2/3; }
-    .numeneraoverhaul .title__descriptor {
-      grid-column: 2/3;
-      grid-row: 2/3; }
-    .numeneraoverhaul .title__type {
-      grid-column: 3/4;
-      grid-row: 2/3; }
-    .numeneraoverhaul .title__who {
-      grid-column: 1/2;
-      grid-row: 3/4; }
-    .numeneraoverhaul .title__focus {
-      grid-column: 2/4;
-      grid-row: 3/4; }
-  .numeneraoverhaul .stats-section {
-    display: flex;
-    flex-direction: row;
-    min-width: 800px;
-    height: 100%; }
-  .numeneraoverhaul .logo img {
-    width: 100%;
-    object-fit: contain; }
-  .numeneraoverhaul .logo {
-    width: 33%; }
-  .numeneraoverhaul .tierEffortXP {
-    width: 33%;
-    flex: 1 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center; }
-  .numeneraoverhaul .tierEffortXP input {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-    border-style: none;
-    background-color: #e8e6e3;
-    box-shadow: inset 0 0 0 2px moccasin;
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Patrick Hand", cursive; }
-  .numeneraoverhaul .circularInput, .numeneraoverhaul .card input.circle__input[type="text"] {
-    border-radius: 50%;
-    width: 4rem;
-    height: 4rem;
-    border-style: none;
-    background-color: #e8e6e3;
-    box-shadow: inset 0 0 0 2px moccasin;
-    text-align: center;
-    font-size: 3rem;
-    font-family: "Patrick Hand", cursive;
-    position: relative; }
-    .numeneraoverhaul .circularInput::before, .numeneraoverhaul .card input.circle__input[type="text"]::before {
-      position: absolute;
-      z-index: 10;
-      content: "";
-      display: block;
-      border-radius: 50%;
-      width: 20px;
-      height: 20px; }
-  .numeneraoverhaul .roundedText {
-    width: 4rem;
-    height: 4rem;
-    font-size: 2rem; }
-  .numeneraoverhaul .--small {
-    width: 3rem;
-    height: 3rem; }
-  .numeneraoverhaul .circle-input__wrapper {
-    position: relative;
-    text-align: center; }
-  .numeneraoverhaul .corner-style {
-    position: absolute;
-    margin-top: -5px;
-    left: -5px;
-    z-index: 10; }
-  .numeneraoverhaul .overlapLabel {
-    position: absolute;
-    bottom: -0.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    font-family: "Shadows Into Light", cursive; }
-  .numeneraoverhaul .item-list-overhaul {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    width: 100%;
-    overflow: visible; }
-  .numeneraoverhaul #stats {
-    grid-row: 1/3; }
-  .numeneraoverhaul .column {
-    display: flex;
-    flex-direction: column;
-    width: 33%; }
-    .numeneraoverhaul .column + .column {
-      margin-left: 0.2rem; }
-    .numeneraoverhaul .column.--one .card {
-      border-top-left-radius: 40px; }
-  .numeneraoverhaul .card {
-    position: relative;
-    width: 100%;
-    height: 8rem;
-    border-radius: 10px;
-    border-top: 3px solid #e8e6e3;
-    border-right: 1px dotted #e8e6e3;
-    border-bottom: 1px dotted #e8e6e3;
-    border-left: 1px dotted #e8e6e3;
-    padding: 0.1rem 0.2rem 0.3rem 0.2rem;
-    margin: 0.1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden; }
-    .numeneraoverhaul .card label {
-      font-weight: bold;
-      color: rgba(114, 88, 71, 0.85); }
-    .numeneraoverhaul .card .stats {
-      margin: 0.5rem; }
-    .numeneraoverhaul .card input[type="text"].circle__input::before {
-      position: absolute;
-      content: "";
-      border-radius: 50%;
-      width: 5rem;
-      height: 5rem; }
-    .numeneraoverhaul .card input[type="checkbox"] {
-      filter: sepia(100%);
-      -webkit-filter: sepia(100%) grayscale(50%); }
-    .numeneraoverhaul .card select {
-      border: 1px dotted rgba(176, 146, 123, 0.65);
-      font-family: "Patrick Hand";
-      color: rgba(114, 88, 71, 0.85);
-      font-weight: bold;
-      background: transparent; }
-    .numeneraoverhaul .card .card__title::before, .numeneraoverhaul .card .card__title::after {
-      content: "⬩"; }
-    .numeneraoverhaul .card#damageTrack .panel {
-      height: 100%; }
-    .numeneraoverhaul .card .editor {
-      min-height: 100%; }
-    .numeneraoverhaul .card .editor-content {
-      font-family: "Patrick Hand";
-      font-weight: bold;
-      color: rgba(114, 88, 71, 0.85);
-      opacity: 90%;
-      position: relative; }
-      .numeneraoverhaul .card .editor-content p,
-      .numeneraoverhaul .card .editor-content h1,
-      .numeneraoverhaul .card .editor-content h2 {
-        font-family: "Patrick Hand";
-        color: rgba(114, 88, 71, 0.85); }
-    .numeneraoverhaul .card.sheet-editor {
-      height: max-content;
-      overflow: visible;
-      font-weight: bold; }
-      .numeneraoverhaul .card.sheet-editor .tox-tinymce {
-        min-height: 20rem; }
-    .numeneraoverhaul .card .damage__slider {
-      padding: 0.1rem 0.5rem;
-      margin: 0.3rem 0;
-      border-radius: 5px;
-      border: 1px dotted rgba(176, 146, 123, 0.65);
-      width: 100%;
-      height: 30%;
-      position: relative; }
-      .numeneraoverhaul .card .damage__slider span {
-        border-radius: 5px;
-        display: block;
-        position: relative;
-        height: 100%;
-        z-index: 1;
-        overflow: hidden; }
-        .numeneraoverhaul .card .damage__slider span.hale {
-          background-color: #36C9C6;
-          background: linear-gradient(to left, #36C9C6, #6184d8);
-          width: 100%; }
-        .numeneraoverhaul .card .damage__slider span.impaired {
-          background: linear-gradient(to left, #6184d8, darkmagenta);
-          width: 60%; }
-        .numeneraoverhaul .card .damage__slider span.debilitated {
-          background: linear-gradient(to left, darkmagenta, firebrick);
-          width: 30%; }
-        .numeneraoverhaul .card .damage__slider span.dead {
-          background: transparent;
-          width: 0%; }
-    .numeneraoverhaul .card#damageTrack {
-      height: 6rem; }
-    .numeneraoverhaul .card#recoveryPanel {
-      height: 11rem; }
-      .numeneraoverhaul .card#recoveryPanel .panel {
-        height: 100%; }
-      .numeneraoverhaul .card#recoveryPanel .recovery__wrapper {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; }
-      .numeneraoverhaul .card#recoveryPanel input[type=checkbox] {
-        margin-right: 0.5rem; }
-      .numeneraoverhaul .card#recoveryPanel .circle-input__wrapper {
-        color: rgba(114, 88, 71, 0.85); }
-      .numeneraoverhaul .card#recoveryPanel .circularInput, .numeneraoverhaul .card#recoveryPanel input.circle__input[type="text"] {
-        color: rgba(76, 68, 70, 0.95);
-        font-size: 1.5rem;
-        font-family: "Shadows Into Light";
-        font-weight: bold; }
-    .numeneraoverhaul .card#mightSpeedIntellect {
-      height: 11rem; }
-    .numeneraoverhaul .card#nonPlayerStats {
-      height: 11rem; }
-    .numeneraoverhaul .card .item-settings {
-      height: max-content; }
-    .numeneraoverhaul .card .item-name,
-    .numeneraoverhaul .card .settings-list,
-    .numeneraoverhaul .card .item-quantity {
-      font-size: 0.85rem;
-      font-weight: bold;
-      opacity: 85%; }
-    .numeneraoverhaul .card .item-header {
-      text-transform: uppercase;
-      font-family: "Patrick Hand"; }
-      .numeneraoverhaul .card .item-header .item-name,
-      .numeneraoverhaul .card .item-header .settings-list,
-      .numeneraoverhaul .card .item-header .item-quantity {
-        opacity: 100%; }
-    .numeneraoverhaul .card .items-list .item ~ .item {
-      border-top: 1px dotted rgba(159, 120, 91, 0.75); }
-    .numeneraoverhaul .card .items-list .item:last-child {
-      border-bottom: 1px dotted rgba(159, 120, 91, 0.75); }
-  .numeneraoverhaul .card__wrapper {
-    width: 100%;
-    height: 8rem;
-    position: relative;
-    margin: 0.1rem; }
-  .numeneraoverhaul .card__wrapper > .card {
-    width: 100%; }
-  .numeneraoverhaul .expanded {
-    overflow: visible;
-    height: max-content; }
-  .numeneraoverhaul .card__title {
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: #e8e6e3; }
-  .numeneraoverhaul .card__header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; }
-  .numeneraoverhaul .expand-toggle {
-    display: inline;
-    width: min-content;
-    float: right;
-    color: #e8e6e3; }
-  .numeneraoverhaul .panel {
-    position: relative;
-    background-color: rgba(232, 230, 227, 0.85);
-    border-radius: 5px;
-    padding: 0.2rem;
-    width: 100%; }
-  .numeneraoverhaul .--extended {
-    min-height: 6.9505rem;
-    max-height: 100%;
-    overflow: visible; }
-  .numeneraoverhaul .panel-overlay {
-    border-radius: 5px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(236, 222, 209, 0.9) 70%, #ebdccf 100%);
-    top: 0;
-    left: 0;
-    content: "";
-    height: 8rem;
-    position: absolute;
-    width: 100%;
-    pointer-events: none;
-    z-index: 10; }
-  .numeneraoverhaul .special-damage-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center; }
-  .numeneraoverhaul .special-damage-label {
-    display: flex;
-    align-items: center; }
-  .numeneraoverhaul #special-damage {
-    width: 2em;
-    flex: 0 1 auto; }
-  .numeneraoverhaul .rest {
-    display: flex;
-    flex-wrap: nowrap;
-    width: min-content;
-    height: min-content;
-    align-items: center;
-    justify-content: center; }
-  .numeneraoverhaul .stats {
-    display: flex;
-    justify-content: space-around; }
-    .numeneraoverhaul .stats .header__button {
-      width: 100%; }
-  .numeneraoverhaul .npc-stats {
-    width: 100%;
-    padding: 0 1rem; }
-    .numeneraoverhaul .npc-stats div {
-      width: 100%; }
-  .numeneraoverhaul .stat > h1 {
-    font-size: 1rem;
-    text-align: center; }
-  .numeneraoverhaul .stat + .stat {
-    margin-left: 0.5rem; }
-  .numeneraoverhaul .stat-graph {
-    display: grid;
-    grid-template-columns: repeat(minmax(0, 1fr), 2);
-    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-    font-weight: bold;
-    color: #725847; }
-    .numeneraoverhaul .stat-graph.--simplified {
-      display: flex;
-      flex-direction: column; }
-    .numeneraoverhaul .stat-graph > div {
-      background-color: #e8e6e3;
-      border-radius: 2px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      justify-content: stretch; }
-      .numeneraoverhaul .stat-graph > div > input {
-        height: 2.5rem;
-        font-size: 2rem;
-        max-width: 3.5rem;
-        text-align: center;
-        background-color: transparent;
-        border-style: none;
-        vertical-align: middle;
-        font-family: "Shadows Into Light"; }
-    .numeneraoverhaul .stat-graph__current {
-      grid-column: 1/3;
-      grid-row: 1/2;
-      border-bottom: 2px solid rgba(176, 146, 123, 0.65); }
-      .numeneraoverhaul .stat-graph__current > input {
-        color: #d5a02d;
-        font-weight: bold; }
-    .numeneraoverhaul .stat-graph__pool {
-      grid-column: 1/2;
-      grid-row: 2/3;
-      border-right: 2px solid rgba(176, 146, 123, 0.65); }
-      .numeneraoverhaul .stat-graph__pool input {
-        font-size: 1.5rem !important;
-        font-weight: normal !important;
-        color: dimgray; }
-    .numeneraoverhaul .stat-graph__edge {
-      grid-column: 2/3;
-      grid-row: 2/3; }
-      .numeneraoverhaul .stat-graph__edge input {
-        font-size: 1.5rem !important;
-        font-weight: normal !important;
-        color: dimgray; }
-  .numeneraoverhaul .background {
-    width: 100%;
-    background-color: transparent;
-    border-style: none;
-    height: auto; }
-  .numeneraoverhaul .damage-track__wrapper {
-    display: flex;
-    justify-content: space-around; }
-  .numeneraoverhaul .radio {
-    display: flex;
-    /* display: grid; */
-    /* grid-template-columns: min-content auto; */
-    /* grid-gap: 0.5em; */ }
-  .numeneraoverhaul .radio span {
-    color: rgba(114, 88, 71, 0.85); }
-  .numeneraoverhaul .radio__wrapper {
-    position: relative;
-    display: flex;
-    align-items: center; }
-  .numeneraoverhaul .radio__wrapper > input {
-    cursor: pointer;
-    margin-right: 0.2em;
-    margin-left: 0.2em; }
-  .numeneraoverhaul .custom__radio {
-    display: grid;
-    display: none;
-    /*TODO: Take this out once you figure the custom radio buttons out*/
-    place-items: center;
-    top: 0;
-    left: 0;
-    width: 1em;
-    height: 1em;
-    border-radius: 50%;
-    border: 0.1em solid rgba(114, 88, 71, 0.85);
-    margin-right: 0.2em; }
-  .numeneraoverhaul [type="radio"]:not(:checked) + .custom__radio::before {
-    content: "";
-    position: absolute;
-    width: 1rem;
-    height: 1rem;
-    box-shadow: inset 0.5rem 0.5 rgba(176, 146, 123, 0.65);
-    border-radius: 50%;
-    /* transform: scale(1); */ }
-  .numeneraoverhaul [type="radio"]:checked + .custom__radio::before {
-    transform: scale(1);
-    border-color: red;
-    /* background: radial-gradient($clr-gradient2 70%, rgba(255 0, 0, 0) 51%) !important; */ }
-  .numeneraoverhaul .tier__input-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0rem 1rem; }
-  .numeneraoverhaul .tier input {
-    max-width: 50%;
-    padding: 0.2rem 1rem;
-    text-align: center; }
-  .numeneraoverhaul .tier > h2 {
-    font-size: 1rem;
-    text-align: center;
-    color: rgba(114, 88, 71, 0.85); }
-  .numeneraoverhaul .color-brown {
-    color: rgba(114, 88, 71, 0.85); }
-  .numeneraoverhaul .color-white {
-    color: #e8e6e3; }
+  /* #endregion */
+}
+.numeneraoverhaul .sheet-body {
+  background: unset;
+  height: 100%;
+  width: 100%;
+}
+.numeneraoverhaul .sheet-body form {
+  height: 100%;
+  width: 100%;
+}
+.numeneraoverhaul .numenera-sheet {
+  max-width: 1000px;
+  height: 100%;
+  width: 100%;
+  color: rgba(49, 44, 45, 0.95);
+}
+.numeneraoverhaul *,
+.numeneraoverhaul *::before,
+.numeneraoverhaul *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.numeneraoverhaul img {
+  border-style: none;
+}
+.numeneraoverhaul .sheet {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: "Shadows Into Light", cursive;
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul input::-webkit-outer-spin-button,
+.numeneraoverhaul input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.numeneraoverhaul .dotted-textbox, .numeneraoverhaul .card input[type=text] {
+  -webkit-appearance: none;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -moz-appearance: textfield;
+  border: 1px dotted rgba(159, 120, 91, 0.75);
+  background-color: transparent;
+  font-family: "Shadows Into Light", cursive;
+}
+.numeneraoverhaul input[type=number] {
+  font-family: "Patrick Hand", cursive !important;
+  color: rgba(49, 44, 45, 0.95);
+  font-size: 1rem;
+}
+.numeneraoverhaul button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  background-color: transparent !important;
+  font-size: 1rem !important;
+  font-family: "Shadows Into Light";
+  text-transform: uppercase;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  cursor: pointer;
+}
+.numeneraoverhaul .header__button {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+.numeneraoverhaul .header__button > i {
+  margin-right: 0.5rem;
+}
+.numeneraoverhaul select:hover, .numeneraoverhaul select:active, .numeneraoverhaul select:focus {
+  box-shadow: 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset, 0 0 3px rgba(195, 171, 149, 0.5) inset;
+}
+.numeneraoverhaul button:hover,
+.numeneraoverhaul button:active,
+.numeneraoverhaul button:focus {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  box-shadow: none;
+  color: #d5a02d;
+  background-color: transparent;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(159, 120, 91, 0.75);
+}
+.numeneraoverhaul input[type=text],
+.numeneraoverhaul input[type=number],
+.numeneraoverhaul textarea {
+  color: rgba(49, 44, 45, 0.95);
+}
+.numeneraoverhaul input[type=text]:focus, .numeneraoverhaul input[type=text]:hover, .numeneraoverhaul input[type=text]:active,
+.numeneraoverhaul input[type=number]:focus,
+.numeneraoverhaul input[type=number]:hover,
+.numeneraoverhaul input[type=number]:active,
+.numeneraoverhaul textarea:focus,
+.numeneraoverhaul textarea:hover,
+.numeneraoverhaul textarea:active {
+  outline: none;
+  background: none;
+  box-shadow: 0px 0px 5px #d5a02d;
+  background-color: white !important;
+}
+.numeneraoverhaul .sheet-body {
+  height: 100%;
+  background: linear-gradient(rgba(49, 44, 45, 0.95), rgba(114, 88, 71, 0.85), rgba(159, 120, 91, 0.75), rgba(176, 146, 123, 0.65), rgba(195, 171, 149, 0.5));
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* grid-template-rows: repeat(1fr, 8) */
+}
+.numeneraoverhaul a {
+  text-decoration: none;
+}
+.numeneraoverhaul header {
+  display: flex;
+  align-items: center;
+}
+.numeneraoverhaul header h1 {
+  color: #e8e6e3;
+  font-size: 1.2rem;
+}
+.numeneraoverhaul label {
+  text-transform: uppercase;
+  font-family: "Shadows Into Light";
+}
+.numeneraoverhaul h1,
+.numeneraoverhaul .header__button {
+  text-transform: uppercase;
+  color: #e8e6e3;
+  text-shadow: 3px 4px 4px rgba(49, 44, 45, 0.95);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Shadows Into Light";
+  border-style: none;
+  font-weight: bold;
+}
+.numeneraoverhaul h2 {
+  font-size: 1rem;
+  color: rgba(114, 88, 71, 0.85);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-family: "Shadows Into Light";
+  border-style: none;
+  font-weight: bold;
+}
+.numeneraoverhaul h3,
+.numeneraoverhaul h4,
+.numeneraoverhaul li {
+  color: rgba(114, 88, 71, 0.85);
+  font-size: 1rem;
+  font-family: "Patrick Hand";
+}
+.numeneraoverhaul .circle-border {
+  position: relative;
+}
+.numeneraoverhaul .icon {
+  margin-right: 0.2rem;
+}
+.numeneraoverhaul .title {
+  min-width: 0;
+  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 33%;
+  flex: 0 1 auto;
+  display: grid;
+  grid-template-rows: 20% 20% 20%;
+  grid-template-columns: 10% 60% 30%;
+  grid-row-gap: 1rem;
+  /* grid-column-gap: 4px; */
+  margin: 0.5rem;
+  /* padding: 1rem; */
+}
+.numeneraoverhaul .title input {
+  border-radius: 1px;
+  overflow: hidden;
+  margin-inline: 0.5rem;
+  min-width: 0;
+  width: 95%;
+  background-color: bisque;
+  border-style: none;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Patrick Hand";
+}
+.numeneraoverhaul .title__name {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.numeneraoverhaul .title__is-a {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.numeneraoverhaul .title__descriptor {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.numeneraoverhaul .title__type {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.numeneraoverhaul .title__who {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.numeneraoverhaul .title__focus {
+  grid-column: 2/4;
+  grid-row: 3/4;
+}
+.numeneraoverhaul .stats-section {
+  display: flex;
+  flex-direction: row;
+  min-width: 800px;
+  height: 100%;
+}
+.numeneraoverhaul .logo img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.numeneraoverhaul .logo {
+  width: 33%;
+}
+.numeneraoverhaul .tierEffortXP {
+  width: 33%;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+.numeneraoverhaul .tierEffortXP input {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-style: none;
+  background-color: #e8e6e3;
+  box-shadow: inset 0 0 0 2px moccasin;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Patrick Hand", cursive;
+}
+.numeneraoverhaul .circularInput, .numeneraoverhaul .card input[type=text].circle__input {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  border-style: none;
+  background-color: #e8e6e3;
+  box-shadow: inset 0 0 0 2px moccasin;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Patrick Hand", cursive;
+  position: relative;
+}
+.numeneraoverhaul .circularInput::before, .numeneraoverhaul .card input[type=text].circle__input::before {
+  position: absolute;
+  z-index: 10;
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.numeneraoverhaul .roundedText {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+}
+.numeneraoverhaul .--small {
+  width: 3rem !important;
+  height: 3rem !important;
+  aspect-ratio: 1/1;
+}
+.numeneraoverhaul .circle-input__wrapper {
+  position: relative;
+  text-align: center;
+  aspect-ratio: 1/1;
+}
+.numeneraoverhaul .corner-style {
+  position: absolute;
+  margin-top: -5px;
+  left: -5px;
+  z-index: 10;
+}
+.numeneraoverhaul .overlapLabel {
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-family: "Shadows Into Light", cursive;
+}
+.numeneraoverhaul .item-list-overhaul {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  width: 100%;
+  overflow: visible;
+}
+.numeneraoverhaul #stats {
+  grid-row: 1/3;
+}
+.numeneraoverhaul .column {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.numeneraoverhaul .column + .column {
+  margin-left: 0.2rem;
+}
+.numeneraoverhaul .column.--one .card {
+  border-top-left-radius: 40px;
+}
+.numeneraoverhaul .card {
+  position: relative;
+  width: 100%;
+  height: 8rem;
+  border-radius: 10px;
+  border-top: 3px solid #e8e6e3;
+  border-right: 1px dotted #e8e6e3;
+  border-bottom: 1px dotted #e8e6e3;
+  border-left: 1px dotted #e8e6e3;
+  padding: 0.1rem 0.2rem 0.3rem 0.2rem;
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.numeneraoverhaul .card label {
+  font-weight: bold;
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .card .stats {
+  margin: 0.5rem;
+}
+.numeneraoverhaul .card input[type=text].circle__input::before {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.numeneraoverhaul .card input[type=checkbox] {
+  filter: sepia(100%);
+  -webkit-filter: sepia(100%) grayscale(50%);
+}
+.numeneraoverhaul .card select {
+  border: 1px dotted rgba(176, 146, 123, 0.65);
+  font-family: "Patrick Hand";
+  color: rgba(114, 88, 71, 0.85);
+  font-weight: bold;
+  background: transparent;
+}
+.numeneraoverhaul .card .card__title::before, .numeneraoverhaul .card .card__title::after {
+  content: "⬩";
+}
+.numeneraoverhaul .card#damageTrack .panel {
+  height: 100%;
+}
+.numeneraoverhaul .card .editor {
+  min-height: 100%;
+}
+.numeneraoverhaul .card .editor-content {
+  font-family: "Patrick Hand";
+  font-weight: bold;
+  color: rgba(114, 88, 71, 0.85);
+  opacity: 90%;
+  position: relative;
+}
+.numeneraoverhaul .card .editor-content p,
+.numeneraoverhaul .card .editor-content h1,
+.numeneraoverhaul .card .editor-content h2 {
+  font-family: "Patrick Hand";
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .card.sheet-editor {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  overflow: visible;
+  font-weight: bold;
+}
+.numeneraoverhaul .card.sheet-editor .tox-tinymce {
+  min-height: 20rem;
+}
+.numeneraoverhaul .card .damage__slider {
+  padding: 0.1rem 0.5rem;
+  margin: 0.3rem 0;
+  border-radius: 5px;
+  border: 1px dotted rgba(176, 146, 123, 0.65);
+  width: 100%;
+  height: 30%;
+  position: relative;
+}
+.numeneraoverhaul .card .damage__slider span {
+  border-radius: 5px;
+  display: block;
+  position: relative;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+.numeneraoverhaul .card .damage__slider span.hale {
+  background-color: #36c9c6;
+  background: linear-gradient(to left, #36c9c6, #6184d8);
+  width: 100%;
+}
+.numeneraoverhaul .card .damage__slider span.impaired {
+  background: linear-gradient(to left, #6184d8, darkmagenta);
+  width: 60%;
+}
+.numeneraoverhaul .card .damage__slider span.debilitated {
+  background: linear-gradient(to left, darkmagenta, firebrick);
+  width: 30%;
+}
+.numeneraoverhaul .card .damage__slider span.dead {
+  background: transparent;
+  width: 0%;
+}
+.numeneraoverhaul .card#damageTrack {
+  height: 6rem;
+}
+.numeneraoverhaul .card#recoveryPanel {
+  height: 11rem;
+}
+.numeneraoverhaul .card#recoveryPanel .panel {
+  height: 100%;
+}
+.numeneraoverhaul .card#recoveryPanel .recovery__wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.numeneraoverhaul .card#recoveryPanel input[type=checkbox] {
+  margin-right: 0.5rem;
+}
+.numeneraoverhaul .card#recoveryPanel .circle-input__wrapper {
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .card#recoveryPanel .circularInput, .numeneraoverhaul .card#recoveryPanel input[type=text].circle__input {
+  color: rgba(76, 68, 70, 0.95);
+  font-size: 1.5rem;
+  font-family: "Shadows Into Light";
+  font-weight: bold;
+}
+.numeneraoverhaul .card#mightSpeedIntellect {
+  height: 11rem;
+}
+.numeneraoverhaul .card#nonPlayerStats {
+  height: 11rem;
+}
+.numeneraoverhaul .card .item-settings {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.numeneraoverhaul .card .item-name,
+.numeneraoverhaul .card .settings-list,
+.numeneraoverhaul .card .item-quantity {
+  font-size: 0.85rem;
+  font-weight: bold;
+  opacity: 85%;
+}
+.numeneraoverhaul .card .item-header {
+  text-transform: uppercase;
+  font-family: "Patrick Hand";
+}
+.numeneraoverhaul .card .item-header .item-name,
+.numeneraoverhaul .card .item-header .settings-list,
+.numeneraoverhaul .card .item-header .item-quantity {
+  opacity: 100%;
+}
+.numeneraoverhaul .card .items-list .item ~ .item {
+  border-top: 1px dotted rgba(159, 120, 91, 0.75);
+}
+.numeneraoverhaul .card .items-list .item:last-child {
+  border-bottom: 1px dotted rgba(159, 120, 91, 0.75);
+}
+.numeneraoverhaul .card__wrapper {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  margin: 0.1rem;
+}
+.numeneraoverhaul .card__wrapper > .card {
+  width: 100%;
+}
+.numeneraoverhaul .expanded {
+  overflow: visible;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.numeneraoverhaul .card__title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #e8e6e3;
+}
+.numeneraoverhaul .card__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.numeneraoverhaul .expand-toggle {
+  display: inline;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  float: right;
+  color: #e8e6e3;
+}
+.numeneraoverhaul .panel {
+  position: relative;
+  background-color: rgba(232, 230, 227, 0.85);
+  border-radius: 5px;
+  padding: 0.2rem;
+  width: 100%;
+}
+.numeneraoverhaul .--extended {
+  min-height: 6.9505rem;
+  max-height: 100%;
+  overflow: visible;
+}
+.numeneraoverhaul .panel-overlay {
+  border-radius: 5px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(236, 222, 209, 0.9) 70%, rgb(235, 220, 207) 100%);
+  top: 0;
+  left: 0;
+  content: "";
+  height: 8rem;
+  position: absolute;
+  width: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+.numeneraoverhaul .special-damage-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.numeneraoverhaul .special-damage-label {
+  display: flex;
+  align-items: center;
+}
+.numeneraoverhaul #special-damage {
+  width: 2em;
+  flex: 0 1 auto;
+}
+.numeneraoverhaul .rest {
+  display: flex;
+  flex-wrap: nowrap;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  align-items: center;
+  justify-content: center;
+}
+.numeneraoverhaul .stats {
+  display: flex;
+  justify-content: space-around;
+}
+.numeneraoverhaul .stats .header__button {
+  width: 100%;
+}
+.numeneraoverhaul .npc-stats {
+  width: 100%;
+  padding: 0 1rem;
+}
+.numeneraoverhaul .npc-stats div {
+  width: 100%;
+}
+.numeneraoverhaul .stat > h1 {
+  font-size: 1rem;
+  text-align: center;
+}
+.numeneraoverhaul .stat + .stat {
+  margin-left: 0.5rem;
+}
+.numeneraoverhaul .stat-graph {
+  display: grid;
+  grid-template-columns: repeat(minmax(0, 1fr), 2);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  font-weight: bold;
+  color: rgb(114, 88, 71);
+}
+.numeneraoverhaul .stat-graph.--simplified {
+  display: flex;
+  flex-direction: column;
+}
+.numeneraoverhaul .stat-graph > div {
+  background-color: #e8e6e3;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: stretch;
+}
+.numeneraoverhaul .stat-graph > div > input {
+  height: 2.5rem;
+  font-size: 2rem;
+  max-width: 3.5rem;
+  text-align: center;
+  background-color: transparent;
+  border-style: none;
+  vertical-align: middle;
+  font-family: "Shadows Into Light";
+}
+.numeneraoverhaul .stat-graph__current {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border-bottom: 2px solid rgba(176, 146, 123, 0.65);
+}
+.numeneraoverhaul .stat-graph__current > input {
+  color: #d5a02d;
+  font-weight: bold;
+}
+.numeneraoverhaul .stat-graph__pool {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border-right: 2px solid rgba(176, 146, 123, 0.65);
+}
+.numeneraoverhaul .stat-graph__pool input {
+  font-size: 1.5rem !important;
+  font-weight: normal !important;
+  color: dimgray;
+}
+.numeneraoverhaul .stat-graph__edge {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.numeneraoverhaul .stat-graph__edge input {
+  font-size: 1.5rem !important;
+  font-weight: normal !important;
+  color: dimgray;
+}
+.numeneraoverhaul .background {
+  width: 100%;
+  background-color: transparent;
+  border-style: none;
+  height: auto;
+}
+.numeneraoverhaul .damage-track__wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.numeneraoverhaul .radio {
+  display: flex;
+  /* display: grid; */
+  /* grid-template-columns: min-content auto; */
+  /* grid-gap: 0.5em; */
+}
+.numeneraoverhaul .radio span {
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .radio__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.numeneraoverhaul .radio__wrapper > input {
+  cursor: pointer;
+  margin-right: 0.2em;
+  margin-left: 0.2em;
+}
+.numeneraoverhaul .custom__radio {
+  display: grid;
+  display: none;
+  /*TODO: Take this out once you figure the custom radio buttons out*/
+  place-items: center;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid rgba(114, 88, 71, 0.85);
+  margin-right: 0.2em;
+}
+.numeneraoverhaul [type=radio]:not(:checked) + .custom__radio::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  box-shadow: inset 0.5rem 0.5 rgba(176, 146, 123, 0.65);
+  border-radius: 50%;
+  /* transform: scale(1); */
+}
+.numeneraoverhaul [type=radio]:checked + .custom__radio::before {
+  transform: scale(1);
+  border-color: red;
+  /* background: radial-gradient($clr-gradient2 70%, rgba(255 0, 0, 0) 51%) !important; */
+}
+.numeneraoverhaul .tier__input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0rem 1rem;
+}
+.numeneraoverhaul .tier input {
+  max-width: 50%;
+  padding: 0.2rem 1rem;
+  text-align: center;
+}
+.numeneraoverhaul .tier > h2 {
+  font-size: 1rem;
+  text-align: center;
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .color-brown {
+  color: rgba(114, 88, 71, 0.85);
+}
+.numeneraoverhaul .color-white {
+  color: #e8e6e3;
+}/*# sourceMappingURL=styleNumenera.css.map */

@@ -6,12 +6,267 @@ let groupName = "importantChoice";
 let choices = { a: "Choice A", b: "Choice B" };
 let chosen = "a";
 Hooks.once("init", function () {
-    Actors.unregisterSheet("cypher", CypherActorSheetPC);
+    // Actors.unregisterSheet("cypher", CypherActorSheetPC);
     Actors.registerSheet("cypher", NumeneraSheet, {
         types: ["pc"],
         makeDefault: true,
     });
 });
+
+function someStuff() {
+    const actorData = data.actor;
+    const itemLists = data.itemLists;
+
+    // Initialize containers
+    const equipment = [];
+    const abilities = [];
+    const spells = [];
+    const abilitiesTwo = [];
+    const abilitiesThree = [];
+    const abilitiesFour = [];
+    const skills = [];
+    const skillsTwo = [];
+    const skillsThree = [];
+    const skillsFour = [];
+    const attacks = [];
+    const armor = [];
+    const lastingDamage = [];
+    const powerShifts = [];
+    const cyphers = [];
+    const artifacts = [];
+    const oddities = [];
+    const teenSkills = [];
+    const teenAbilities = [];
+    const teenAttacks = [];
+    const teenArmor = [];
+    const teenLastingDamage = [];
+    const materials = [];
+    const ammo = [];
+    const recursions = [];
+    const tags = [];
+
+    // Iterate through items, allocating to containers
+    for (let item of data.items) {
+        // let item = item.system;
+        item.img = item.img || DEFAULT_TOKEN;
+
+        // Check for hidden item
+        let hidden = false;
+        if (actorData.system.settings.general.hideArchive && item.system.archived) hidden = true;
+
+        // Check for roll button on level
+        if (item.type == "cypher" || item.type == "artifact") {
+            if (
+                Roll.validate(item.system.basic.level.toString()) &&
+                item.system.basic.level &&
+                isNaN(item.system.basic.level)
+            ) {
+                item.system.rollForLevel = true;
+            } else {
+                item.system.rollForLevel = false;
+            }
+        }
+
+        // Append to containers
+        if (item.type === "equipment" && !hidden) {
+            equipment.push(item);
+        } else if (item.type === "ammo" && !hidden) {
+            ammo.push(item);
+        } else if (
+            item.type === "ability" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "Ability"
+        ) {
+            abilities.push(item);
+        } else if (
+            item.type === "ability" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "Spell"
+        ) {
+            spells.push(item);
+        } else if (
+            item.type === "ability" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "AbilityTwo"
+        ) {
+            abilitiesTwo.push(item);
+        } else if (
+            item.type === "ability" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "AbilityThree"
+        ) {
+            abilitiesThree.push(item);
+        } else if (
+            item.type === "ability" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "AbilityFour"
+        ) {
+            abilitiesFour.push(item);
+        } else if (
+            item.type === "skill" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "Skill"
+        ) {
+            skills.push(item);
+        } else if (
+            item.type === "skill" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "SkillTwo"
+        ) {
+            skillsTwo.push(item);
+        } else if (
+            item.type === "skill" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "SkillThree"
+        ) {
+            skillsThree.push(item);
+        } else if (
+            item.type === "skill" &&
+            item.system.settings.general.unmaskedForm == "Mask" &&
+            !hidden &&
+            item.system.settings.general.sorting == "SkillFour"
+        ) {
+            skillsFour.push(item);
+        } else if (item.type === "attack" && item.system.settings.general.unmaskedForm == "Mask" && !hidden) {
+            attacks.push(item);
+        } else if (item.type === "armor" && item.system.settings.general.unmaskedForm == "Mask" && !hidden) {
+            armor.push(item);
+        } else if (item.type === "lasting-damage" && item.system.settings.general.unmaskedForm == "Mask" && !hidden) {
+            lastingDamage.push(item);
+        } else if (item.type === "power-shift" && !hidden) {
+            powerShifts.push(item);
+        } else if (item.type === "cypher" && !hidden) {
+            cyphers.push(item);
+        } else if (item.type === "artifact" && !hidden) {
+            artifacts.push(item);
+        } else if (item.type === "oddity" && !hidden) {
+            oddities.push(item);
+        } else if (item.type === "skill" && item.system.settings.general.unmaskedForm == "Teen" && !hidden) {
+            teenSkills.push(item);
+        } else if (item.type === "ability" && item.system.settings.general.unmaskedForm == "Teen" && !hidden) {
+            teenAbilities.push(item);
+        } else if (item.type === "attack" && item.system.settings.general.unmaskedForm == "Teen" && !hidden) {
+            teenAttacks.push(item);
+        } else if (item.type === "armor" && item.system.settings.general.unmaskedForm == "Teen" && !hidden) {
+            teenArmor.push(item);
+        } else if (item.type === "lasting-damage" && item.system.settings.general.unmaskedForm == "Teen" && !hidden) {
+            teenLastingDamage.push(item);
+        } else if (item.type === "material" && !hidden) {
+            materials.push(item);
+        } else if (item.type === "recursion" && !hidden) {
+            recursions.push(item);
+        } else if (item.type === "tag" && !hidden) {
+            tags.push(item);
+        }
+    }
+
+    // Sort by name
+    equipment.sort(byNameAscending);
+    abilities.sort(byNameAscending);
+    abilitiesTwo.sort(byNameAscending);
+    abilitiesThree.sort(byNameAscending);
+    abilitiesFour.sort(byNameAscending);
+    spells.sort(byNameAscending);
+    skills.sort(byNameAscending);
+    skillsTwo.sort(byNameAscending);
+    skillsThree.sort(byNameAscending);
+    skillsFour.sort(byNameAscending);
+    attacks.sort(byNameAscending);
+    armor.sort(byNameAscending);
+    lastingDamage.sort(byNameAscending);
+    powerShifts.sort(byNameAscending);
+    cyphers.sort(byNameAscending);
+    artifacts.sort(byNameAscending);
+    oddities.sort(byNameAscending);
+    teenSkills.sort(byNameAscending);
+    teenAbilities.sort(byNameAscending);
+    teenAttacks.sort(byNameAscending);
+    teenArmor.sort(byNameAscending);
+    teenLastingDamage.sort(byNameAscending);
+    materials.sort(byNameAscending);
+    ammo.sort(byNameAscending);
+    recursions.sort(byNameAscending);
+    tags.sort(byNameAscending);
+
+    // Sort by skill rating
+    if (this.actor.type == "pc" || this.actor.type == "companion") {
+        if (actorData.system.settings.skills.sortByRating) {
+            skills.sort(bySkillRating);
+            skillsTwo.sort(bySkillRating);
+            skillsThree.sort(bySkillRating);
+            skillsFour.sort(bySkillRating);
+            teenSkills.sort(bySkillRating);
+        }
+    }
+
+    // Sort by identified status
+    cyphers.sort(byIdentifiedStatus);
+    artifacts.sort(byIdentifiedStatus);
+
+    // Sort by archive status
+    equipment.sort(byArchiveStatus);
+    abilities.sort(byArchiveStatus);
+    abilitiesTwo.sort(byArchiveStatus);
+    abilitiesThree.sort(byArchiveStatus);
+    abilitiesFour.sort(byArchiveStatus);
+    spells.sort(byArchiveStatus);
+    skills.sort(byArchiveStatus);
+    skillsTwo.sort(byArchiveStatus);
+    skillsThree.sort(byArchiveStatus);
+    skillsFour.sort(byArchiveStatus);
+    attacks.sort(byArchiveStatus);
+    armor.sort(byArchiveStatus);
+    lastingDamage.sort(byArchiveStatus);
+    powerShifts.sort(byArchiveStatus);
+    cyphers.sort(byArchiveStatus);
+    artifacts.sort(byArchiveStatus);
+    oddities.sort(byArchiveStatus);
+    teenSkills.sort(byArchiveStatus);
+    teenAbilities.sort(byArchiveStatus);
+    teenAttacks.sort(byArchiveStatus);
+    teenArmor.sort(byArchiveStatus);
+    teenLastingDamage.sort(byArchiveStatus);
+    materials.sort(byArchiveStatus);
+    ammo.sort(byArchiveStatus);
+    recursions.sort(byArchiveStatus);
+    tags.sort(byArchiveStatus);
+
+    // Assign and return
+    itemLists.equipment = equipment;
+    itemLists.abilities = abilities;
+    itemLists.abilitiesTwo = abilitiesTwo;
+    itemLists.abilitiesThree = abilitiesThree;
+    itemLists.abilitiesFour = abilitiesFour;
+    itemLists.spells = spells;
+    itemLists.skills = skills;
+    itemLists.skillsTwo = skillsTwo;
+    itemLists.skillsThree = skillsThree;
+    itemLists.skillsFour = skillsFour;
+    itemLists.attacks = attacks;
+    itemLists.armor = armor;
+    itemLists.lastingDamage = lastingDamage;
+    itemLists.powerShifts = powerShifts;
+    itemLists.cyphers = cyphers;
+    itemLists.artifacts = artifacts;
+    itemLists.oddities = oddities;
+    itemLists.teenSkills = teenSkills;
+    itemLists.teenAbilities = teenAbilities;
+    itemLists.teenAttacks = teenAttacks;
+    itemLists.teenArmor = teenArmor;
+    itemLists.teenLastingDamage = teenLastingDamage;
+    itemLists.materials = materials;
+    itemLists.ammo = ammo;
+    itemLists.recursions = recursions;
+    itemLists.tags = tags;
+}
 
 Hooks.on("getJournalSheetHeaderButtons", function (app, buttons) {
     if (app.document.testUserPermission(game.user, 3) && app.object._getSheetClass().name !== "ExcalidrawJournal") {
@@ -41,8 +296,9 @@ export class NumeneraSheet extends CypherActorSheetPC {
             // overflow: auto,
         });
     }
-    getData() {
-        const data = super.getData();
+    async getData() {
+        const data = await super.getData();
+        console.log(data);
         return data;
     }
     _createEditor(target, editorOptions, initialContent) {
@@ -60,13 +316,13 @@ export class NumeneraSheet extends CypherActorSheetPC {
         //full rest button click
         html.find(".rest").click((clickEvent) => {
             this.actor.update({
-                "data.pools.might.value": this.actor.data.data.pools.might.max,
-                "data.pools.speed.value": this.actor.data.data.pools.speed.max,
-                "data.pools.intellect.value": this.actor.data.data.pools.intellect.max,
-                "data.damage.damageTrack": "Hale",
+                "system.pools.might.value": this.actor.system.pools.might.max,
+                "system.pools.speed.value": this.actor.system.pools.speed.max,
+                "system.pools.intellect.value": this.actor.system.pools.intellect.max,
+                "system.damage.damageTrack": "Hale",
             });
         });
-        if (this.actor.getFlag("world", "Advancement") == null) {
+        if (!this.actor.getFlag("world", "Advancement")) {
             SaveAdvancements(this.actor, html);
         }
 
@@ -100,7 +356,7 @@ export class NumeneraSheet extends CypherActorSheetPC {
             });
         }
         desaturateRankingColors(html);
-        let damageTrackSelect = Array.from(html.find('[name="data.damage.damageTrack"]'))[0];
+        let damageTrackSelect = Array.from(html.find('[name="system.damage.damageTrack"]'))[0];
         changeSlider(damageTrackSelect, html);
         damageTrackSelect.addEventListener("change", (event) => {
             changeSlider(event.currentTarget, html);
@@ -143,47 +399,6 @@ function changeSlider(select, html) {
     // span.style.width = width;
     // span.style.backgroundColor = color;
 }
-
-Hooks.on("renderActorSheet", (app, html, data) => {
-    // // if(data.actor.getFlag("world", "scrollX") == null){
-    // // 	data.actor.setFlag("world", "scrollX", 0)
-    // // }
-    // // else{
-    // // 	html.find(".stats-section")[0].closest(".window-content").scrollTop = data.actor.getFlag("world", "scrollX")
-    // // }
-    // if(data.actor.getFlag("world", "Advancement") == null){
-    // 	SaveAdvancements(data.actor, html)
-    // }
-    // let expandButtons = Array.from(html.find(".expand-toggle"));
-    // for(let expandButton of expandButtons){
-    // 	expandButton.addEventListener("click", (event)=> toggleExpandClass(event, data.actor))
-    // }
-    // let cards = Array.from(html.find(".card"))
-    // for(let card of cards){
-    // 	if(card.querySelector(".expand-toggle") !=null){
-    // 		//if this isn't set yet, set it to false as default
-    // 		if(data.actor.getFlag("world", card.id) == null){
-    // 			data.actor.setFlag("world", card.id, false);
-    // 		}
-    // 		if(data.actor.getFlag("world", card.id) == true){
-    // 			preExpand(card)
-    // 		}
-    // 		else{
-    // 			let panel = card.querySelector(".panel")
-    // 			panel.prepend(returnOverlayHTML())
-    // 		}
-    // 	}
-    // }
-    // let recoveryButton = Array.from(html.find("#recovery"))[0]
-    // recoveryButton.addEventListener("click", ()=> game.cyphersystem.recoveryRollMacro(data.actor))
-    // populateTiersFromFlags(data.actor, html)
-    // let advancementTiers = Array.from(html.find(".tier"));
-    // for(let advancementTier of advancementTiers){
-    // 	advancementTier.addEventListener("change", ()=>{
-    // 		SaveAdvancements(data.actor, html);
-    // 	})
-    // }
-});
 
 function preExpand(card) {
     var button = card.querySelector(".expand-toggle");
@@ -287,6 +502,9 @@ function desaturateRankingColors(html) {
 function populateTiersFromFlags(actor, thisHTML) {
     let tiers = Array.from(thisHTML.find(".tier"));
     let advancements = actor.getFlag("world", "Advancement");
+    if (!advancements) {
+        return;
+    }
     let tierIndex = 0;
     for (let tier of tiers) {
         let advancementArray = advancements[tierIndex][`${tier.id}`];
