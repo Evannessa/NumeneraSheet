@@ -356,7 +356,7 @@ export class NumeneraSheet extends CypherActorSheetPC {
             });
         }
         desaturateRankingColors(html);
-        let damageTrackSelect = Array.from(html.find('[name="system.damage.damageTrack"]'))[0];
+        let damageTrackSelect = Array.from(html.find('[name="data.system.damage.damageTrack"]'))[0];
         changeSlider(damageTrackSelect, html);
         damageTrackSelect.addEventListener("change", (event) => {
             changeSlider(event.currentTarget, html);
