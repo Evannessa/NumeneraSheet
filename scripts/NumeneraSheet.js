@@ -7,7 +7,7 @@ let choices = { a: "Choice A", b: "Choice B" };
 let chosen = "a";
 Hooks.once("init", function () {
     // Actors.unregisterSheet("cypher", CypherActorSheetPC);
-    Actors.registerSheet("cypher", NumeneraSheet, {
+    Actors.registerSheet("cyphersystem", NumeneraSheet, {
         types: ["pc"],
         makeDefault: true,
     });
